@@ -1,0 +1,42 @@
+[
+  {
+    "title": { "en": "Registration Certificate", "mr": "नोंदणी प्रमाणपत्र" },
+    "description": {
+      "en": "Official registration certificate of the Mandal.",
+      "mr": "मंडळाचे अधिकृत नोंदणी प्रमाणपत्र."
+    },
+    "category": { "en": "Legal", "mr": "कायदेशीर" },
+    "href": "/documents/registration-certificate.pdf",
+    "size": "PDF"
+  },
+  {
+    "title": { "en": "Annual Report 2025", "mr": "वार्षिक अहवाल २०२५" },
+    "description": {
+      "en": "A summary of activities, events and accounts for the year.",
+      "mr": "वर्षभरातील उपक्रम, कार्यक्रम आणि हिशेबांचा सारांश."
+    },
+    "category": { "en": "Reports", "mr": "अहवाल" },
+    "href": "/documents/annual-report-2025.pdf",
+    "size": "PDF"
+  },
+  {
+    "title": { "en": "Vargani Receipt Format", "mr": "वर्गणी पावती नमुना" },
+    "description": {
+      "en": "Standard receipt format issued for every contribution.",
+      "mr": "प्रत्येक वर्गणीसाठी दिला जाणारा प्रमाणित पावती नमुना."
+    },
+    "category": { "en": "Forms", "mr": "अर्ज" },
+    "href": "/documents/vargani-receipt.pdf",
+    "size": "PDF"
+  },
+  {
+    "title": { "en": "Festival Poster 2026", "mr": "उत्सव पोस्टर २०२६" },
+    "description": {
+      "en": "Official poster for the 47th Ganeshotsav celebrations.",
+      "mr": "४७ व्या गणेशोत्सवाचे अधिकृत पोस्टर."
+    },
+    "category": { "en": "Posters", "mr": "पोस्टर" },
+    "href": "/documents/festival-poster-2026.pdf",
+    "size": "PDF"
+  }
+]

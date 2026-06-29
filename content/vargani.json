@@ -1,0 +1,40 @@
+{
+  "intro": {
+    "en": "Vargani is the voluntary contribution that powers our Ganeshotsav and year-round service. Every rupee is accounted for and put to work for the community.",
+    "mr": "वर्गणी ही ऐच्छिक देणगी आहे जी आमचा गणेशोत्सव आणि वर्षभराची सेवा चालवते. प्रत्येक रुपयाचा हिशेब ठेवला जातो आणि समाजासाठी वापरला जातो."
+  },
+  "whatIs": {
+    "en": "Traditionally, Vargani is collected from households and well-wishers to fund the public celebration. For us it is also a bond of trust — a shared investment in faith, culture and social good.",
+    "mr": "पारंपरिकपणे, सार्वजनिक उत्सवासाठी कुटुंबे आणि हितचिंतकांकडून वर्गणी गोळा केली जाते. आमच्यासाठी तो विश्वासाचा बंध आहे — श्रद्धा, संस्कृती आणि सामाजिक हितातील सामायिक गुंतवणूक."
+  },
+  "contribution": { "amount": 351, "year": 2026 },
+  "importance": [
+    {
+      "title": { "en": "Transparency", "mr": "पारदर्शकता" },
+      "body": {
+        "en": "Every contribution is receipted and recorded. Annual accounts are shared openly with members.",
+        "mr": "प्रत्येक वर्गणीची पावती दिली जाते आणि नोंद ठेवली जाते. वार्षिक हिशेब सभासदांसोबत खुलेपणाने सामायिक केले जातात."
+      }
+    },
+    {
+      "title": { "en": "Community First", "mr": "समाज प्रथम" },
+      "body": {
+        "en": "Funds go directly into the festival and social programs that serve our neighbourhood.",
+        "mr": "निधी थेट उत्सव आणि परिसराची सेवा करणाऱ्या सामाजिक उपक्रमांमध्ये जातो."
+      }
+    },
+    {
+      "title": { "en": "Voluntary Always", "mr": "नेहमी ऐच्छिक" },
+      "body": {
+        "en": "Vargani is given with devotion, never under pressure. Every contribution, big or small, matters.",
+        "mr": "वर्गणी भक्तीने दिली जाते, कधीही दबावाखाली नाही. लहान असो वा मोठी, प्रत्येक देणगी महत्त्वाची आहे."
+      }
+    }
+  ],
+  "utilisation": [
+    { "label": { "en": "Festival & Celebration", "mr": "उत्सव व सोहळा" }, "percent": 40 },
+    { "label": { "en": "Social Activities", "mr": "सामाजिक उपक्रम" }, "percent": 30 },
+    { "label": { "en": "Cultural Programs", "mr": "सांस्कृतिक कार्यक्रम" }, "percent": 15 },
+    { "label": { "en": "Maintenance & Operations", "mr": "देखभाल व व्यवस्थापन" }, "percent": 15 }
+  ]
+}

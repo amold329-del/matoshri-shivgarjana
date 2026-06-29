@@ -1,0 +1,66 @@
+[
+  {
+    "icon": "droplet",
+    "title": { "en": "Blood Donation", "mr": "रक्तदान" },
+    "body": {
+      "en": "Annual donation camps in partnership with local hospitals.",
+      "mr": "स्थानिक रुग्णालयांच्या सहकार्याने वार्षिक रक्तदान शिबिरे."
+    }
+  },
+  {
+    "icon": "stethoscope",
+    "title": { "en": "Medical Camps", "mr": "वैद्यकीय शिबिरे" },
+    "body": {
+      "en": "Free health check-ups and consultations for the community.",
+      "mr": "समाजासाठी मोफत आरोग्य तपासणी आणि सल्ला."
+    }
+  },
+  {
+    "icon": "graduation",
+    "title": { "en": "Education Support", "mr": "शैक्षणिक मदत" },
+    "body": {
+      "en": "Scholarships and study material for deserving students.",
+      "mr": "गुणवंत विद्यार्थ्यांसाठी शिष्यवृत्ती व अभ्यास साहित्य."
+    }
+  },
+  {
+    "icon": "tree",
+    "title": { "en": "Tree Plantation", "mr": "वृक्षारोपण" },
+    "body": {
+      "en": "Greening drives to give back to our environment.",
+      "mr": "पर्यावरणाच्या रक्षणासाठी वृक्षारोपण मोहिमा."
+    }
+  },
+  {
+    "icon": "festival",
+    "title": { "en": "Festival Activities", "mr": "उत्सव उपक्रम" },
+    "body": {
+      "en": "Cultural programs, aartis and community gatherings.",
+      "mr": "सांस्कृतिक कार्यक्रम, आरत्या आणि सामुदायिक मेळावे."
+    }
+  },
+  {
+    "icon": "women",
+    "title": { "en": "Women's Empowerment", "mr": "महिला सक्षमीकरण" },
+    "body": {
+      "en": "Skill workshops and self-help initiatives for women.",
+      "mr": "महिलांसाठी कौशल्य कार्यशाळा आणि बचत गट उपक्रम."
+    }
+  },
+  {
+    "icon": "community",
+    "title": { "en": "Community Service", "mr": "सामुदायिक सेवा" },
+    "body": {
+      "en": "Relief drives and support for families in need.",
+      "mr": "गरजू कुटुंबांसाठी मदत व सहाय्य उपक्रम."
+    }
+  },
+  {
+    "icon": "health",
+    "title": { "en": "Health Awareness", "mr": "आरोग्य जनजागृती" },
+    "body": {
+      "en": "Wellness drives and preventive-care awareness sessions.",
+      "mr": "आरोग्य मोहिमा आणि प्रतिबंधात्मक काळजी जनजागृती सत्रे."
+    }
+  }
+]

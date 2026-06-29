@@ -1,0 +1,55 @@
+[
+  {
+    "id": "n1",
+    "date": "2026-08-20",
+    "featured": true,
+    "category": { "en": "Festival", "mr": "उत्सव" },
+    "title": {
+      "en": "47th Ganeshotsav Schedule Announced",
+      "mr": "४७ व्या गणेशोत्सवाचे वेळापत्रक जाहीर"
+    },
+    "excerpt": {
+      "en": "The full ten-day programme of aartis, cultural nights and community events is now available.",
+      "mr": "आरत्या, सांस्कृतिक रात्री आणि सामुदायिक कार्यक्रमांचे संपूर्ण दहा दिवसांचे वेळापत्रक आता उपलब्ध आहे."
+    }
+  },
+  {
+    "id": "n2",
+    "date": "2026-07-15",
+    "category": { "en": "Social", "mr": "सामाजिक" },
+    "title": {
+      "en": "Annual Blood Donation Camp a Success",
+      "mr": "वार्षिक रक्तदान शिबिर यशस्वी"
+    },
+    "excerpt": {
+      "en": "Volunteers and donors came together to support local hospitals ahead of the festival season.",
+      "mr": "उत्सव हंगामापूर्वी स्थानिक रुग्णालयांना मदत करण्यासाठी स्वयंसेवक आणि दाते एकत्र आले."
+    }
+  },
+  {
+    "id": "n3",
+    "date": "2026-06-30",
+    "category": { "en": "Announcement", "mr": "घोषणा" },
+    "title": {
+      "en": "Online Membership Coming Soon",
+      "mr": "ऑनलाइन सभासदत्व लवकरच"
+    },
+    "excerpt": {
+      "en": "We are preparing a digital membership system. Until then, please reach out to the committee.",
+      "mr": "आम्ही डिजिटल सभासद प्रणाली तयार करत आहोत. तोपर्यंत कृपया समितीशी संपर्क साधा."
+    }
+  },
+  {
+    "id": "n4",
+    "date": "2026-05-10",
+    "category": { "en": "Community", "mr": "समुदाय" },
+    "title": {
+      "en": "Tree Plantation Drive Plants 500 Saplings",
+      "mr": "वृक्षारोपण मोहिमेत ५०० रोपांची लागवड"
+    },
+    "excerpt": {
+      "en": "Members and youth volunteers greened several public spaces across the neighbourhood.",
+      "mr": "सभासद आणि युवा स्वयंसेवकांनी परिसरातील अनेक सार्वजनिक जागा हिरव्यागार केल्या."
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "quote": {
+      "en": "This Mandal is the heart of our neighbourhood. For over four decades it has brought us together in faith and in service.",
+      "mr": "हे मंडळ आमच्या परिसराचे हृदय आहे. चार दशकांहून अधिक काळ ते आम्हाला श्रद्धा आणि सेवेत एकत्र आणत आहे."
+    },
+    "name": "[रहिवासी नाव]",
+    "role": {
+      "en": "Long-time Devotee",
+      "mr": "जुने भक्त"
+    }
+  },
+  {
+    "quote": {
+      "en": "The transparency and care this Mandal shows with every rupee of Vargani is why our family supports it every single year.",
+      "mr": "वर्गणीच्या प्रत्येक रुपयाबाबत मंडळ दाखवत असलेली पारदर्शकता आणि काळजी यामुळेच आमचे कुटुंब दरवर्षी पाठिंबा देते."
+    },
+    "name": "[वर्गणीदार नाव]",
+    "role": {
+      "en": "Annual Contributor",
+      "mr": "वार्षिक वर्गणीदार"
+    }
+  },
+  {
+    "quote": {
+      "en": "From blood donation camps to education support, their social work touches real lives all year round, not just during the festival.",
+      "mr": "रक्तदान शिबिरांपासून शैक्षणिक मदतीपर्यंत, त्यांचे सामाजिक कार्य वर्षभर खऱ्या आयुष्यांना स्पर्श करते, फक्त उत्सवापुरते नाही."
+    },
+    "name": "[लाभार्थी नाव]",
+    "role": {
+      "en": "Community Member",
+      "mr": "समाज सदस्य"
+    }
+  },
+  {
+    "quote": {
+      "en": "Volunteering here taught me what unity really means. It is a family that welcomes everyone with open arms.",
+      "mr": "इथे स्वयंसेवा केल्याने एकतेचा खरा अर्थ मला कळला. हे एक कुटुंब आहे जे सर्वांचे मनापासून स्वागत करते."
+    },
+    "name": "[स्वयंसेवक नाव]",
+    "role": {
+      "en": "Youth Volunteer",
+      "mr": "युवा स्वयंसेवक"
+    }
+  }
+]

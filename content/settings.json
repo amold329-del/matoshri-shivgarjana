@@ -1,0 +1,54 @@
+{
+  "org": {
+    "nameShort": {
+      "en": "Matoshri Shivgarjana Mandal",
+      "mr": "मातोश्री शिवगर्जना मंडळ"
+    },
+    "nameFull": {
+      "en": "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal (Regd.)",
+      "mr": "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.)"
+    },
+    "tagline": {
+      "en": "॥ मातोश्रीचा विघ्नहर्ता ॥",
+      "mr": "॥ मातोश्रीचा विघ्नहर्ता ॥"
+    },
+    "motto": {
+      "en": "A registered public Ganeshotsav Mandal in Mumbai, devoted to faith, unity and service since 1980.",
+      "mr": "१९८० पासून श्रद्धा, एकता आणि सेवेला समर्पित मुंबईतील नोंदणीकृत सार्वजनिक गणेशोत्सव मंडळ."
+    },
+    "established": 1980,
+    "registered": 2025,
+    "anniversaryYear": 2026,
+    "yearsCount": 47,
+    "registrationNo": "F0087088(GBR)",
+    "panNo": "AAXAM••••P"
+  },
+  "countdown": {
+    "targetISO": "2026-09-14T06:00:00+05:30",
+    "label": {
+      "en": "Ganesh Chaturthi falls on 14 September 2026. Join us as we welcome Bappa home.",
+      "mr": "गणेश चतुर्थी १४ सप्टेंबर २०२६ रोजी आहे. बाप्पाच्या स्वागतासाठी आमच्यासोबत सहभागी व्हा."
+    }
+  },
+  "contact": {
+    "addressLines": [
+      "ए विंग, १/१०२, मातोश्री एस.आर.ए. सहकारी गृहनिर्माण संस्था",
+      "जेरबाई वाडिया रोड, परेल-भोईवाडा",
+      "मुंबई - १२"
+    ],
+    "phones": ["+91 77383 37412"],
+    "email": "matoshreeshivgarjanasarvajanik@gmail.com",
+    "hours": {
+      "en": "Mon – Sun: 9:00 AM – 9:00 PM (during festival)",
+      "mr": "सोम – रवि: सकाळी ९ – रात्री ९ (उत्सवादरम्यान)"
+    },
+    "mapEmbedSrc": "https://maps.google.com/maps?q=Jerbai+Wadia+Road,+Parel,+Mumbai+400012&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    "mapLink": "https://maps.google.com/?q=Jerbai+Wadia+Road,+Parel+Bhoiwada,+Mumbai+400012"
+  },
+  "social": [
+    { "label": "Facebook", "href": "#", "icon": "facebook" },
+    { "label": "Instagram", "href": "#", "icon": "instagram" },
+    { "label": "YouTube", "href": "#", "icon": "youtube" },
+    { "label": "Twitter", "href": "#", "icon": "twitter" }
+  ]
+}

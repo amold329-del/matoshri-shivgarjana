@@ -1,0 +1,14 @@
+[
+  { "id": "g1", "year": 2025, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Ganpati Sthapana 2025", "mr": "गणपती स्थापना २०२५" } },
+  { "id": "g2", "year": 2025, "type": "photo", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Mandap Decoration", "mr": "मंडप सजावट" } },
+  { "id": "g3", "year": 2025, "type": "photo", "category": { "en": "Cultural", "mr": "सांस्कृतिक" }, "caption": { "en": "Cultural Night Performance", "mr": "सांस्कृतिक संध्या सादरीकरण" } },
+  { "id": "g4", "year": 2025, "type": "photo", "category": { "en": "Procession", "mr": "मिरवणूक" }, "caption": { "en": "Visarjan Procession", "mr": "विसर्जन मिरवणूक" } },
+  { "id": "g5", "year": 2024, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Aarti Ceremony", "mr": "आरती सोहळा" } },
+  { "id": "g6", "year": 2024, "type": "photo", "category": { "en": "Social", "mr": "सामाजिक" }, "caption": { "en": "Blood Donation Camp", "mr": "रक्तदान शिबिर" } },
+  { "id": "g7", "year": 2024, "type": "photo", "category": { "en": "Community", "mr": "समुदाय" }, "caption": { "en": "Mahaprasad Bhojan", "mr": "महाप्रसाद भोजन" } },
+  { "id": "g8", "year": 2024, "type": "photo", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Floral Rangoli", "mr": "फुलांची रांगोळी" } },
+  { "id": "g9", "year": 2023, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Morning Aarti", "mr": "सकाळची आरती" } },
+  { "id": "g10", "year": 2023, "type": "photo", "category": { "en": "Cultural", "mr": "सांस्कृतिक" }, "caption": { "en": "Youth Dance Group", "mr": "युवा नृत्य गट" } },
+  { "id": "g11", "year": 2023, "type": "photo", "category": { "en": "Social", "mr": "सामाजिक" }, "caption": { "en": "Medical Camp", "mr": "वैद्यकीय शिबिर" } },
+  { "id": "g12", "year": 2023, "type": "photo", "category": { "en": "Procession", "mr": "मिरवणूक" }, "caption": { "en": "Dhol Tasha Pathak", "mr": "ढोल ताशा पथक" } }
+]

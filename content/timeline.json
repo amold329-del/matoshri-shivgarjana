@@ -1,0 +1,50 @@
+[
+  {
+    "year": "1980",
+    "kind": "past",
+    "title": {
+      "en": "Mandal Established",
+      "mr": "मंडळाची स्थापना"
+    },
+    "body": {
+      "en": "A handful of devoted neighbours came together to celebrate their first Sarvajanik Ganeshotsav.",
+      "mr": "काही श्रद्धाळू शेजाऱ्यांनी एकत्र येऊन पहिला सार्वजनिक गणेशोत्सव साजरा केला."
+    }
+  },
+  {
+    "year": "2025",
+    "kind": "past",
+    "title": {
+      "en": "Official Registration",
+      "mr": "अधिकृत नोंदणी"
+    },
+    "body": {
+      "en": "Decades of service were formalised as the Mandal became an officially registered organisation.",
+      "mr": "दशकांच्या सेवेला अधिकृत रूप मिळाले आणि मंडळ नोंदणीकृत संस्था बनले."
+    }
+  },
+  {
+    "year": "2026",
+    "kind": "current",
+    "title": {
+      "en": "Celebrating 47 Years",
+      "mr": "४७ वे वर्ष"
+    },
+    "body": {
+      "en": "We mark 47 glorious years of faith, unity and service to our community.",
+      "mr": "श्रद्धा, एकता आणि सेवेची ४७ वैभवशाली वर्षे आम्ही साजरी करत आहोत."
+    }
+  },
+  {
+    "year": "भविष्य",
+    "kind": "future",
+    "title": {
+      "en": "Towards Digital Transformation",
+      "mr": "डिजिटल परिवर्तनाकडे"
+    },
+    "body": {
+      "en": "Online membership, digital Vargani and a community app — bringing our legacy into a new era.",
+      "mr": "ऑनलाइन सभासदत्व, डिजिटल वर्गणी आणि कम्युनिटी अ‍ॅप — आमचा वारसा नव्या युगात."
+    }
+  }
+]
