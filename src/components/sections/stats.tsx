@@ -31,7 +31,7 @@ export function Stats() {
             <Reveal key={s.label.en} delay={i * 0.08}>
               <div className="rounded-2xl border border-gold/25 bg-white/[0.04] p-7 text-center backdrop-blur-sm">
                 <p className="font-display text-4xl font-extrabold goldtext sm:text-5xl">
-                  <Counter value={s.value} suffix={s.suffix} />
+                  <Counter value={s.value} suffix={s.suffix} plain={s.plain} />
                 </p>
                 <p className="mt-2 text-sm font-medium text-[var(--dark-text-soft)]">
                   {tr(s.label)}

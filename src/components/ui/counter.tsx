@@ -12,11 +12,14 @@ export function Counter({
   value,
   suffix = "",
   duration = 1800,
+  plain = false,
   className,
 }: {
   value: number;
   suffix?: string;
   duration?: number;
+  /** Render the value verbatim (no thousands separator, no count-up) — e.g. a year. */
+  plain?: boolean;
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -25,6 +28,7 @@ export function Counter({
   const reduce = useReducedMotion();
 
   useEffect(() => {
+    if (plain) return;
     if (reduce) {
       setDisplay(value);
       return;
@@ -53,11 +57,11 @@ export function Counter({
 
     io.observe(el);
     return () => io.disconnect();
-  }, [value, duration, reduce]);
+  }, [value, duration, reduce, plain]);
 
   return (
     <span ref={ref} className={className}>
-      {display.toLocaleString("en-IN")}
+      {plain ? value : display.toLocaleString("en-IN")}
       {suffix}
     </span>
   );

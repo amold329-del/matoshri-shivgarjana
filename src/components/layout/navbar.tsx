@@ -51,7 +51,7 @@ export function Navbar() {
           : "border-b border-transparent py-4",
       )}
     >
-      <nav className="wrap flex items-center justify-between gap-4">
+      <nav className="wrap flex items-center justify-between gap-3">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3">
           <Emblem className="h-10 w-10 shrink-0" />
@@ -66,7 +66,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-1 xl:flex">
+        <ul className="hidden items-center gap-0.5 xl:flex">
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
@@ -74,7 +74,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative rounded-full px-3 py-2 text-[0.86rem] font-medium transition-colors",
+                    "relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
                     active
                       ? "text-saffron"
                       : "text-ink-soft hover:text-saffron",

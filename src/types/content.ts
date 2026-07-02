@@ -57,6 +57,8 @@ export interface StatItem {
   value: number;
   suffix?: string;
   label: Bilingual;
+  /** Render the value verbatim (e.g. a year) — no thousands separator, no count-up. */
+  plain?: boolean;
 }
 
 export interface SocialActivity {

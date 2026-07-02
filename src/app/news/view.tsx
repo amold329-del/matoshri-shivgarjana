@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, ArrowUpRight, Star } from "lucide-react";
+import { Search, Star } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -109,7 +109,7 @@ export function NewsView() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((n, i) => (
                 <Reveal key={n.id} delay={(i % 3) * 0.06}>
-                  <article className="card-surface group flex h-full flex-col p-6">
+                  <article className="card-surface flex h-full flex-col p-6">
                     <p className="text-xs font-semibold uppercase tracking-wide text-saffron">
                       {tr(n.category)}
                     </p>
@@ -119,11 +119,10 @@ export function NewsView() {
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
                       {tr(n.excerpt)}
                     </p>
-                    <div className="mt-4 flex items-center justify-between border-t border-card-border pt-3">
+                    <div className="mt-4 border-t border-card-border pt-3">
                       <time className="text-xs text-ink-soft">
                         {formatDate(n.date, lang)}
                       </time>
-                      <ArrowUpRight className="h-4 w-4 text-saffron transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                     </div>
                   </article>
                 </Reveal>

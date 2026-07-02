@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="min-w-0">
           <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">
             {tr(dict.footer.contact)}
           </h3>
@@ -90,9 +90,12 @@ export function Footer() {
                 </a>
               </li>
             ))}
-            <li className="flex gap-3">
+            <li className="flex min-w-0 gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <a href={`mailto:${settings.contact.email}`} className="hover:text-gold-light">
+              <a
+                href={`mailto:${settings.contact.email}`}
+                className="min-w-0 break-all hover:text-gold-light"
+              >
                 {settings.contact.email}
               </a>
             </li>
@@ -104,7 +107,7 @@ export function Footer() {
         </div>
 
         {/* Map + social */}
-        <div>
+        <div className="min-w-0">
           <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">
             {tr(dict.footer.follow)}
           </h3>
