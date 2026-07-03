@@ -72,13 +72,13 @@ export function Hero() {
 
         <motion.h1
           variants={item}
-          className="font-mr text-[2.1rem] font-extrabold leading-[1.18] text-[var(--dark-text)] sm:text-5xl md:text-6xl lg:text-[4.2rem]"
+          className="font-mr text-[clamp(1.4rem,5vw,4.2rem)] font-extrabold leading-[1.32] text-[var(--dark-text)]"
         >
-          मातोश्री शिवगर्जना
-          <span className="mt-1 block goldtext">
+          <span className="block whitespace-nowrap">मातोश्री शिवगर्जना</span>
+          <span className="mt-2 block whitespace-nowrap goldtext">
             सार्वजनिक गणेशोत्सव मंडळ
           </span>
-          <span className="mt-1 block text-2xl font-bold text-[var(--dark-text-soft)] sm:text-3xl md:text-4xl">
+          <span className="mt-2 block text-[0.5em] font-bold text-[var(--dark-text-soft)]">
             (रजि.)
           </span>
         </motion.h1>
