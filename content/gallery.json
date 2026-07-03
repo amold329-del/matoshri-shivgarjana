@@ -1,14 +1,130 @@
 [
-  { "id": "g1", "year": 2025, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Ganpati Sthapana 2025", "mr": "गणपती स्थापना २०२५" } },
-  { "id": "g2", "year": 2025, "type": "photo", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Mandap Decoration", "mr": "मंडप सजावट" } },
-  { "id": "g3", "year": 2025, "type": "photo", "category": { "en": "Cultural", "mr": "सांस्कृतिक" }, "caption": { "en": "Cultural Night Performance", "mr": "सांस्कृतिक संध्या सादरीकरण" } },
-  { "id": "g4", "year": 2025, "type": "photo", "category": { "en": "Procession", "mr": "मिरवणूक" }, "caption": { "en": "Visarjan Procession", "mr": "विसर्जन मिरवणूक" } },
-  { "id": "g5", "year": 2024, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Aarti Ceremony", "mr": "आरती सोहळा" } },
-  { "id": "g6", "year": 2024, "type": "photo", "category": { "en": "Social", "mr": "सामाजिक" }, "caption": { "en": "Blood Donation Camp", "mr": "रक्तदान शिबिर" } },
-  { "id": "g7", "year": 2024, "type": "photo", "category": { "en": "Community", "mr": "समुदाय" }, "caption": { "en": "Mahaprasad Bhojan", "mr": "महाप्रसाद भोजन" } },
-  { "id": "g8", "year": 2024, "type": "photo", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Floral Rangoli", "mr": "फुलांची रांगोळी" } },
-  { "id": "g9", "year": 2023, "type": "photo", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Morning Aarti", "mr": "सकाळची आरती" } },
-  { "id": "g10", "year": 2023, "type": "photo", "category": { "en": "Cultural", "mr": "सांस्कृतिक" }, "caption": { "en": "Youth Dance Group", "mr": "युवा नृत्य गट" } },
-  { "id": "g11", "year": 2023, "type": "photo", "category": { "en": "Social", "mr": "सामाजिक" }, "caption": { "en": "Medical Camp", "mr": "वैद्यकीय शिबिर" } },
-  { "id": "g12", "year": 2023, "type": "photo", "category": { "en": "Procession", "mr": "मिरवणूक" }, "caption": { "en": "Dhol Tasha Pathak", "mr": "ढोल ताशा पथक" } }
+  {
+    "id": "g2021-01",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-01.jpg",
+    "category": { "en": "Festival", "mr": "उत्सव" },
+    "caption": { "en": "Shri Ganesha adorned with pheta and flowers", "mr": "फेटा व फुलांनी सजलेली श्रीमूर्ती" }
+  },
+  {
+    "id": "g2021-02",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-02.jpg",
+    "category": { "en": "Decoration", "mr": "सजावट" },
+    "caption": { "en": "The main mandap and decoration", "mr": "मुख्य मंडप व आरास" }
+  },
+  {
+    "id": "g2021-03",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-03.jpg",
+    "category": { "en": "Festival", "mr": "उत्सव" },
+    "caption": { "en": "A closer darshan of Shri Ganesha", "mr": "श्रींचे जवळून दर्शन" }
+  },
+  {
+    "id": "g2021-04",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-04.jpg",
+    "category": { "en": "Festival", "mr": "उत्सव" },
+    "caption": { "en": "Shri Ganesha at the mandap", "mr": "मंडपातील श्रीमूर्ती" }
+  },
+  {
+    "id": "g2021-05",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-05.jpg",
+    "category": { "en": "Festival", "mr": "उत्सव" },
+    "caption": { "en": "The main Ganesh idol", "mr": "मुख्य श्रीगणेश मूर्ती" }
+  },
+  {
+    "id": "g2021-06",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-06.jpg",
+    "category": { "en": "Decoration", "mr": "सजावट" },
+    "caption": { "en": "Evening illumination and decor", "mr": "सायंकाळची रोषणाई व सजावट" }
+  },
+  {
+    "id": "g2021-07",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-07.jpg",
+    "category": { "en": "Rituals", "mr": "पूजाविधी" },
+    "caption": { "en": "Puja rituals during the festival", "mr": "उत्सवातील पूजाविधी" }
+  },
+  {
+    "id": "sabha-2026-01",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-01.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Members at the annual report meeting", "mr": "अहवाल सभेस उपस्थित सभासद" }
+  },
+  {
+    "id": "sabha-2026-02",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-02.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Guidance during the meeting", "mr": "सभेत मार्गदर्शन" }
+  },
+  {
+    "id": "sabha-2026-03",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-03.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Reading the annual report", "mr": "अहवालाचे वाचन" }
+  },
+  {
+    "id": "sabha-2026-04",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-04.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Discussion during the meeting", "mr": "सभेतील चर्चा" }
+  },
+  {
+    "id": "sabha-2026-05",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-05.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Members in attendance", "mr": "उपस्थित सभासद" }
+  },
+  {
+    "id": "sabha-2026-06",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-06.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Moments from the report meeting", "mr": "अहवाल सभेचे क्षण" }
+  },
+  {
+    "id": "sabha-2026-07",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-07.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Annual report meeting", "mr": "वार्षिक अहवाल सभा" }
+  },
+  {
+    "id": "sabha-2026-08",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-08.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Participation in the meeting", "mr": "सभेतील सहभाग" }
+  },
+  {
+    "id": "sabha-2026-09",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-09.jpg",
+    "category": { "en": "Meeting", "mr": "सभा" },
+    "caption": { "en": "Report meeting", "mr": "अहवाल सभा" }
+  }
 ]

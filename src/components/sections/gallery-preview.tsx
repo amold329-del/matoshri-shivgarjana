@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { X, ArrowRight, ImageIcon } from "lucide-react";
 import { getGallery } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -91,7 +92,7 @@ export function GalleryPreview() {
                 {item.src ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={item.src}
+                    src={asset(item.src)}
                     alt={tr(item.caption)}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -155,7 +156,7 @@ export function GalleryPreview() {
             {active.src ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={active.src}
+                src={asset(active.src)}
                 alt={tr(active.caption)}
                 className="h-full w-full object-contain"
               />
