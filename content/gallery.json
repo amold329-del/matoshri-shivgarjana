@@ -1,32 +1,492 @@
 [
-  { "id": "g2025-01", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-01.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "The main Ganesh idol", "mr": "मुख्य श्रीगणेश मूर्ती" } },
-  { "id": "g2025-02", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-02.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Devotees at the festival", "mr": "उत्सवात सहभागी भक्त" } },
-  { "id": "g2025-03", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-03.jpg", "category": { "en": "Cultural", "mr": "सांस्कृतिक कार्यक्रम" }, "caption": { "en": "Bhajan and aarti", "mr": "भजन व आरती" } },
-  { "id": "g2025-04", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-04.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "The Mandal's volunteers", "mr": "मंडळाचे कार्यकर्ते" } },
-  { "id": "g2025-05", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-05.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "The festival welcome arch", "mr": "उत्सवाचे प्रवेशद्वार" } },
-  { "id": "g2025-06", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-06.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "The welcome arch at night", "mr": "रात्रीचे प्रवेशद्वार" } },
-  { "id": "g2025-07", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-07.jpg", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Floral decoration for the puja", "mr": "पूजेची पुष्पसजावट" } },
-  { "id": "g2025-08", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-08.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Joyful moments at the festival", "mr": "उत्सवातील आनंदाचे क्षण" } },
-  { "id": "g2025-09", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-09.jpg", "category": { "en": "Rituals", "mr": "पूजाविधी" }, "caption": { "en": "Darshan of Shri Ganesha", "mr": "श्रींचे दर्शन" } },
-  { "id": "g2025-10", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-10.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Felicitation of a guest", "mr": "पाहुण्यांचा सत्कार" } },
-  { "id": "g2025-11", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-11.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Arrival of Shri Ganesha", "mr": "श्रींचे आगमन" } },
-  { "id": "g2025-12", "year": 2025, "type": "photo", "src": "/gallery/ganeshotsav-2025-12.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Welcome and felicitation", "mr": "स्वागत व सत्कार" } },
-
-  { "id": "g2021-01", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-01.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Shri Ganesha adorned with pheta and flowers", "mr": "फेटा व फुलांनी सजलेली श्रीमूर्ती" } },
-  { "id": "g2021-02", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-02.jpg", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "The main mandap and decoration", "mr": "मुख्य मंडप व आरास" } },
-  { "id": "g2021-03", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-03.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "A closer darshan of Shri Ganesha", "mr": "श्रींचे जवळून दर्शन" } },
-  { "id": "g2021-04", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-04.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "Shri Ganesha at the mandap", "mr": "मंडपातील श्रीमूर्ती" } },
-  { "id": "g2021-05", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-05.jpg", "category": { "en": "Festival", "mr": "उत्सव" }, "caption": { "en": "The main Ganesh idol", "mr": "मुख्य श्रीगणेश मूर्ती" } },
-  { "id": "g2021-06", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-06.jpg", "category": { "en": "Decoration", "mr": "सजावट" }, "caption": { "en": "Evening illumination and decor", "mr": "सायंकाळची रोषणाई व सजावट" } },
-  { "id": "g2021-07", "year": 2021, "type": "photo", "src": "/gallery/ganeshotsav-2021-07.jpg", "category": { "en": "Rituals", "mr": "पूजाविधी" }, "caption": { "en": "Puja rituals during the festival", "mr": "उत्सवातील पूजाविधी" } },
-
-  { "id": "sabha-2026-01", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-01.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Members at the annual report meeting", "mr": "अहवाल सभेस उपस्थित सभासद" } },
-  { "id": "sabha-2026-02", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-02.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Guidance during the meeting", "mr": "सभेत मार्गदर्शन" } },
-  { "id": "sabha-2026-03", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-03.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Reading the annual report", "mr": "अहवालाचे वाचन" } },
-  { "id": "sabha-2026-04", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-04.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Discussion during the meeting", "mr": "सभेतील चर्चा" } },
-  { "id": "sabha-2026-05", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-05.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Members in attendance", "mr": "उपस्थित सभासद" } },
-  { "id": "sabha-2026-06", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-06.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Moments from the report meeting", "mr": "अहवाल सभेचे क्षण" } },
-  { "id": "sabha-2026-07", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-07.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Annual report meeting", "mr": "वार्षिक अहवाल सभा" } },
-  { "id": "sabha-2026-08", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-08.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Participation in the meeting", "mr": "सभेतील सहभाग" } },
-  { "id": "sabha-2026-09", "year": 2026, "type": "photo", "src": "/gallery/ahawal-sabha-09.jpg", "category": { "en": "Meeting", "mr": "सभा" }, "caption": { "en": "Report meeting", "mr": "अहवाल सभा" } }
+  {
+    "id": "g2025-01",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-01.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The main Ganesh idol",
+      "mr": "मुख्य श्रीगणेश मूर्ती"
+    }
+  },
+  {
+    "id": "g2025-02",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-02.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Devotees at the festival",
+      "mr": "उत्सवात सहभागी भक्त"
+    }
+  },
+  {
+    "id": "g2025-03",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-03.jpg",
+    "category": {
+      "en": "Cultural",
+      "mr": "सांस्कृतिक कार्यक्रम"
+    },
+    "caption": {
+      "en": "Bhajan and aarti",
+      "mr": "भजन व आरती"
+    }
+  },
+  {
+    "id": "g2025-04",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-04.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The Mandal's volunteers",
+      "mr": "मंडळाचे कार्यकर्ते"
+    }
+  },
+  {
+    "id": "g2025-05",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-05.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The festival welcome arch",
+      "mr": "उत्सवाचे प्रवेशद्वार"
+    }
+  },
+  {
+    "id": "g2025-06",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-06.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The welcome arch at night",
+      "mr": "रात्रीचे प्रवेशद्वार"
+    }
+  },
+  {
+    "id": "g2025-07",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-07.jpg",
+    "category": {
+      "en": "Decoration",
+      "mr": "सजावट"
+    },
+    "caption": {
+      "en": "Floral decoration for the puja",
+      "mr": "पूजेची पुष्पसजावट"
+    }
+  },
+  {
+    "id": "g2025-08",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-08.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Joyful moments at the festival",
+      "mr": "उत्सवातील आनंदाचे क्षण"
+    }
+  },
+  {
+    "id": "g2025-09",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-09.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "Darshan of Shri Ganesha",
+      "mr": "श्रींचे दर्शन"
+    }
+  },
+  {
+    "id": "g2025-10",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-10.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Felicitation of a guest",
+      "mr": "पाहुण्यांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2025-11",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-11.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Arrival of Shri Ganesha",
+      "mr": "श्रींचे आगमन"
+    }
+  },
+  {
+    "id": "g2025-12",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2025-12.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Welcome and felicitation",
+      "mr": "स्वागत व सत्कार"
+    }
+  },
+  {
+    "id": "mandal-2025-01",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-01.jpg",
+    "category": {
+      "en": "Registration",
+      "mr": "नोंदणी"
+    },
+    "caption": {
+      "en": "Committee members with the registration documents",
+      "mr": "नोंदणी दस्तऐवजांसह कार्यकर्ते"
+    }
+  },
+  {
+    "id": "mandal-2025-02",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-02.jpg",
+    "category": {
+      "en": "Setup",
+      "mr": "मंडप उभारणी"
+    },
+    "caption": {
+      "en": "The mandap setup begins",
+      "mr": "मंडप उभारणीची सुरुवात"
+    }
+  },
+  {
+    "id": "mandal-2025-03",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-03.jpg",
+    "category": {
+      "en": "Registration",
+      "mr": "नोंदणी"
+    },
+    "caption": {
+      "en": "Receiving the certificate of registration",
+      "mr": "नोंदणी प्रमाणपत्र स्वीकारताना"
+    }
+  },
+  {
+    "id": "mandal-2025-04",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-04.jpg",
+    "category": {
+      "en": "Registration",
+      "mr": "नोंदणी"
+    },
+    "caption": {
+      "en": "Members at the registration",
+      "mr": "नोंदणीप्रसंगी कार्यकर्ते"
+    }
+  },
+  {
+    "id": "mandal-2025-05",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-05.jpg",
+    "category": {
+      "en": "Registration",
+      "mr": "नोंदणी"
+    },
+    "caption": {
+      "en": "The Mandal's office bearers",
+      "mr": "मंडळाचे पदाधिकारी"
+    }
+  },
+  {
+    "id": "mandal-2025-06",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-06.jpg",
+    "category": {
+      "en": "Setup",
+      "mr": "मंडप उभारणी"
+    },
+    "caption": {
+      "en": "Preparing the mandap",
+      "mr": "मंडपाची तयारी"
+    }
+  },
+  {
+    "id": "mandal-2025-07",
+    "year": 2025,
+    "type": "photo",
+    "src": "/gallery/mandal-2025-07.jpg",
+    "category": {
+      "en": "Registration",
+      "mr": "नोंदणी"
+    },
+    "caption": {
+      "en": "Presentation of the registration certificate",
+      "mr": "नोंदणी प्रमाणपत्र वितरण"
+    }
+  },
+  {
+    "id": "g2021-01",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-01.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Shri Ganesha adorned with pheta and flowers",
+      "mr": "फेटा व फुलांनी सजलेली श्रीमूर्ती"
+    }
+  },
+  {
+    "id": "g2021-02",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-02.jpg",
+    "category": {
+      "en": "Decoration",
+      "mr": "सजावट"
+    },
+    "caption": {
+      "en": "The main mandap and decoration",
+      "mr": "मुख्य मंडप व आरास"
+    }
+  },
+  {
+    "id": "g2021-03",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-03.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "A closer darshan of Shri Ganesha",
+      "mr": "श्रींचे जवळून दर्शन"
+    }
+  },
+  {
+    "id": "g2021-04",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-04.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Shri Ganesha at the mandap",
+      "mr": "मंडपातील श्रीमूर्ती"
+    }
+  },
+  {
+    "id": "g2021-05",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-05.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The main Ganesh idol",
+      "mr": "मुख्य श्रीगणेश मूर्ती"
+    }
+  },
+  {
+    "id": "g2021-06",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-06.jpg",
+    "category": {
+      "en": "Decoration",
+      "mr": "सजावट"
+    },
+    "caption": {
+      "en": "Evening illumination and decor",
+      "mr": "सायंकाळची रोषणाई व सजावट"
+    }
+  },
+  {
+    "id": "g2021-07",
+    "year": 2021,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2021-07.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "Puja rituals during the festival",
+      "mr": "उत्सवातील पूजाविधी"
+    }
+  },
+  {
+    "id": "sabha-2026-01",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-01.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Members at the annual report meeting",
+      "mr": "अहवाल सभेस उपस्थित सभासद"
+    }
+  },
+  {
+    "id": "sabha-2026-02",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-02.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Guidance during the meeting",
+      "mr": "सभेत मार्गदर्शन"
+    }
+  },
+  {
+    "id": "sabha-2026-03",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-03.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Reading the annual report",
+      "mr": "अहवालाचे वाचन"
+    }
+  },
+  {
+    "id": "sabha-2026-04",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-04.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Discussion during the meeting",
+      "mr": "सभेतील चर्चा"
+    }
+  },
+  {
+    "id": "sabha-2026-05",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-05.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Members in attendance",
+      "mr": "उपस्थित सभासद"
+    }
+  },
+  {
+    "id": "sabha-2026-06",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-06.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Moments from the report meeting",
+      "mr": "अहवाल सभेचे क्षण"
+    }
+  },
+  {
+    "id": "sabha-2026-07",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-07.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Annual report meeting",
+      "mr": "वार्षिक अहवाल सभा"
+    }
+  },
+  {
+    "id": "sabha-2026-08",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-08.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Participation in the meeting",
+      "mr": "सभेतील सहभाग"
+    }
+  },
+  {
+    "id": "sabha-2026-09",
+    "year": 2026,
+    "type": "photo",
+    "src": "/gallery/ahawal-sabha-09.jpg",
+    "category": {
+      "en": "Meeting",
+      "mr": "सभा"
+    },
+    "caption": {
+      "en": "Report meeting",
+      "mr": "अहवाल सभा"
+    }
+  }
 ]
