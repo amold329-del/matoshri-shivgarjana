@@ -72,21 +72,15 @@ export function Hero() {
 
         <motion.h1
           variants={item}
-          className="font-mr text-[clamp(1.4rem,5vw,4.2rem)] font-extrabold leading-[1.32] text-[var(--dark-text)]"
+          className="whitespace-nowrap font-mr text-[clamp(0.7rem,3.5vw,4.5rem)] font-extrabold leading-[1.25] text-[var(--dark-text)]"
         >
-          <span className="block whitespace-nowrap">मातोश्री शिवगर्जना</span>
-          <span className="mt-2 block whitespace-nowrap goldtext">
-            सार्वजनिक गणेशोत्सव मंडळ
-          </span>
-          <span className="mt-2 block text-[0.5em] font-bold text-[var(--dark-text-soft)]">
-            (रजि.)
-          </span>
+          मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.)
         </motion.h1>
 
         {/* Devotional tagline */}
         <motion.p
           variants={item}
-          className="mt-5 font-mr text-xl font-semibold tracking-wide text-gold-light sm:text-2xl"
+          className="mt-6 whitespace-nowrap font-mr text-[clamp(1.6rem,3.4vw,3.25rem)] font-bold tracking-wide text-gold-light"
         >
           {tr(org.tagline)}
         </motion.p>

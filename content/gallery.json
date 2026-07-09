@@ -266,6 +266,370 @@
     }
   },
   {
+    "id": "g2024-01",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-01.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The Ganesh idol",
+      "mr": "श्रींची मूर्ती"
+    }
+  },
+  {
+    "id": "g2024-02",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-02.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "A closer darshan of the idol",
+      "mr": "श्रींचे जवळून दर्शन"
+    }
+  },
+  {
+    "id": "g2024-03",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-03.jpg",
+    "category": {
+      "en": "Setup",
+      "mr": "मंडप उभारणी"
+    },
+    "caption": {
+      "en": "Painting the mandap boards",
+      "mr": "मंडपाची रंगरंगोटी"
+    }
+  },
+  {
+    "id": "g2024-04",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-04.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation of a dignitary",
+      "mr": "मान्यवरांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2024-05",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-05.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "The pole worship",
+      "mr": "खांब पूजा"
+    }
+  },
+  {
+    "id": "g2024-06",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-06.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "Pole worship rituals",
+      "mr": "खांब पूजेचे विधी"
+    }
+  },
+  {
+    "id": "g2024-07",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-07.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "During the pole worship",
+      "mr": "खांब पूजेप्रसंगी"
+    }
+  },
+  {
+    "id": "g2024-08",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-08.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "Moments of worship",
+      "mr": "पूजेचे क्षण"
+    }
+  },
+  {
+    "id": "g2024-09",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-09.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Meeting a dignitary",
+      "mr": "मान्यवरांची भेट"
+    }
+  },
+  {
+    "id": "g2024-10",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-10.jpg",
+    "category": {
+      "en": "Setup",
+      "mr": "मंडप उभारणी"
+    },
+    "caption": {
+      "en": "Mandap decoration underway",
+      "mr": "मंडप सजावट सुरू"
+    }
+  },
+  {
+    "id": "g2024-11",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-11.jpg",
+    "category": {
+      "en": "Decoration",
+      "mr": "सजावट"
+    },
+    "caption": {
+      "en": "The 'Matoshricha Vighnaharta' nameplate",
+      "mr": "मातोश्रीचा विघ्नहर्ता — नामफलक"
+    }
+  },
+  {
+    "id": "g2024-12",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-12.jpg",
+    "category": {
+      "en": "Decoration",
+      "mr": "सजावट"
+    },
+    "caption": {
+      "en": "Installing the nameplate",
+      "mr": "नामफलकाची उभारणी"
+    }
+  },
+  {
+    "id": "g2024-13",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-13.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation of a dignitary",
+      "mr": "मान्यवरांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2024-14",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-14.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Volunteers with a dignitary",
+      "mr": "कार्यकर्ते व मान्यवर"
+    }
+  },
+  {
+    "id": "g2024-15",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-15.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation of a dignitary",
+      "mr": "मान्यवरांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2024-16",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-16.jpg",
+    "category": {
+      "en": "Procession",
+      "mr": "मिरवणूक"
+    },
+    "caption": {
+      "en": "The visarjan procession",
+      "mr": "विसर्जन मिरवणूक"
+    }
+  },
+  {
+    "id": "g2024-17",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-17.jpg",
+    "category": {
+      "en": "Procession",
+      "mr": "मिरवणूक"
+    },
+    "caption": {
+      "en": "A splash of colours",
+      "mr": "रंगांची उधळण"
+    }
+  },
+  {
+    "id": "g2024-18",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-18.jpg",
+    "category": {
+      "en": "Procession",
+      "mr": "मिरवणूक"
+    },
+    "caption": {
+      "en": "The visarjan celebration",
+      "mr": "विसर्जन सोहळा"
+    }
+  },
+  {
+    "id": "g2024-19",
+    "year": 2024,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2024-19.jpg",
+    "category": {
+      "en": "Procession",
+      "mr": "मिरवणूक"
+    },
+    "caption": {
+      "en": "The visarjan procession",
+      "mr": "विसर्जन मिरवणूक"
+    }
+  },
+  {
+    "id": "g2023-01",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-01.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "The Ganesh idol",
+      "mr": "श्रींची मूर्ती"
+    }
+  },
+  {
+    "id": "g2023-02",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-02.jpg",
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
+    "caption": {
+      "en": "Members and guests",
+      "mr": "कार्यकर्ते व पाहुणे"
+    }
+  },
+  {
+    "id": "g2023-03",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-03.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation of a guest",
+      "mr": "मान्यवरांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2023-04",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-04.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation with a sapling",
+      "mr": "रोपटे भेट देऊन सत्कार"
+    }
+  },
+  {
+    "id": "g2023-05",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-05.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "A sapling as a token of honour",
+      "mr": "स्नेहभेट — रोपटे"
+    }
+  },
+  {
+    "id": "g2023-06",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-06.jpg",
+    "category": {
+      "en": "Felicitation",
+      "mr": "सत्कार"
+    },
+    "caption": {
+      "en": "Felicitation of a guest",
+      "mr": "मान्यवरांचा सत्कार"
+    }
+  },
+  {
+    "id": "g2023-07",
+    "year": 2023,
+    "type": "photo",
+    "src": "/gallery/ganeshotsav-2023-07.jpg",
+    "category": {
+      "en": "Rituals",
+      "mr": "पूजाविधी"
+    },
+    "caption": {
+      "en": "The puja ceremony",
+      "mr": "पूजा विधी"
+    }
+  },
+  {
     "id": "g2021-01",
     "year": 2021,
     "type": "photo",

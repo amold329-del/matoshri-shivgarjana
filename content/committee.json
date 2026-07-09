@@ -1,5 +1,41 @@
 [
   {
+    "name": "कु. विवेक राजाराम चव्हाण",
+    "role": {
+      "en": "President",
+      "mr": "अध्यक्ष"
+    },
+    "responsibilities": {
+      "en": "Leads the Mandal and presides over the general body.",
+      "mr": "मंडळाचे नेतृत्व व सर्वसाधारण सभेचे अध्यक्षपद."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. मनोज श्रीपत केसरकर",
+    "role": {
+      "en": "Secretary",
+      "mr": "सचिव"
+    },
+    "responsibilities": {
+      "en": "Correspondence, notices and records of the Mandal.",
+      "mr": "मंडळाचा पत्रव्यवहार, सूचना व दप्तर."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. अमोल चंद्रकांत दाभोळकर",
+    "role": {
+      "en": "Treasurer",
+      "mr": "खजिनदार"
+    },
+    "responsibilities": {
+      "en": "Accounts, vargani receipts and the statement of accounts.",
+      "mr": "जमाखर्च, वर्गणी पावत्या व हिशेब."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
     "name": "श्री. किशोर गंगाराम पाताडे",
     "role": {
       "en": "Committee Member",
@@ -9,43 +45,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
-  },
-  {
-    "name": "श्री. मनोज श्रीपत केसरकर",
-    "role": {
-      "en": "Committee Member",
-      "mr": "कार्यकारिणी सदस्य"
-    },
-    "responsibilities": {
-      "en": "Serving the Mandal's festival, social and community initiatives.",
-      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
-    },
-    "tenure": "2025 पासून"
-  },
-  {
-    "name": "श्री. अमोल चंद्रकांत दाभोळकर",
-    "role": {
-      "en": "Committee Member",
-      "mr": "कार्यकारिणी सदस्य"
-    },
-    "responsibilities": {
-      "en": "Serving the Mandal's festival, social and community initiatives.",
-      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
-    },
-    "tenure": "2025 पासून"
-  },
-  {
-    "name": "कु. विवेक राजाराम चव्हाण",
-    "role": {
-      "en": "Committee Member",
-      "mr": "कार्यकारिणी सदस्य"
-    },
-    "responsibilities": {
-      "en": "Serving the Mandal's festival, social and community initiatives.",
-      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
-    },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "कु. सुदेश विठोबा पंदारे",
@@ -57,7 +57,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "श्री. श्रावण रमेश कटाळे",
@@ -69,7 +69,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "श्री. सिद्धेश राजाराम चव्हाण",
@@ -81,7 +81,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "श्री. मुकुंद बाळकृष्ण कुंभार",
@@ -93,7 +93,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "कु. मनिष गजानन भोजने",
@@ -105,7 +105,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "श्री. राजाराम विष्णु चव्हाण",
@@ -117,7 +117,7 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
   },
   {
     "name": "मंगला देवेंद्र साळवी",
@@ -129,6 +129,78 @@
       "en": "Serving the Mandal's festival, social and community initiatives.",
       "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
     },
-    "tenure": "2025 पासून"
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. तन्मय विठ्ठल पंदारे",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. नयन कृष्णा जांभळे",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. रवींद्र अर्जुन बदांबे",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. साहिल बुरुड",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. संजय हडशी",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
+  },
+  {
+    "name": "श्री. रामचंद्र पंदारे",
+    "role": {
+      "en": "Committee Member",
+      "mr": "कार्यकारिणी सदस्य"
+    },
+    "responsibilities": {
+      "en": "Serving the Mandal's festival, social and community initiatives.",
+      "mr": "मंडळाच्या उत्सव, सामाजिक व सामुदायिक उपक्रमांची सेवा."
+    },
+    "tenure": "2019 पासून"
   }
 ]

@@ -65,6 +65,8 @@ export interface SocialActivity {
   icon: string;
   title: Bilingual;
   body: Bilingual;
+  /** Marks an initiative the Mandal plans to start (shown with a "planned" badge). */
+  planned?: boolean;
 }
 
 export interface NewsItem {

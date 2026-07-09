@@ -6,6 +6,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getDownloads } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { dict } from "@/lib/i18n";
 import type { DownloadItem } from "@/types/content";
 
@@ -49,7 +50,7 @@ export function DownloadsView() {
                 {g.items.map((d, i) => (
                   <Reveal key={d.title.en} delay={i * 0.05}>
                     <a
-                      href={d.href}
+                      href={asset(d.href)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="card-surface group flex items-center gap-4 p-5 transition-colors hover:border-gold"

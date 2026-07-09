@@ -1,10 +1,11 @@
 [
   {
     "icon": "droplet",
+    "planned": true,
     "title": { "en": "Blood Donation", "mr": "रक्तदान" },
     "body": {
-      "en": "Annual donation camps in partnership with local hospitals.",
-      "mr": "स्थानिक रुग्णालयांच्या सहकार्याने वार्षिक रक्तदान शिबिरे."
+      "en": "A blood donation camp is planned in partnership with local hospitals.",
+      "mr": "स्थानिक रुग्णालयांच्या सहकार्याने रक्तदान शिबिर आयोजित करण्याचे नियोजन आहे."
     }
   },
   {

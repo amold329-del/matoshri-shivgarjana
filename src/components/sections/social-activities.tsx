@@ -57,6 +57,11 @@ export function SocialActivities() {
                   <h3 className="mt-4 font-display text-base font-bold text-ink">
                     {tr(item.title)}
                   </h3>
+                  {item.planned && (
+                    <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wider text-gold">
+                      नियोजित
+                    </span>
+                  )}
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                     {tr(item.body)}
                   </p>
