@@ -92,6 +92,7 @@ const orgJsonLd = {
     addressCountry: "IN",
   },
   email: settings.contact.email,
+  sameAs: settings.social.map((s) => s.href),
   slogan: "श्रद्धा • एकता • सेवा",
 };
 

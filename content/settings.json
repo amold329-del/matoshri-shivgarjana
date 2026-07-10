@@ -36,7 +36,9 @@
       "जेरबाई वाडिया रोड, परेल-भोईवाडा",
       "मुंबई - १२"
     ],
-    "phones": ["+91 77383 37412"],
+    "phones": [
+      "+91 77383 37412"
+    ],
     "email": "matoshreeshivgarjanasarvajanik@gmail.com",
     "hours": {
       "en": "Mon – Sun: 9:00 AM – 9:00 PM (during festival)",
@@ -46,9 +48,10 @@
     "mapLink": "https://maps.google.com/?q=Jerbai+Wadia+Road,+Parel+Bhoiwada,+Mumbai+400012"
   },
   "social": [
-    { "label": "Facebook", "href": "#", "icon": "facebook" },
-    { "label": "Instagram", "href": "#", "icon": "instagram" },
-    { "label": "YouTube", "href": "#", "icon": "youtube" },
-    { "label": "Twitter", "href": "#", "icon": "twitter" }
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/matoshree.cha.vighnaharta/",
+      "icon": "instagram"
+    }
   ]
 }
