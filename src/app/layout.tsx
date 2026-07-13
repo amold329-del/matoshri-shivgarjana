@@ -109,6 +109,11 @@ export default function RootLayout({
     >
       <body>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var u=navigator.userAgent||"";var m=/iPhone|iPod|iPad|Android|Mobile|Windows Phone/i.test(u);var t=(navigator.maxTouchPoints||0)>1;var d=Math.min(screen.width||9999,screen.height||9999);if(!m&&t&&d<=480){var v=document.querySelector('meta[name="viewport"]');if(v){v.setAttribute("content","width=1366");}}}catch(e){}})();`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
