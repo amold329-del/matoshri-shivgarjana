@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
@@ -178,11 +179,16 @@ export function GalleryView() {
       </section>
 
       {/* Lightbox */}
-      {active && (
-        <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
-          onClick={close}
-        >
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
+            onClick={close}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
           <button
             type="button"
             aria-label="Close"
@@ -217,9 +223,13 @@ export function GalleryView() {
               </button>
             </>
           )}
-          <figure
+          <motion.figure
+            key={activeIdx}
             className="max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-2xl"
             onClick={(e) => e.stopPropagation()}
+            initial={{ scale: 0.92, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             {active.src ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -239,9 +249,10 @@ export function GalleryView() {
             <figcaption className="bg-maroon-ink p-4 text-center text-sm text-cream">
               {tr(active.caption)} · {tr(active.category)} · {active.year}
             </figcaption>
-          </figure>
-        </div>
-      )}
+          </motion.figure>
+        </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

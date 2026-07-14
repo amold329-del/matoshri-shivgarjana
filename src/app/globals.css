@@ -137,6 +137,75 @@
     transform: translateY(-2px);
     border-color: #c9a227;
   }
+
+  /* Gold shine sweep across primary buttons on hover */
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-gold::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.55),
+      transparent
+    );
+    transform: skewX(-18deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+  .btn-gold:hover::after {
+    left: 135%;
+  }
+
+  /* Tactile lift for cards */
+  .card-surface {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+  .card-surface:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 162, 39, 0.5);
+    box-shadow: 0 18px 40px -20px rgba(201, 162, 39, 0.5);
+  }
+
+  /* Reusable stronger lift for image/feature tiles */
+  .hover-lift {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 162, 39, 0.6);
+    box-shadow: 0 20px 44px -18px rgba(201, 162, 39, 0.55);
+  }
+}
+
+/* Respect reduced-motion: disable the new hover/shine motions */
+@media (prefers-reduced-motion: reduce) {
+  .btn-gold::after {
+    display: none;
+  }
+  .card-surface,
+  .hover-lift,
+  .btn {
+    transition: none !important;
+  }
+  .card-surface:hover,
+  .hover-lift:hover,
+  .btn:hover {
+    transform: none !important;
+  }
 }
 
 /* Respect reduced motion globally */

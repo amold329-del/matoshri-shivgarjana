@@ -9,6 +9,8 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LanguageProvider } from "@/components/providers/language-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { BackToTop } from "@/components/ui/back-to-top";
 import { getSettings } from "@/lib/content";
 
 /* ---- Fonts wired to the CSS variables used in tailwind.config ---- */
@@ -124,9 +126,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider defaultLang="mr">
+            <ScrollProgress />
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <BackToTop />
           </LanguageProvider>
         </ThemeProvider>
       </body>
