@@ -56,10 +56,20 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <Emblem className="h-10 w-10 shrink-0" />
           <span className="leading-tight">
-            <span className="block font-mr text-[0.95rem] font-bold text-ink">
+            <span
+              className={cn(
+                "block font-mr text-[0.95rem] font-bold transition-colors",
+                scrolled ? "text-ink" : "text-[var(--dark-text)]",
+              )}
+            >
               {tr(settings.org.nameShort)}
             </span>
-            <span className="block font-display text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-saffron">
+            <span
+              className={cn(
+                "block font-display text-[0.62rem] font-semibold uppercase tracking-[0.18em] transition-colors",
+                scrolled ? "text-saffron" : "text-gold-light",
+              )}
+            >
               स्थापना {settings.org.established} · {settings.org.yearsCount} वे वर्ष
             </span>
           </span>
@@ -74,10 +84,14 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
+                    "relative whitespace-nowrap rounded-full px-1.5 py-2 text-[0.8rem] font-medium transition-colors",
                     active
-                      ? "text-saffron"
-                      : "text-ink-soft hover:text-saffron",
+                      ? scrolled
+                        ? "text-saffron"
+                        : "text-gold-light"
+                      : scrolled
+                        ? "text-ink-soft hover:text-saffron"
+                        : "text-[var(--dark-text-soft)] hover:text-[var(--dark-text)]",
                   )}
                 >
                   {tr(item.label)}
@@ -94,13 +108,18 @@ export function Navbar() {
 
         {/* Right controls */}
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          <ThemeToggle onDark={!scrolled} />
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-card-border text-ink xl:hidden"
+            className={cn(
+              "grid h-10 w-10 place-items-center rounded-full border transition-colors xl:hidden",
+              scrolled
+                ? "border-card-border text-ink"
+                : "border-white/25 text-[var(--dark-text)]",
+            )}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

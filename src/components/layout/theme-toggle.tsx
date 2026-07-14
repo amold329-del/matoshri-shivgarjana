@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 /**
  * Light/dark switch.
@@ -13,7 +14,7 @@ import { Moon, Sun } from "lucide-react";
  * mismatch. The click handler reads the live DOM class, so it works even before
  * React finishes hydrating.
  */
-export function ThemeToggle() {
+export function ThemeToggle({ onDark = false }: { onDark?: boolean }) {
   const { setTheme } = useTheme();
 
   return (
@@ -24,7 +25,12 @@ export function ThemeToggle() {
         const isDark = document.documentElement.classList.contains("dark");
         setTheme(isDark ? "light" : "dark");
       }}
-      className="grid h-10 w-10 place-items-center rounded-full border border-card-border text-ink transition-colors hover:border-gold hover:text-saffron"
+      className={cn(
+        "grid h-10 w-10 place-items-center rounded-full border transition-colors",
+        onDark
+          ? "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light"
+          : "border-card-border text-ink hover:border-gold hover:text-saffron",
+      )}
     >
       {/* Shown in dark mode (tap to switch to light) */}
       <Sun className="hidden h-[18px] w-[18px] dark:block" />

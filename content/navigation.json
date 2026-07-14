@@ -8,6 +8,11 @@
   { "label": { "en": "Committee", "mr": "समिती" }, "href": "/committee" },
   { "label": { "en": "Vargani", "mr": "वर्गणी" }, "href": "/vargani" },
   {
+    "label": { "en": "Online Donation", "mr": "ऑनलाइन देणगी" },
+    "href": "/online-donation",
+    "comingSoon": true
+  },
+  {
     "label": { "en": "Registration", "mr": "नोंदणी तपशील" },
     "href": "/registration"
   },
