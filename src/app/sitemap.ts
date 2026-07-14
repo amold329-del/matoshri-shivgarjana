@@ -3,7 +3,7 @@ import { getNav } from "@/lib/content";
 
 export const dynamic = "force-static";
 
-const SITE_URL = "https://matoshri-shivgarjana.org";
+const SITE_URL = "https://matoshreechavighnaharta.co.in";
 
 /** Static sitemap built from the navigation manifest (export-safe). */
 export default function sitemap(): MetadataRoute.Sitemap {

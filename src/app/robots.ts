@@ -6,6 +6,6 @@ export const dynamic = "force-static";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://matoshri-shivgarjana.org/sitemap.xml",
+    sitemap: "https://matoshreechavighnaharta.co.in/sitemap.xml",
   };
 }

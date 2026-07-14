@@ -31,7 +31,7 @@ const devanagari = Noto_Sans_Devanagari({
 });
 
 const settings = getSettings();
-const SITE_URL = "https://matoshri-shivgarjana.org";
+const SITE_URL = "https://matoshreechavighnaharta.co.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
