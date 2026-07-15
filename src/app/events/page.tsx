@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { EventsView } from "./view";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "कार्यक्रम",
   description:
     "मातोश्री शिवगर्जना मंडळाचे आगामी व मागील कार्यक्रम — गणेशोत्सव वेळापत्रक, सांस्कृतिक संध्या, आरत्या आणि सामुदायिक उपक्रम.",
-};
+  path: "/events",
+});
 
 export default function Page() {
   return <EventsView />;

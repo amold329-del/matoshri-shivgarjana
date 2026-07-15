@@ -8,7 +8,7 @@ import { getNav, getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Emblem } from "@/components/ui/decorations";
-import { cn } from "@/lib/utils";
+import { cn, isActivePath } from "@/lib/utils";
 
 /**
  * Sticky navigation.
@@ -78,11 +78,12 @@ export function Navbar() {
         {/* Desktop links */}
         <ul className="hidden items-center gap-0.5 xl:flex">
           {nav.map((item) => {
-            const active = pathname === item.href;
+            const active = isActivePath(pathname, item.href);
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
                     "relative whitespace-nowrap rounded-full px-1.5 py-2 text-[0.8rem] font-medium transition-colors",
                     active
@@ -135,11 +136,12 @@ export function Navbar() {
       >
         <ul className="wrap flex flex-col gap-1 py-4">
           {nav.map((item) => {
-            const active = pathname === item.href;
+            const active = isActivePath(pathname, item.href);
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
                     "flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-colors",
                     active

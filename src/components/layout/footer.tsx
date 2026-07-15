@@ -15,6 +15,7 @@ import { getNav, getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
 import { Emblem, LotusDivider } from "@/components/ui/decorations";
+import { MapEmbed } from "@/components/ui/map-embed";
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   facebook: Facebook,
@@ -129,13 +130,10 @@ export function Footer() {
             })}
           </div>
           <div className="mt-6 overflow-hidden rounded-xl border border-gold/20">
-            <iframe
+            <MapEmbed
               src={settings.contact.mapEmbedSrc}
               title="स्थान नकाशा"
-              width="100%"
-              height="140"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              height={140}
               className="grayscale-[0.2]"
             />
           </div>
