@@ -217,6 +217,15 @@ Unchanged from the report's own coverage note:
   finding and not changed, but worth a look.
 - **S-18** — keep Next.js patched (`next@^15.1.6` here).
 
+## SEO (added 16 July)
+
+Separate from the audit — see **SEO.md**. Short version: the Search Console
+"Sitemap is HTML" error is a submission mistake (the homepage URL was submitted
+as the sitemap), not a code bug; the sitemap builds fine and always did.
+Shipped alongside: richer Organisation JSON-LD with a full postal address,
+Event markup for the Ganeshotsav programme, and a sitemap with the dishonest
+build-time `lastmod` removed.
+
 ## Re-testing
 
 ```bash

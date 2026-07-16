@@ -12,8 +12,9 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BackToTop } from "@/components/ui/back-to-top";
 import { SkipLink } from "@/components/ui/skip-link";
-import { getSettings } from "@/lib/content";
+import { JsonLd } from "@/components/ui/json-ld";
 import { OG_IMAGE, SITE_NAME, SITE_URL, TITLE_SUFFIX } from "@/lib/seo";
+import { organisationJsonLd } from "@/lib/structured-data";
 
 /* ---- Fonts wired to the CSS variables used in tailwind.config ---- */
 const inter = Inter({
@@ -33,8 +34,6 @@ const devanagari = Noto_Sans_Devanagari({
   variable: "--font-devanagari",
   display: "swap",
 });
-
-const settings = getSettings();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -90,29 +89,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-/** JSON-LD structured data for the organisation (SEO / rich results). */
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
-  alternateName: "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
-  foundingDate: "1980",
-  url: SITE_URL,
-  logo: OG_IMAGE.url,
-  image: OG_IMAGE.url,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Mumbai",
-    addressRegion: "Maharashtra",
-    addressCountry: "IN",
-  },
-  email: settings.contact.email,
-  // N-24 — the audit noted telephone was missing. Sourced from settings so it
-  // stays in step with what /contact/ actually renders.
-  telephone: settings.contact.phones[0]?.replace(/\s/g, ""),
-  sameAs: settings.social.map((s) => s.href),
-  slogan: "श्रद्धा • एकता • सेवा",
-};
+/* JSON-LD now lives in @/lib/structured-data — it grew past the point where
+   inlining it here made sense, and /events/ needs the Place block too.
+   N-24 (missing telephone) is fixed there, along with the street address,
+   postal code and geo slot that Google needs to tie the site to a real
+   location in Bhoiwada. */
 
 export default function RootLayout({
   children,
@@ -167,10 +148,7 @@ export default function RootLayout({
             __html: `(function(){try{var u=navigator.userAgent||"";var m=/iPhone|iPod|iPad|Android|Mobile|Windows Phone/i.test(u);var t=(navigator.maxTouchPoints||0)>1;var d=Math.min(screen.width||9999,screen.height||9999);if(!m&&t&&d<=480){var v=document.querySelector('meta[name="viewport"]');if(v){v.setAttribute("content","width=1366");}}}catch(e){}})();`,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-        />
+        <JsonLd data={organisationJsonLd()} />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

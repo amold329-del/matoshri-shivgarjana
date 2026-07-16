@@ -36,6 +36,14 @@
       "जेरबाई वाडिया रोड, परेल-भोईवाडा",
       "मुंबई - १२"
     ],
+    "postal": {
+      "streetAddress": "A Wing, 1/102, Matoshree SRA Co-operative Housing Society, Jerbai Wadia Road, Parel-Bhoiwada",
+      "addressLocality": "Mumbai",
+      "addressRegion": "MH",
+      "postalCode": "400012",
+      "addressCountry": "IN"
+    },
+    "geo": null,
     "phones": [
       "+91 77383 37412"
     ],
