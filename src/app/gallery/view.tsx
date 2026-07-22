@@ -225,7 +225,7 @@ export function GalleryView() {
           )}
           <motion.figure
             key={activeIdx}
-            className="max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-2xl"
+            className="overflow-hidden rounded-2xl"
             onClick={(e) => e.stopPropagation()}
             initial={{ scale: 0.92, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -236,11 +236,11 @@ export function GalleryView() {
               <img
                 src={asset(active.src)}
                 alt={tr(active.caption)}
-                className="h-full w-full object-contain"
+                className="mx-auto block max-h-[80vh] w-auto max-w-[min(92vw,60rem)] object-contain"
               />
             ) : (
               <div
-                className="flex aspect-video items-center justify-center"
+                className="flex aspect-video w-[min(88vw,720px)] items-center justify-center"
                 style={{ background: GRADIENTS[(activeIdx ?? 0) % GRADIENTS.length] }}
               >
                 <ImageIcon className="h-14 w-14 text-white/50" />
