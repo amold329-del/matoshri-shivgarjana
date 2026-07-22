@@ -10,6 +10,7 @@ import {
   TempleSilhouette,
   FloatingPetals,
 } from "@/components/ui/decorations";
+import { asset } from "@/lib/asset";
 
 /**
  * Fullscreen landing hero — the showpiece.
@@ -42,6 +43,16 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[radial-gradient(125%_125%_at_50%_-10%,#5a1024_0%,#2a0712_52%,#190410_100%)] text-center text-[var(--dark-text)]">
+      {/* Idol photograph backdrop */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={asset("/hero-idol.jpg")}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-top"
+      />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(25,4,16,0.66)_0%,rgba(42,7,18,0.46)_45%,rgba(25,4,16,0.82)_100%)]" />
+
       {/* gold glow */}
       <div
         className="pointer-events-none absolute left-1/2 top-[12%] h-[420px] w-[420px] -translate-x-1/2 rounded-full opacity-55 blur-[90px]"
@@ -49,7 +60,7 @@ export function Hero() {
       />
       {/* light rays */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.10]"
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           background:
             "conic-gradient(from 180deg at 50% 0%, transparent 0deg, #e6c868 12deg, transparent 24deg, transparent 60deg, #e6c868 72deg, transparent 84deg, transparent 140deg, #e6c868 152deg, transparent 164deg)",

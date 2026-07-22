@@ -5,6 +5,7 @@ import type { Bilingual } from "@/types/content";
 import {
   TempleSilhouette,
   FloatingPetals,
+  GaneshaMark,
 } from "@/components/ui/decorations";
 
 /**
@@ -33,6 +34,11 @@ export function PageHero({
         style={{ background: "radial-gradient(circle,#e6c868,transparent 65%)" }}
       />
       <FloatingPetals count={8} />
+
+      {/* Ganesha watermark */}
+      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+        <GaneshaMark className="h-[150%] w-auto text-gold-light opacity-[0.10]" />
+      </div>
 
       <div className="wrap relative z-10">
         <span className="eyebrow !text-gold-light">{tr(eyebrow)}</span>

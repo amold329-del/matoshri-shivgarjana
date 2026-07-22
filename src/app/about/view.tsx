@@ -63,6 +63,63 @@ export function AboutView() {
         </div>
       </section>
 
+      {/* Foreword — lines drawn from the Annual Report 2025 (pages 2-3) */}
+      <section className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_50%_-10%,#5a1024,#2a0712)] py-24 text-[var(--dark-text)]">
+        <div className="pointer-events-none absolute left-1/2 top-8 h-64 w-64 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" />
+        <div className="wrap relative max-w-3xl">
+          <Reveal className="text-center">
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-light">
+              {tr({ en: "From the Annual Report 2025", mr: "वार्षिक अहवाल २०२५" })}
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-extrabold text-gold-light sm:text-4xl">
+              {tr({ en: "A Message from the Mandal", mr: "मंडळाचे मनोगत" })}
+            </h2>
+          </Reveal>
+
+          <Quote className="mx-auto mt-8 h-9 w-9 text-gold/40" />
+
+          <div className="mt-4 space-y-5 text-[1.05rem] leading-relaxed text-[var(--dark-text-soft)]">
+            <Reveal>
+              <p>
+                {tr({
+                  en: "Since the founding of our community in 1980, the devotional tradition of Shri Ganeshotsav has continued unbroken. Begun through the society, this sacred tradition is today approaching nearly five decades of its journey.",
+                  mr: "आपल्या वसाहतीच्या स्थापनेपासून, म्हणजेच सन १९८० पासून, श्री गणेशोत्सवाची भक्तिमय परंपरा अखंडितपणे सुरू आहे. सोसायटीच्या माध्यमातून सुरू झालेली ही पावन परंपरा आज जवळपास पाच दशकांचा प्रवास पूर्ण करण्याच्या मार्गावर आहे.",
+                })}
+              </p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <p>
+                {tr({
+                  en: "The Ganeshotsav we have all celebrated together for many years has become a symbol of the unity and affection of our community. This year the Mandal enters its 47th year — an endeavour not of the Mandal alone, but of our entire community.",
+                  mr: "गेली अनेक वर्षे आपण सर्वजण एकत्र येऊन साजरा करीत असलेला श्री गणेशोत्सव हा आपल्या वसाहतीच्या एकोप्याचे आणि स्नेहाचे प्रतीक बनला आहे. मंडळ यावर्षी ४७ व्या वर्षात पदार्पण करीत आहे — ही केवळ मंडळाची नव्हे, तर आपल्या संपूर्ण वसाहतीची साधना आहे.",
+                })}
+              </p>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p>
+                {tr({
+                  en: "It is only through the selfless cooperation of all flat-owners, well-wishers, subscribers and donors that this festival is celebrated with ever-greater enthusiasm each year. Without your loving support, this sacred journey would not have been possible. Our heartfelt thanks to all.",
+                  mr: "सर्व सदनिकाधारक, हितचिंतक, वर्गणीदार आणि देणगीदार यांच्या निरपेक्ष सहकार्यामुळेच हा उत्सव दरवर्षी अधिक उत्साहाने साजरा होत आहे. आपल्या प्रेमळ पाठिंब्याशिवाय ही पावन यात्रा शक्य झाली नसती. सर्वांचे मनःपूर्वक शतशः आभार.",
+                })}
+              </p>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <p className="font-display text-xl font-semibold text-gold-light">
+                {tr({
+                  en: "Holding close the pure spirit and purpose of this festival, the Mandal marches onward towards its golden jubilee.",
+                  mr: "या उत्सवाची शुद्ध भावना आणि उद्देश हृदयाशी बाळगून मंडळ सुवर्ण महोत्सवाच्या दिशेने वाटचाल करीत आहे.",
+                })}
+              </p>
+            </Reveal>
+          </div>
+
+          <LotusDivider className="mt-9" />
+          <p className="mt-4 text-center text-sm text-gold-light/80">
+            {tr({ en: "— From the Annual Report 2025", mr: "— वार्षिक अहवाल २०२५ मधून" })}
+          </p>
+        </div>
+      </section>
+
       {/* Mission / Vision */}
       <section className="bg-surface-2 py-24">
         <div className="wrap grid gap-6 md:grid-cols-2">
@@ -133,7 +190,7 @@ export function AboutView() {
               </p>
               <LotusDivider className="mt-7" />
               <p className="mt-4 font-display font-bold text-maroon">
-                [अध्यक्षांचे नाव]
+                कु. विवेक राजाराम चव्हाण
               </p>
               <p className="text-sm text-ink-soft">{tr({ en: "President", mr: "अध्यक्ष" })}</p>
             </article>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useCallback, useEffect, useRef } from "react";
+import { useMemo, useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
@@ -10,7 +10,6 @@ import { getGallery } from "@/lib/content";
 import { asset } from "@/lib/asset";
 import { dict } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import { useFocusTrap, useBodyScrollLock } from "@/lib/modal-a11y";
 import type { GalleryItem } from "@/types/content";
 
 /** Deterministic gradients so placeholder tiles read as intentional design. */
@@ -67,14 +66,6 @@ export function GalleryView() {
   }, [activeIdx, close, next, prev]);
 
   const active = activeIdx === null ? null : filtered[activeIdx];
-
-  /* N-13 — dialog semantics, focus management and scroll lock.
-     Esc / arrow handling above already passes (F-15/F-16) and is untouched. */
-  const isOpen = activeIdx !== null;
-  const dialogRef = useRef<HTMLDivElement>(null);
-  const closeRef = useRef<HTMLButtonElement>(null);
-  useBodyScrollLock(isOpen);
-  useFocusTrap(isOpen, dialogRef, closeRef);
 
   return (
     <>
@@ -191,12 +182,7 @@ export function GalleryView() {
       <AnimatePresence>
         {active && (
           <motion.div
-            ref={dialogRef}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="lightbox-caption"
-            tabIndex={-1}
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 outline-none backdrop-blur-sm"
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
             onClick={close}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -204,7 +190,6 @@ export function GalleryView() {
             transition={{ duration: 0.2 }}
           >
           <button
-            ref={closeRef}
             type="button"
             aria-label="Close"
             className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10"
@@ -261,10 +246,7 @@ export function GalleryView() {
                 <ImageIcon className="h-14 w-14 text-white/50" />
               </div>
             )}
-            <figcaption
-              id="lightbox-caption"
-              className="bg-maroon-ink p-4 text-center text-sm text-cream"
-            >
+            <figcaption className="bg-maroon-ink p-4 text-center text-sm text-cream">
               {tr(active.caption)} · {tr(active.category)} · {active.year}
             </figcaption>
           </motion.figure>

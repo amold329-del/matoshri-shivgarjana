@@ -221,35 +221,3 @@
     scroll-behavior: auto;
   }
 }
-
-/* ============================================================
-   ACCESSIBILITY  — N-12 / N-17
-   ============================================================ */
-@layer base {
-  /* N-12 — the audit found focus IS reachable and IS indicated, but with the
-     browser-default blue outline, which reads as a bug against this palette.
-     :focus-visible only, so pointer users never see it. */
-  :focus-visible {
-    outline: 2px solid theme("colors.gold.light");
-    outline-offset: 2px;
-    border-radius: 3px;
-  }
-
-  /* On the cream light theme, gold alone is too faint against #fbf5e9,
-     so pair it with the deep maroon ink from the same palette. */
-  html:not(.dark) :focus-visible {
-    outline-color: theme("colors.maroon.ink");
-    box-shadow: 0 0 0 4px rgba(230, 200, 104, 0.45);
-  }
-
-  /* N-17 — the skip link targets <main id="main">, which sits under the fixed
-     navbar. Without scroll-margin the heading lands behind the bar. */
-  #main {
-    scroll-margin-top: 6rem;
-  }
-  /* main gets tabIndex={-1} so focus can land on it; never ring the whole page. */
-  #main:focus,
-  #main:focus-visible {
-    outline: none;
-  }
-}

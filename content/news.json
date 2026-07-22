@@ -1,9 +1,29 @@
 [
   {
+    "id": "n0",
+    "date": "2026-07-25",
+    "featured": true,
+    "category": {
+      "en": "Seva",
+      "mr": "सेवा"
+    },
+    "title": {
+      "en": "Banana Distribution on Ashadhi Ekadashi",
+      "mr": "आषाढी एकादशीनिमित्त केळी वितरण"
+    },
+    "excerpt": {
+      "en": "On 25 July 2026, on the holy occasion of Ashadhi Ekadashi, the Mandal will distribute bananas to devotees. All are warmly invited.",
+      "mr": "२५ जुलै २०२६ रोजी आषाढी एकादशीच्या पावन निमित्ताने मंडळातर्फे भाविकांना केळीचे वितरण केले जाणार आहे. सर्वांना प्रेमळ आमंत्रण."
+    }
+  },
+  {
     "id": "n1",
     "date": "2026-08-20",
     "featured": true,
-    "category": { "en": "Festival", "mr": "उत्सव" },
+    "category": {
+      "en": "Festival",
+      "mr": "उत्सव"
+    },
     "title": {
       "en": "47th Ganeshotsav Schedule Announced",
       "mr": "४७ व्या गणेशोत्सवाचे वेळापत्रक जाहीर"
@@ -16,7 +36,10 @@
   {
     "id": "n2",
     "date": "2026-07-15",
-    "category": { "en": "Announcement", "mr": "घोषणा" },
+    "category": {
+      "en": "Announcement",
+      "mr": "घोषणा"
+    },
     "title": {
       "en": "Blood Donation Camp Being Planned",
       "mr": "रक्तदान शिबिराचे नियोजन"
@@ -29,7 +52,10 @@
   {
     "id": "n3",
     "date": "2026-06-30",
-    "category": { "en": "Announcement", "mr": "घोषणा" },
+    "category": {
+      "en": "Announcement",
+      "mr": "घोषणा"
+    },
     "title": {
       "en": "Online Membership Coming Soon",
       "mr": "ऑनलाइन सभासदत्व लवकरच"
@@ -42,7 +68,10 @@
   {
     "id": "n4",
     "date": "2026-05-10",
-    "category": { "en": "Community", "mr": "समुदाय" },
+    "category": {
+      "en": "Community",
+      "mr": "समुदाय"
+    },
     "title": {
       "en": "Tree Plantation Drive Plants 500 Saplings",
       "mr": "वृक्षारोपण मोहिमेत ५०० रोपांची लागवड"

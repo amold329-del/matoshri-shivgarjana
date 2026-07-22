@@ -31,16 +31,6 @@ export interface SiteSettings {
   };
   contact: {
     addressLines: string[];
-    /** Machine-readable address for schema.org (see src/lib/structured-data.ts). */
-    postal: {
-      streetAddress: string;
-      addressLocality: string;
-      addressRegion: string;
-      postalCode: string;
-      addressCountry: string;
-    };
-    /** Map pin for schema.org. null until filled — never guess coordinates. */
-    geo: { lat: number; lng: number } | null;
     phones: string[];
     email: string;
     hours: Bilingual;

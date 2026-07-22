@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
-import { MapEmbed } from "@/components/ui/map-embed";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getSettings } from "@/lib/content";
 
@@ -199,11 +198,14 @@ export function ContactView() {
         <div className="wrap mt-12">
           <Reveal>
             <div className="overflow-hidden rounded-2xl border border-card-border shadow-soft">
-              <MapEmbed
+              <iframe
                 src={contact.mapEmbedSrc}
                 title="Mandal location map"
-                height={380}
-                addressLine={contact.addressLines.join(", ")}
+                width="100%"
+                height="380"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0 }}
               />
             </div>
           </Reveal>

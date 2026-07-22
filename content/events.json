@@ -1,11 +1,34 @@
 [
   {
+    "id": "e0",
+    "date": "2026-07-25",
+    "status": "upcoming",
+    "title": {
+      "en": "Banana Distribution — Ashadhi Ekadashi",
+      "mr": "केळी वितरण — आषाढी एकादशी"
+    },
+    "venue": {
+      "en": "Mandal premises",
+      "mr": "मंडळ परिसर"
+    },
+    "body": {
+      "en": "On the holy occasion of Ashadhi Ekadashi, the Mandal will distribute bananas to devotees as a small seva. All are warmly invited.",
+      "mr": "आषाढी एकादशीच्या पावन निमित्ताने मंडळातर्फे भाविकांना केळीचे वितरण ही छोटीशी सेवा केली जाणार आहे. सर्वांना प्रेमळ आमंत्रण."
+    }
+  },
+  {
     "id": "e1",
     "date": "2026-09-14",
     "time": "6:00 AM",
     "status": "upcoming",
-    "title": { "en": "Ganpati Sthapana", "mr": "गणपती स्थापना" },
-    "venue": { "en": "Mandal Hall", "mr": "मंडळ सभागृह" },
+    "title": {
+      "en": "Ganpati Sthapana",
+      "mr": "गणपती स्थापना"
+    },
+    "venue": {
+      "en": "Mandal Hall",
+      "mr": "मंडळ सभागृह"
+    },
     "body": {
       "en": "The sacred installation of Shri Ganesh, marking the start of the 47th Ganeshotsav.",
       "mr": "श्री गणेशाची पवित्र स्थापना, ४७ व्या गणेशोत्सवाची सुरुवात."
@@ -16,8 +39,14 @@
     "date": "2026-09-17",
     "time": "7:30 PM",
     "status": "upcoming",
-    "title": { "en": "Cultural Night", "mr": "सांस्कृतिक संध्या" },
-    "venue": { "en": "Open Grounds", "mr": "खुले मैदान" },
+    "title": {
+      "en": "Cultural Night",
+      "mr": "सांस्कृतिक संध्या"
+    },
+    "venue": {
+      "en": "Open Grounds",
+      "mr": "खुले मैदान"
+    },
     "body": {
       "en": "An evening of music, dance and folk performances by local artists.",
       "mr": "स्थानिक कलाकारांकडून संगीत, नृत्य आणि लोककला सादरीकरणाची संध्याकाळ."
@@ -28,8 +57,14 @@
     "date": "2026-09-20",
     "time": "8:00 AM",
     "status": "upcoming",
-    "title": { "en": "Mahaprasad & Community Bhojan", "mr": "महाप्रसाद व सामुदायिक भोजन" },
-    "venue": { "en": "Mandal Hall", "mr": "मंडळ सभागृह" },
+    "title": {
+      "en": "Mahaprasad & Community Bhojan",
+      "mr": "महाप्रसाद व सामुदायिक भोजन"
+    },
+    "venue": {
+      "en": "Mandal Hall",
+      "mr": "मंडळ सभागृह"
+    },
     "body": {
       "en": "A shared meal bringing the entire community together in devotion.",
       "mr": "संपूर्ण समाजाला भक्तीत एकत्र आणणारे सामुदायिक भोजन."
@@ -40,8 +75,14 @@
     "date": "2026-09-23",
     "time": "5:00 PM",
     "status": "upcoming",
-    "title": { "en": "Visarjan Procession", "mr": "विसर्जन मिरवणूक" },
-    "venue": { "en": "From Mandal to Chowpatty", "mr": "मंडळ ते चौपाटी" },
+    "title": {
+      "en": "Visarjan Procession",
+      "mr": "विसर्जन मिरवणूक"
+    },
+    "venue": {
+      "en": "From Mandal to Chowpatty",
+      "mr": "मंडळ ते चौपाटी"
+    },
     "body": {
       "en": "A grand, eco-conscious farewell procession with dhol-tasha.",
       "mr": "ढोल-ताशासह भव्य, पर्यावरणपूरक निरोप मिरवणूक."
@@ -51,8 +92,14 @@
     "id": "e5",
     "date": "2025-09-06",
     "status": "past",
-    "title": { "en": "46th Ganeshotsav", "mr": "४६ वा गणेशोत्सव" },
-    "venue": { "en": "Mandal Hall", "mr": "मंडळ सभागृह" },
+    "title": {
+      "en": "46th Ganeshotsav",
+      "mr": "४६ वा गणेशोत्सव"
+    },
+    "venue": {
+      "en": "Mandal Hall",
+      "mr": "मंडळ सभागृह"
+    },
     "body": {
       "en": "Last year's celebration welcomed record participation from the community.",
       "mr": "मागील वर्षीच्या उत्सवात समाजाचा विक्रमी सहभाग होता."
