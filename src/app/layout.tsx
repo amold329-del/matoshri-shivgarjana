@@ -11,7 +11,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BackToTop } from "@/components/ui/back-to-top";
-import { getSettings } from "@/lib/content";
+import StructuredData from "./structured-data";
 
 /* ---- Fonts wired to the CSS variables used in tailwind.config ---- */
 const inter = Inter({
@@ -32,7 +32,6 @@ const devanagari = Noto_Sans_Devanagari({
   display: "swap",
 });
 
-const settings = getSettings();
 const SITE_URL = "https://matoshreechavighnaharta.co.in";
 
 export const metadata: Metadata = {
@@ -79,25 +78,6 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-/** JSON-LD structured data for the organisation (SEO / rich results). */
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
-  alternateName: "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
-  foundingDate: "1980",
-  url: SITE_URL,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Mumbai",
-    addressRegion: "Maharashtra",
-    addressCountry: "IN",
-  },
-  email: settings.contact.email,
-  sameAs: settings.social.map((s) => s.href),
-  slogan: "श्रद्धा • एकता • सेवा",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -115,10 +95,7 @@ export default function RootLayout({
             __html: `(function(){try{var u=navigator.userAgent||"";var m=/iPhone|iPod|iPad|Android|Mobile|Windows Phone/i.test(u);var t=(navigator.maxTouchPoints||0)>1;var d=Math.min(screen.width||9999,screen.height||9999);if(!m&&t&&d<=480){var v=document.querySelector('meta[name="viewport"]');if(v){v.setAttribute("content","width=1366");}}}catch(e){}})();`,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-        />
+        <StructuredData />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
