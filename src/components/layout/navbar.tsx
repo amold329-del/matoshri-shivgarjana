@@ -58,25 +58,25 @@ export function Navbar() {
           <span className="leading-tight">
             <span
               className={cn(
-                "block font-mr text-[0.95rem] font-bold transition-colors",
+                "block max-w-[13.5rem] font-mr text-[0.6rem] font-bold leading-[1.2] transition-colors sm:max-w-none sm:text-[0.8rem] xl:text-[0.95rem]",
                 scrolled ? "text-ink" : "text-[var(--dark-text)]",
               )}
             >
-              {tr(settings.org.nameShort)}
+              {tr(settings.org.nameFull)}
             </span>
             <span
               className={cn(
-                "block font-display text-[0.62rem] font-semibold uppercase tracking-[0.18em] transition-colors",
+                "mt-0.5 block font-mr text-[0.58rem] font-semibold tracking-[0.06em] transition-colors sm:text-[0.68rem] xl:text-[0.72rem]",
                 scrolled ? "text-saffron" : "text-gold-light",
               )}
             >
-              स्थापना {settings.org.established} · {settings.org.yearsCount} वे वर्ष
+              {tr(settings.org.tagline)}
             </span>
           </span>
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-0.5 xl:flex">
+        <ul className="nav-desktop hidden items-center gap-0.5 xl:flex">
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
@@ -115,7 +115,7 @@ export function Navbar() {
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
             className={cn(
-              "grid h-10 w-10 place-items-center rounded-full border transition-colors xl:hidden",
+              "nav-burger grid h-10 w-10 place-items-center rounded-full border transition-colors xl:hidden",
               scrolled
                 ? "border-card-border text-ink"
                 : "border-white/25 text-[var(--dark-text)]",
@@ -129,7 +129,7 @@ export function Navbar() {
       {/* Mobile sheet */}
       <div
         className={cn(
-          "glass overflow-hidden border-t border-card-border transition-[max-height] duration-300 xl:hidden",
+          "nav-mobile-panel glass overflow-hidden border-t border-card-border transition-[max-height] duration-300 xl:hidden",
           open ? "max-h-[80vh]" : "max-h-0",
         )}
       >

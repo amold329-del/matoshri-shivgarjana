@@ -221,3 +221,22 @@
     scroll-behavior: auto;
   }
 }
+
+/* ---------------------------------------------------------------
+   "Request Desktop Site" on a phone/tablet.
+   Mobile browsers ignore the viewport meta in desktop mode and lay
+   out at ~980px, which is below the xl breakpoint the desktop nav
+   needs — so the mobile nav persisted. These rules force the real
+   desktop layout without relying on media queries. Normal mobile
+   browsing is untouched (the attribute is only set in desktop mode).
+   --------------------------------------------------------------- */
+html[data-desktop-mode] body {
+  min-width: 1280px;
+}
+html[data-desktop-mode] .nav-desktop {
+  display: flex !important;
+}
+html[data-desktop-mode] .nav-burger,
+html[data-desktop-mode] .nav-mobile-panel {
+  display: none !important;
+}

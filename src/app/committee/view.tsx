@@ -21,17 +21,47 @@ const HONORIFICS = new Set([
   "mr", "mr.", "mrs", "mrs.", "ms", "ms.", "dr", "dr.", "shri", "smt", "smt.",
 ]);
 
+/** First Devanagari letter -> Latin equivalent (avatar initials stay Latin). */
+const DEVANAGARI_TO_LATIN: Record<string, string> = {
+  अ: "A", आ: "A", ऑ: "A", ऒ: "A",
+  इ: "I", ई: "I",
+  उ: "U", ऊ: "U",
+  ऋ: "R",
+  ए: "E", ऐ: "E",
+  ओ: "O", औ: "O",
+  क: "K", ख: "K",
+  ग: "G", घ: "G", ङ: "N",
+  च: "C", छ: "C",
+  ज: "J", झ: "J", ञ: "N",
+  ट: "T", ठ: "T",
+  ड: "D", ढ: "D", ण: "N",
+  त: "T", थ: "T",
+  द: "D", ध: "D", न: "N",
+  प: "P", फ: "P",
+  ब: "B", भ: "B", म: "M",
+  य: "Y", र: "R", ल: "L", ळ: "L",
+  व: "V",
+  श: "S", ष: "S", स: "S",
+  ह: "H",
+};
+
+function latinInitial(word: string) {
+  const first = Array.from(word)[0] ?? "";
+  return DEVANAGARI_TO_LATIN[first] ?? first.toUpperCase();
+}
+
 function initials(name: string) {
   const words = name
     .replace(/\[|\]/g, "")
     .split(/\s+/)
     .filter(Boolean)
     .filter((w) => !HONORIFICS.has(w.toLowerCase()));
-  return words
-    .slice(0, 2)
-    .map((w) => Array.from(w)[0])
-    .join("")
-    .toUpperCase();
+
+  if (words.length === 0) return "";
+  // Given name + surname, always rendered in Latin letters.
+  const picked =
+    words.length === 1 ? [words[0]] : [words[0], words[words.length - 1]];
+  return picked.map(latinInitial).join("");
 }
 
 export function CommitteeView() {

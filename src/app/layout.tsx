@@ -92,7 +92,7 @@ export default function RootLayout({
       <body>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var u=navigator.userAgent||"";var m=/iPhone|iPod|iPad|Android|Mobile|Windows Phone/i.test(u);var t=(navigator.maxTouchPoints||0)>1;var d=Math.min(screen.width||9999,screen.height||9999);if(!m&&t&&d<=480){var v=document.querySelector('meta[name="viewport"]');if(v){v.setAttribute("content","width=1366");}}}catch(e){}})();`,
+            __html: `(function(){function f(){try{var u=navigator.userAgent||"";var m=/iPhone|iPod|Android.*Mobile|Mobile Safari|Windows Phone|IEMobile/i.test(u);var t=(navigator.maxTouchPoints||0)>1;var p=Math.min(screen.width||9999,screen.height||9999);var w=window.innerWidth||document.documentElement.clientWidth||0;var on=!m&&t&&p<=1024&&w<1200;var e=document.documentElement;if(on){e.setAttribute("data-desktop-mode","1");var v=document.querySelector('meta[name="viewport"]');if(v&&v.getAttribute("content").indexOf("1280")<0){v.setAttribute("content","width=1280");}}else{e.removeAttribute("data-desktop-mode");}}catch(e){}}f();window.addEventListener("resize",f);window.addEventListener("orientationchange",f);})();`,
           }}
         />
         <StructuredData />
