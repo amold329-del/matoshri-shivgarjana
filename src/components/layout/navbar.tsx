@@ -54,16 +54,23 @@ export function Navbar() {
     >
       <nav className="wrap flex items-center justify-between gap-3">
         {/* Brand */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
           <Emblem className="h-10 w-10 shrink-0" />
           <span className="leading-tight">
             <span
               className={cn(
-                "block max-w-[13.5rem] font-mr text-[0.6rem] font-bold leading-[1.2] transition-colors sm:max-w-none sm:text-[0.8rem] xl:text-[0.95rem]",
+                "block font-mr font-bold leading-[1.2] transition-colors",
                 scrolled ? "text-ink" : "text-[var(--dark-text)]",
               )}
             >
-              {tr(settings.org.nameFull)}
+              {/* phones: short name keeps the bar uncluttered */}
+              <span className="block text-[0.78rem] sm:hidden">
+                {tr(settings.org.nameShort)}
+              </span>
+              {/* tablet and up: full registered name */}
+              <span className="hidden sm:block sm:text-[0.8rem] xl:text-[0.95rem]">
+                {tr(settings.org.nameFull)}
+              </span>
             </span>
             <span
               className={cn(
@@ -108,13 +115,13 @@ export function Navbar() {
         </ul>
 
         {/* Right controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={toggle}
             aria-label="Switch language / भाषा बदला"
             className={cn(
-              "h-10 rounded-full border px-3 text-[0.72rem] font-bold transition-colors",
+              "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-[0.68rem] font-extrabold tracking-wide transition-colors",
               scrolled
                 ? "border-card-border text-ink hover:border-gold hover:text-saffron"
                 : "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light",

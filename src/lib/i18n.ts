@@ -9,7 +9,7 @@ export type Lang = "en" | "mr";
  */
 export const dict = {
   nav: {
-    languageToggle: { en: "मराठी", mr: "EN" },
+    languageToggle: { en: "MR", mr: "EN" },
     themeLight: { en: "Light", mr: "उजेड" },
     themeDark: { en: "Dark", mr: "अंधार" },
     menu: { en: "Menu", mr: "मेनू" },
