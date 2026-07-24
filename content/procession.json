@@ -1,0 +1,88 @@
+[
+  {
+    "id": "aagman",
+    "type": "aagman",
+    "title": {
+      "en": "Aagman Procession",
+      "mr": "आगमन मिरवणूक"
+    },
+    "date": "2026-09-13",
+    "dateLabel": {
+      "en": "Sunday, 13 September 2026",
+      "mr": "रविवार, १३ सप्टेंबर २०२६"
+    },
+    "timeLabel": {
+      "en": "7:00 PM to 9:00 PM",
+      "mr": "संध्याकाळी ७ ते ९"
+    },
+    "stops": [
+      {
+        "en": "Bhoiwada Naka",
+        "mr": "भोईवाडा नाका"
+      },
+      {
+        "en": "Jerbai Wadia Road",
+        "mr": "जेरबाई वाडिया रोड"
+      },
+      {
+        "en": "Matoshree S.R.A. Building 1 premises",
+        "mr": "मातोश्री एस.आर.ए. इमारत १ आवार"
+      },
+      {
+        "en": "Mandap",
+        "mr": "मंडप"
+      }
+    ]
+  },
+  {
+    "id": "visarjan",
+    "type": "visarjan",
+    "title": {
+      "en": "Visarjan Procession",
+      "mr": "विसर्जन मिरवणूक"
+    },
+    "date": "2026-09-25",
+    "dateLabel": {
+      "en": "Friday, 25 September 2026",
+      "mr": "शुक्रवार, २५ सप्टेंबर २०२६"
+    },
+    "timeLabel": {
+      "en": "4:00 PM to 9:00 PM",
+      "mr": "संध्याकाळी ४ ते ९"
+    },
+    "stops": [
+      {
+        "en": "Mandap",
+        "mr": "मंडप"
+      },
+      {
+        "en": "Jerbai Wadia Road",
+        "mr": "जेरबाई वाडिया रोड"
+      },
+      {
+        "en": "Bhoiwada Naka",
+        "mr": "भोईवाडा नाका"
+      },
+      {
+        "en": "Hindmata",
+        "mr": "हिंदमाता"
+      },
+      {
+        "en": "Dadar T.T.",
+        "mr": "दादर टी.टी."
+      },
+      {
+        "en": "Plaza Cinema",
+        "mr": "प्लाझा सिनेमा"
+      },
+      {
+        "en": "Shivsena Bhavan",
+        "mr": "शिवसेना भवन"
+      },
+      {
+        "en": "Chhatrapati Shivaji Maharaj Park (SP5)",
+        "mr": "छत्रपती शिवाजी महाराज पार्क (SP5)"
+      }
+    ]
+  }
+]

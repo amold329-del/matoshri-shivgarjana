@@ -85,7 +85,7 @@ export function Hero() {
           variants={item}
           className="whitespace-nowrap font-mr text-[clamp(0.7rem,3.5vw,4.5rem)] font-extrabold leading-[1.25] text-[var(--dark-text)]"
         >
-          मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.)
+          {tr(settings.org.nameFull)}
         </motion.h1>
 
         {/* Devotional tagline */}
@@ -103,7 +103,7 @@ export function Hero() {
         >
           <span className="absolute inset-0 -z-10 rounded-full bg-gold/20 blur-xl" />
           <span className="rounded-full border border-gold/50 bg-gradient-to-b from-gold-light/20 to-transparent px-7 py-3 font-mr text-2xl font-bold text-gold-light shadow-gold sm:text-3xl">
-            ४७ वे वर्ष
+            {tr(dict.hero.yearBadge)}
           </span>
         </motion.div>
 
@@ -111,7 +111,7 @@ export function Hero() {
           variants={item}
           className="mt-7 max-w-xl text-base text-[var(--dark-text-soft)] sm:text-lg"
         >
-          श्रद्धा, एकता आणि सेवेची ४७ वर्षे साजरी करत आहोत
+          {tr(dict.hero.subtitle)}
         </motion.p>
 
         <motion.div

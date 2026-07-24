@@ -20,6 +20,8 @@ export const dict = {
     vargani: { en: "Know About Vargani", mr: "वर्गणीबद्दल" },
     sabhasad: { en: "सभासद", mr: "सभासद" },
     comingSoon: { en: "Coming Soon", mr: "लवकरच" },
+    planned: { en: "Planned", mr: "नियोजित" },
+    getDirections: { en: "Get Directions", mr: "दिशा मिळवा" },
     contactUs: { en: "Contact Us", mr: "संपर्क करा" },
     readMore: { en: "Read More", mr: "अधिक वाचा" },
     loadMore: { en: "Load More", mr: "अधिक पाहा" },
@@ -72,6 +74,51 @@ export const dict = {
     rights: { en: "All rights reserved.", mr: "सर्व हक्क राखीव." },
     designed: { en: "Designed with ❤ in Mumbai", mr: "मुंबईत ❤ ने तयार केले" },
     regNo: { en: "Reg. No.", mr: "नोंदणी क्र." },
+    values: { en: "Faith • Unity • Service", mr: "श्रद्धा • एकता • सेवा" },
+  },
+  hero: {
+    yearBadge: { en: "47th Year", mr: "४७ वे वर्ष" },
+    subtitle: {
+      en: "Celebrating 47 years of faith, unity and service",
+      mr: "श्रद्धा, एकता आणि सेवेची ४७ वर्षे साजरी करत आहोत",
+    },
+  },
+  comingSoonPage: {
+    donation: { en: "Online Donation Coming Soon", mr: "ऑनलाइन देणगी लवकरच" },
+    membership: {
+      en: "Membership Registration Coming Soon",
+      mr: "सभासद नोंदणी लवकरच",
+    },
+  },
+  notFound: {
+    title: { en: "Page Not Found", mr: "पृष्ठ सापडले नाही" },
+    body: {
+      en: "The page you are looking for is unavailable or has been moved.",
+      mr: "तुम्ही शोधत असलेले पृष्ठ उपलब्ध नाही किंवा दुसरीकडे हलवले गेले आहे.",
+    },
+  },
+  reach: {
+    eyebrow: { en: "How to Reach", mr: "कसे पोहोचाल" },
+    title: { en: "Getting to the Mandal", mr: "मंडळापर्यंत कसे याल" },
+    byTrain: { en: "By Local Train", mr: "लोकल ट्रेनने" },
+    byBus: { en: "By Bus", mr: "बसने" },
+    byRoad: { en: "By Road / Taxi", mr: "रस्त्याने / टॅक्सीने" },
+    landmark: { en: "Landmark", mr: "खूण" },
+  },
+  procession: {
+    eyebrow: { en: "Procession", mr: "मिरवणूक" },
+    title: { en: "Aagman & Visarjan Route", mr: "आगमन व विसर्जन मार्ग" },
+    aagman: { en: "Aagman Procession", mr: "आगमन मिरवणूक" },
+    visarjan: { en: "Visarjan Procession", mr: "विसर्जन मिरवणूक" },
+    route: { en: "Route", mr: "मार्ग" },
+    note: {
+      en: "Timings are indicative and may shift with crowd and traffic conditions.",
+      mr: "वेळा अंदाजे असून गर्दी व वाहतुकीनुसार बदलू शकतात.",
+    },
+  },
+  legal: {
+    terms: { en: "Terms of Use", mr: "वापराच्या अटी" },
+    privacy: { en: "Privacy Policy", mr: "गोपनीयता धोरण" },
   },
 } satisfies Record<string, Record<string, Bilingual | string>>;
 

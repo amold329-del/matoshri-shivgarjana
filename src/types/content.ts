@@ -31,13 +31,23 @@ export interface SiteSettings {
   };
   contact: {
     addressLines: string[];
+    addressLinesEn?: string[];
     phones: string[];
     email: string;
     hours: Bilingual;
     mapEmbedSrc: string;
     mapLink: string;
+    howToReach?: HowToReachItem[];
   };
   social: { label: string; href: string; icon: string }[];
+  taxExemption?: {
+    enabled: boolean;
+    section: string;
+    registrationNo: string;
+    validity: string;
+    panNo: string;
+    note: Bilingual;
+  };
 }
 
 export interface NavItem {
@@ -133,4 +143,19 @@ export interface VarganiContent {
   contribution: { amount: number; year: number };
   importance: { title: Bilingual; body: Bilingual }[];
   utilisation: { label: Bilingual; percent: number }[];
+}
+
+export interface HowToReachItem {
+  mode: Bilingual;
+  detail: Bilingual;
+}
+
+export interface ProcessionRoute {
+  id: string;
+  type: "aagman" | "visarjan";
+  title: Bilingual;
+  date: string;
+  dateLabel: Bilingual;
+  timeLabel: Bilingual;
+  stops: Bilingual[];
 }

@@ -5,6 +5,7 @@ import { ShieldCheck, Users, HeartHandshake, PieChart } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { TaxExemptionNotice } from "@/components/ui/tax-exemption-notice";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getVargani } from "@/lib/content";
 import { dict } from "@/lib/i18n";
@@ -181,6 +182,11 @@ export function VarganiView() {
               {tr(dict.cta.contactUs)}
             </Link>
           </div>
+        </div>
+      </section>
+      <section className="bg-bg pb-16">
+        <div className="wrap max-w-3xl">
+          <TaxExemptionNotice />
         </div>
       </section>
     </>

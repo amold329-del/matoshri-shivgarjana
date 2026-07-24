@@ -45,7 +45,54 @@
       "mr": "सोम – रवि: सकाळी ९ – रात्री ९ (उत्सवादरम्यान)"
     },
     "mapEmbedSrc": "https://maps.google.com/maps?q=MATOSHREE+S.R.A+CHS+A+WING,+Jerbai+Wadia+Rd,+Bhoiwada,+Parel,+Mumbai+400012&z=17&ie=UTF8&iwloc=&output=embed",
-    "mapLink": "https://www.google.com/maps/search/?api=1&query=MATOSHREE%20S.R.A%20CHS%20A%20WING%2C%20Jerbai%20Wadia%20Rd%2C%20Bhoiwada%2C%20Parel%2C%20Mumbai%20400012&query_place_id=ChIJZ1eRvePO5zsRWQ32yN3Ne-U"
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=MATOSHREE%20S.R.A%20CHS%20A%20WING%2C%20Jerbai%20Wadia%20Rd%2C%20Bhoiwada%2C%20Parel%2C%20Mumbai%20400012&query_place_id=ChIJZ1eRvePO5zsRWQ32yN3Ne-U",
+    "addressLinesEn": [
+      "A Wing, 1/102, Matoshree S.R.A. Co-op Housing Society",
+      "Jerbai Wadia Road, Parel-Bhoiwada",
+      "Mumbai - 400012"
+    ],
+    "howToReach": [
+      {
+        "mode": {
+          "en": "By Local Train",
+          "mr": "लोकल ट्रेनने"
+        },
+        "detail": {
+          "en": "Central line: Currey Road or Chinchpokli station (approx. 10-12 min walk). Western line: Lower Parel station, then a short auto/taxi ride.",
+          "mr": "मध्य रेल्वे: करी रोड किंवा चिंचपोकळी स्थानक (अंदाजे १०-१२ मिनिटे चालत). पश्चिम रेल्वे: लोअर परेल स्थानक, तेथून रिक्षा/टॅक्सी."
+        }
+      },
+      {
+        "mode": {
+          "en": "By Bus",
+          "mr": "बसने"
+        },
+        "detail": {
+          "en": "BEST buses to Bhoiwada Naka. Alight at Bhoiwada and walk along Jerbai Wadia Road towards the Mandal.",
+          "mr": "भोईवाडा नाक्यापर्यंत बेस्ट बस. भोईवाडा येथे उतरून जेरबाई वाडिया रोडने मंडळाकडे चालत या."
+        }
+      },
+      {
+        "mode": {
+          "en": "By Road / Taxi",
+          "mr": "रस्त्याने / टॅक्सीने"
+        },
+        "detail": {
+          "en": "Take Jerbai Wadia Road from Bhoiwada Naka. The Mandal is in the Matoshree S.R.A. building premises.",
+          "mr": "भोईवाडा नाक्यावरून जेरबाई वाडिया रोड घ्या. मंडळ मातोश्री एस.आर.ए. इमारतीच्या आवारात आहे."
+        }
+      },
+      {
+        "mode": {
+          "en": "Landmark",
+          "mr": "खूण"
+        },
+        "detail": {
+          "en": "Matoshree S.R.A. building, Jerbai Wadia Road, near Bhoiwada Naka, Parel.",
+          "mr": "मातोश्री एस.आर.ए. इमारत, जेरबाई वाडिया रोड, भोईवाडा नाक्याजवळ, परेल."
+        }
+      }
+    ]
   },
   "social": [
     {
@@ -53,5 +100,16 @@
       "href": "https://www.instagram.com/matoshree.cha.vighnaharta/",
       "icon": "instagram"
     }
-  ]
+  ],
+  "taxExemption": {
+    "enabled": false,
+    "section": "80G",
+    "registrationNo": "",
+    "validity": "",
+    "panNo": "AAXAM••••P",
+    "note": {
+      "en": "Donations to the Mandal are eligible for deduction under Section 80G of the Income Tax Act, 1961. A receipt will be issued for every contribution.",
+      "mr": "मंडळाला दिलेल्या देणग्या आयकर कायदा १९६१ च्या कलम ८०जी अंतर्गत वजावटीस पात्र आहेत. प्रत्येक देणगीची पावती दिली जाईल."
+    }
+  }
 }

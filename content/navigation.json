@@ -6,6 +6,10 @@
   { "label": { "en": "Events", "mr": "कार्यक्रम" }, "href": "/events" },
   { "label": { "en": "News", "mr": "बातम्या" }, "href": "/news" },
   { "label": { "en": "Committee", "mr": "समिती" }, "href": "/committee" },
+  {
+    "label": { "en": "Procession Route", "mr": "मिरवणूक मार्ग" },
+    "href": "/procession"
+  },
   { "label": { "en": "Vargani", "mr": "वर्गणी" }, "href": "/vargani" },
   {
     "label": { "en": "Online Donation", "mr": "ऑनलाइन देणगी" },

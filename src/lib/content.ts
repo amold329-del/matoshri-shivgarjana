@@ -22,10 +22,12 @@ import type {
   Sponsor,
   DownloadItem,
   VarganiContent,
+  ProcessionRoute,
 } from "@/types/content";
 
 import settings from "@/../content/settings.json";
 import navigation from "@/../content/navigation.json";
+import procession from "@/../content/procession.json";
 import timeline from "@/../content/timeline.json";
 import stats from "@/../content/stats.json";
 import social from "@/../content/social-activities.json";
@@ -54,3 +56,5 @@ export const getTestimonials = (): Testimonial[] =>
 export const getSponsors = (): Sponsor[] => sponsors as Sponsor[];
 export const getDownloads = (): DownloadItem[] => downloads as DownloadItem[];
 export const getVargani = (): VarganiContent => vargani as VarganiContent;
+export const getProcession = (): ProcessionRoute[] =>
+  procession as ProcessionRoute[];

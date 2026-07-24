@@ -66,7 +66,7 @@ export function SabhasadView() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 font-mr text-2xl font-semibold text-gold-light sm:text-3xl">
-              सभासद नोंदणी लवकरच
+              {tr(dict.comingSoonPage.membership)}
             </p>
           </Reveal>
           <Reveal delay={0.15}>

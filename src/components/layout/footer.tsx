@@ -49,7 +49,7 @@ export function Footer() {
             {tr(settings.org.motto)}
           </p>
           <p className="mt-4 font-mr text-lg text-gold-light">
-            श्रद्धा • एकता • सेवा
+            {tr(dict.footer.values)}
           </p>
         </div>
 
@@ -151,7 +151,16 @@ export function Footer() {
           <br className="sm:hidden" />
           {tr(dict.footer.regNo)} {settings.org.registrationNo}
         </p>
-        <p className="text-gold-light">{tr(dict.footer.designed)}</p>
+        <p className="flex items-center gap-3">
+          <Link
+            href="/terms"
+            className="text-gold-light transition-colors hover:text-gold"
+          >
+            {tr(dict.legal.terms)} · {tr(dict.legal.privacy)}
+          </Link>
+          <span className="hidden sm:inline">·</span>
+          <span>{tr(dict.footer.designed)}</span>
+        </p>
       </div>
     </footer>
   );

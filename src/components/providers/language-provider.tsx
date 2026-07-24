@@ -42,8 +42,15 @@ export function LanguageProvider({
 }) {
   const [lang, setLangState] = useState<Lang>(defaultLang);
 
-  // Marathi-only site: always start in the default language. (The bilingual
-  // data is retained, so re-enabling an EN/MR switch later is a small change.)
+  // Restore the visitor's stored preference (falls back to defaultLang).
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(STORAGE_KEY);
+      if (stored === "en" || stored === "mr") setLangState(stored);
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   // Reflect language on <html lang> + persist.
   useEffect(() => {

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { getNav, getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
+import { dict } from "@/lib/i18n";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Emblem } from "@/components/ui/decorations";
 import { cn } from "@/lib/utils";
@@ -20,7 +21,7 @@ export function Navbar() {
   const nav = getNav();
   const settings = getSettings();
   const pathname = usePathname();
-  const { tr } = useLanguage();
+  const { tr, toggle } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -97,7 +98,7 @@ export function Navbar() {
                   {tr(item.label)}
                   {item.comingSoon && (
                     <span className="ml-1 rounded-full bg-gold/15 px-1.5 py-0.5 align-middle text-[0.58rem] font-semibold uppercase tracking-wider text-gold">
-                      लवकरच
+                      {tr(dict.cta.comingSoon)}
                     </span>
                   )}
                 </Link>
@@ -108,6 +109,19 @@ export function Navbar() {
 
         {/* Right controls */}
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label="Switch language / भाषा बदला"
+            className={cn(
+              "h-10 rounded-full border px-3 text-[0.72rem] font-bold transition-colors",
+              scrolled
+                ? "border-card-border text-ink hover:border-gold hover:text-saffron"
+                : "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light",
+            )}
+          >
+            {tr(dict.nav.languageToggle)}
+          </button>
           <ThemeToggle onDark={!scrolled} />
           <button
             type="button"
@@ -150,7 +164,7 @@ export function Navbar() {
                   <span>{tr(item.label)}</span>
                   {item.comingSoon && (
                     <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-gold">
-                      लवकरच
+                      {tr(dict.cta.comingSoon)}
                     </span>
                   )}
                 </Link>

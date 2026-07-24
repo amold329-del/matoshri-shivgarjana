@@ -20,12 +20,14 @@ const routes: Array<{
   { path: "/events/", priority: 0.9, changeFrequency: "weekly" },
   { path: "/news/", priority: 0.9, changeFrequency: "weekly" },
   { path: "/committee/", priority: 0.6, changeFrequency: "yearly" },
+  { path: "/procession/", priority: 0.9, changeFrequency: "monthly" },
   { path: "/vargani/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-donation/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/registration/", priority: 0.5, changeFrequency: "yearly" },
   { path: "/downloads/", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact/", priority: 0.6, changeFrequency: "yearly" },
   { path: "/sabhasad/", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/terms/", priority: 0.3, changeFrequency: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

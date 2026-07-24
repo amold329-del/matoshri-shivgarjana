@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Emblem, FloatingPetals, TempleSilhouette } from "@/components/ui/decorations";
 import { Reveal } from "@/components/ui/reveal";
+import { TaxExemptionNotice } from "@/components/ui/tax-exemption-notice";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
 
@@ -71,7 +72,7 @@ export function OnlineDonationView() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 font-mr text-2xl font-semibold text-gold-light sm:text-3xl">
-              ऑनलाइन देणगी लवकरच
+              {tr(dict.comingSoonPage.donation)}
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -130,6 +131,7 @@ export function OnlineDonationView() {
               </Reveal>
             ))}
           </div>
+          <TaxExemptionNotice className="mt-8" />
         </div>
       </section>
     </>

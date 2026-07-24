@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import {
+  Navigation,
   MapPin,
   Phone,
   Mail,
@@ -16,6 +17,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getSettings } from "@/lib/content";
+import { dict } from "@/lib/i18n";
 
 const SOCIAL_ICONS: Record<string, typeof Facebook> = {
   facebook: Facebook,
@@ -208,6 +210,48 @@ export function ContactView() {
                 style={{ border: 0 }}
               />
             </div>
+          </Reveal>
+        </div>
+
+        {/* How to reach */}
+        <div className="wrap mt-16 max-w-4xl">
+          <Reveal className="text-center">
+            <span className="eyebrow">{tr(dict.reach.eyebrow)}</span>
+            <h2 className="mt-3 font-display text-3xl font-extrabold text-ink">
+              {tr(dict.reach.title)}
+            </h2>
+          </Reveal>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {contact.howToReach?.map((item, i) => (
+              <Reveal key={item.mode.en} delay={(i % 2) * 0.08}>
+                <div className="card-surface flex h-full gap-4 p-6">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                    <Navigation className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="font-display font-bold text-ink">
+                      {tr(item.mode)}
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                      {tr(item.detail)}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.15} className="mt-8 text-center">
+            <a
+              href={contact.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-gold inline-flex items-center gap-2"
+            >
+              <Navigation className="h-4 w-4" />
+              {tr(dict.cta.getDirections)}
+            </a>
           </Reveal>
         </div>
       </section>

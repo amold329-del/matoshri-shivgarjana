@@ -4,12 +4,14 @@ import { CalendarDays } from "lucide-react";
 import { asset } from "@/lib/asset";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { useLanguage } from "@/components/providers/language-provider";
 
 /**
  * Time-sensitive seva announcement — केळी वितरण on Ashadhi Ekadashi.
  * Features the Mandal's own poster with a prominent date badge.
  */
 export function SevaHighlight() {
+  const { tr } = useLanguage();
   return (
     <section className="bg-surface-2 py-20">
       <div className="wrap max-w-5xl">
@@ -28,7 +30,7 @@ export function SevaHighlight() {
         <Reveal className="mt-6 flex justify-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(120deg,#e6c868,#c9a227)] px-6 py-2.5 font-mr text-base font-extrabold text-[#3a1206] shadow-[0_10px_28px_-10px_rgba(201,162,39,0.7)]">
             <CalendarDays className="h-5 w-5" />
-            शनिवार · २५ जुलै २०२६
+            {tr({ en: "Saturday · 25 July 2026", mr: "शनिवार · २५ जुलै २०२६" })}
           </span>
         </Reveal>
 
@@ -46,7 +48,7 @@ export function SevaHighlight() {
 
         <Reveal className="mt-6 text-center">
           <p className="font-mr text-sm font-semibold text-ink-soft">
-            विठ्ठल विठ्ठल जय हरी विठ्ठल · पुंडलिक वरदा हरी विठ्ठल
+            {tr({ en: "Vitthal Vitthal Jai Hari Vitthal · Pundalik Varada Hari Vitthal", mr: "विठ्ठल विठ्ठल जय हरी विठ्ठल · पुंडलिक वरदा हरी विठ्ठल" })}
           </p>
         </Reveal>
       </div>

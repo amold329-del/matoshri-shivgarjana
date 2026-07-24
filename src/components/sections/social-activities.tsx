@@ -59,7 +59,7 @@ export function SocialActivities() {
                   </h3>
                   {item.planned && (
                     <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wider text-gold">
-                      नियोजित
+                      {tr(dict.cta.planned)}
                     </span>
                   )}
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">
