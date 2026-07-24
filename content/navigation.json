@@ -1,29 +1,101 @@
 [
-  { "label": { "en": "Home", "mr": "मुख्यपृष्ठ" }, "href": "/" },
-  { "label": { "en": "About Us", "mr": "आमच्याबद्दल" }, "href": "/about" },
-  { "label": { "en": "History", "mr": "इतिहास" }, "href": "/history" },
-  { "label": { "en": "Gallery", "mr": "गॅलरी" }, "href": "/gallery" },
-  { "label": { "en": "Events", "mr": "कार्यक्रम" }, "href": "/events" },
-  { "label": { "en": "News", "mr": "बातम्या" }, "href": "/news" },
-  { "label": { "en": "Committee", "mr": "समिती" }, "href": "/committee" },
   {
-    "label": { "en": "Procession Route", "mr": "मिरवणूक मार्ग" },
+    "label": {
+      "en": "Home",
+      "mr": "मुख्यपृष्ठ"
+    },
+    "href": "/"
+  },
+  {
+    "label": {
+      "en": "About Us",
+      "mr": "आमच्याबद्दल"
+    },
+    "href": "/about"
+  },
+  {
+    "label": {
+      "en": "History",
+      "mr": "इतिहास"
+    },
+    "href": "/history"
+  },
+  {
+    "label": {
+      "en": "Gallery",
+      "mr": "गॅलरी"
+    },
+    "href": "/gallery"
+  },
+  {
+    "label": {
+      "en": "Events",
+      "mr": "कार्यक्रम"
+    },
+    "href": "/events"
+  },
+  {
+    "label": {
+      "en": "News",
+      "mr": "बातम्या"
+    },
+    "href": "/news"
+  },
+  {
+    "label": {
+      "en": "Committee",
+      "mr": "समिती"
+    },
+    "href": "/committee"
+  },
+  {
+    "label": {
+      "en": "Procession Route",
+      "mr": "मिरवणूक मार्ग"
+    },
     "href": "/procession"
   },
-  { "label": { "en": "Vargani", "mr": "वर्गणी" }, "href": "/vargani" },
   {
-    "label": { "en": "Online Donation", "mr": "ऑनलाइन देणगी" },
+    "label": {
+      "en": "Vargani",
+      "mr": "वर्गणी"
+    },
+    "href": "/vargani"
+  },
+  {
+    "label": {
+      "en": "Online Donation",
+      "mr": "ऑनलाइन देणगी"
+    },
     "href": "/online-donation",
     "comingSoon": true
   },
   {
-    "label": { "en": "Registration", "mr": "नोंदणी तपशील" },
+    "label": {
+      "en": "Registration",
+      "mr": "नोंदणी तपशील"
+    },
     "href": "/registration"
   },
-  { "label": { "en": "Downloads", "mr": "डाउनलोड" }, "href": "/downloads" },
-  { "label": { "en": "Contact", "mr": "संपर्क" }, "href": "/contact" },
   {
-    "label": { "en": "सभासद", "mr": "सभासद" },
+    "label": {
+      "en": "Downloads",
+      "mr": "डाउनलोड"
+    },
+    "href": "/downloads"
+  },
+  {
+    "label": {
+      "en": "Contact",
+      "mr": "संपर्क"
+    },
+    "href": "/contact"
+  },
+  {
+    "label": {
+      "en": "Membership",
+      "mr": "सभासद"
+    },
     "href": "/sabhasad",
     "comingSoon": true
   }

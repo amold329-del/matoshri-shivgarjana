@@ -18,7 +18,7 @@ export const dict = {
     gallery: { en: "Gallery", mr: "गॅलरी" },
     about: { en: "About Us", mr: "आमच्याबद्दल" },
     vargani: { en: "Know About Vargani", mr: "वर्गणीबद्दल" },
-    sabhasad: { en: "सभासद", mr: "सभासद" },
+    sabhasad: { en: "Membership", mr: "सभासद" },
     comingSoon: { en: "Coming Soon", mr: "लवकरच" },
     planned: { en: "Planned", mr: "नियोजित" },
     getDirections: { en: "Get Directions", mr: "दिशा मिळवा" },

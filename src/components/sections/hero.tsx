@@ -6,6 +6,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import { getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 import {
   TempleSilhouette,
   FloatingPetals,
@@ -19,7 +20,7 @@ import { asset } from "@/lib/asset";
  */
 export function Hero() {
   const settings = getSettings();
-  const { tr } = useLanguage();
+  const { tr, lang } = useLanguage();
   const reduce = useReducedMotion();
   const org = settings.org;
 
@@ -78,12 +79,20 @@ export function Hero() {
           variants={item}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-[0.74rem] font-semibold uppercase tracking-[0.2em] text-gold-light backdrop-blur"
         >
-          श्री गणेशाय नमः · स्थापना {org.established}
+          {tr({
+            en: `Shri Ganeshaya Namah · Est. ${org.established}`,
+            mr: `श्री गणेशाय नमः · स्थापना ${org.established}`,
+          })}
         </motion.span>
 
         <motion.h1
           variants={item}
-          className="whitespace-nowrap font-mr text-[clamp(0.7rem,3.5vw,4.5rem)] font-extrabold leading-[1.25] text-[var(--dark-text)]"
+          className={cn(
+            "font-mr font-extrabold leading-[1.25] text-[var(--dark-text)]",
+            lang === "mr"
+              ? "whitespace-nowrap text-[clamp(0.7rem,3.5vw,4.5rem)]"
+              : "mx-auto max-w-5xl text-balance text-[clamp(1.4rem,4.2vw,3.4rem)]",
+          )}
         >
           {tr(settings.org.nameFull)}
         </motion.h1>
@@ -91,7 +100,7 @@ export function Hero() {
         {/* Devotional tagline */}
         <motion.p
           variants={item}
-          className="mt-6 whitespace-nowrap font-mr text-[clamp(1.6rem,3.4vw,3.25rem)] font-bold tracking-wide text-gold-light"
+          className="mt-6 font-mr text-[clamp(1.35rem,3.4vw,3.25rem)] font-bold tracking-wide text-gold-light"
         >
           {tr(org.tagline)}
         </motion.p>
@@ -118,9 +127,19 @@ export function Hero() {
           variants={item}
           className="mt-3 flex items-center gap-3 text-sm text-[var(--dark-text-soft)]"
         >
-          <span>स्थापना {org.established}</span>
+          <span>
+            {tr({
+              en: `Established ${org.established}`,
+              mr: `स्थापना ${org.established}`,
+            })}
+          </span>
           <span className="h-1 w-1 rounded-full bg-gold" />
-          <span>नोंदणी {org.registered}</span>
+          <span>
+            {tr({
+              en: `Registered ${org.registered}`,
+              mr: `नोंदणी ${org.registered}`,
+            })}
+          </span>
         </motion.div>
 
         {/* CTAs */}

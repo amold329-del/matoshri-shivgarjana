@@ -63,13 +63,11 @@ export function Navbar() {
                 scrolled ? "text-ink" : "text-[var(--dark-text)]",
               )}
             >
-              {/* phones: short name keeps the bar uncluttered */}
-              <span className="block text-[0.78rem] sm:hidden">
+              {/* Short name everywhere: the full registered name cannot share
+                  the bar with the menu, especially in English. It appears in
+                  full in the hero and the footer. */}
+              <span className="block max-w-[11rem] text-[0.78rem] sm:max-w-[14rem] sm:text-[0.85rem] xl:max-w-[16rem] xl:text-[0.95rem]">
                 {tr(settings.org.nameShort)}
-              </span>
-              {/* tablet and up: full registered name */}
-              <span className="hidden sm:block sm:text-[0.8rem] xl:text-[0.95rem]">
-                {tr(settings.org.nameFull)}
               </span>
             </span>
             <span
