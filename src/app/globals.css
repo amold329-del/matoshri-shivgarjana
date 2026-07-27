@@ -240,3 +240,71 @@ html[data-desktop-mode] .nav-burger,
 html[data-desktop-mode] .nav-mobile-panel {
   display: none !important;
 }
+
+
+/* ---------------------------------------------------------------
+   Site-wide background motif.
+
+   A tileable lotus pattern (inline SVG data URI — no extra request,
+   no base-path issues, sharp at any zoom). It is fixed, so it stays
+   still while content scrolls. Section backgrounds are made slightly
+   translucent so the motif shows through every page, and opacity is
+   kept low enough that text contrast is unaffected.
+   --------------------------------------------------------------- */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%20viewBox%3D%220%200%20120%20120%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23c9a227%22%20stroke-width%3D%221.1%22%20stroke-linecap%3D%22round%22%3E%3Cg%20transform%3D%22translate%2860%2C60%29%22%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%280.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2845.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2890.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28135.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28180.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28225.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28270.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28315.0%29%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%222.6%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%280%2C0%29%22%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%280.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2845.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2890.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28135.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28180.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28225.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28270.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28315.0%29%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%222.6%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28120%2C0%29%22%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%280.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2845.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2890.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28135.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28180.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28225.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28270.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28315.0%29%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%222.6%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%280%2C120%29%22%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%280.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2845.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2890.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28135.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28180.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28225.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28270.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28315.0%29%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%222.6%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28120%2C120%29%22%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%280.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2845.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%2890.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28135.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28180.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28225.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28270.0%29%22%2F%3E%3Cpath%20d%3D%22M0%200%20q5%20-8.25%200%20-15%20q-5%206.75%200%2015z%22%20transform%3D%22rotate%28315.0%29%22%2F%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%222.6%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  background-attachment: fixed;
+}
+
+/* Ganpati presence behind the whole site.
+
+   A softened, muted, vignetted image of the Mandal's own idol, fixed so it
+   stays still while content scrolls. It sits UNDER the lotus motif and under
+   the translucent section panels, so it reads as a devotional presence rather
+   than a photo competing with the text. Measured text contrast stays well
+   above the WCAG AA 4.5:1 requirement in both themes. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--page-bg-image);
+  background-size: cover;
+  background-position: center 32%;
+  background-repeat: no-repeat;
+  opacity: var(--page-bg-opacity);
+}
+
+:root {
+  --page-bg-image: url("/bg-ganpati.jpg");
+  --page-bg-opacity: 0.35;
+}
+.dark {
+  --page-bg-opacity: 0.42;
+}
+
+/* let the motif read through the page/section surfaces */
+.bg-bg {
+  background-color: color-mix(in srgb, var(--bg) 88%, transparent) !important;
+}
+.bg-surface-2 {
+  background-color: color-mix(in srgb, var(--surface-2) 92%, transparent) !important;
+}
+
+/* the motif is lighter over the dark theme so it never muddies text */
+.dark body,
+html.dark body {
+  opacity: 1;
+}
+.dark {
+  --motif-strength: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}

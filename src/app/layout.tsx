@@ -12,6 +12,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BackToTop } from "@/components/ui/back-to-top";
 import StructuredData from "./structured-data";
+import { asset } from "@/lib/asset";
 
 /* ---- Fonts wired to the CSS variables used in tailwind.config ---- */
 const inter = Inter({
@@ -89,7 +90,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${poppins.variable} ${devanagari.variable}`}
     >
-      <body>
+      <body
+        style={
+          {
+            "--page-bg-image": `url(${asset("/bg-ganpati.jpg")})`,
+          } as React.CSSProperties
+        }
+      >
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var applied=null,raf=0;function dm(){var u=navigator.userAgent||"";var mob=/iPhone|iPod|Android.*Mobile|Mobile Safari|Windows Phone|IEMobile/i.test(u);var touch=(navigator.maxTouchPoints||0)>1;var small=Math.min(screen.width||9999,screen.height||9999)<=1024;return !mob&&touch&&small;}function vp(c){var o=document.querySelector('meta[name="viewport"]');if(!o||o.getAttribute("content")===c)return;var m=document.createElement("meta");m.setAttribute("name","viewport");m.setAttribute("content",c);o.parentNode.replaceChild(m,o);}function apply(){var on=dm();if(on===applied)return;applied=on;var e=document.documentElement;if(on){e.setAttribute("data-desktop-mode","1");vp("width=1280");}else{e.removeAttribute("data-desktop-mode");vp("width=device-width, initial-scale=1");}void e.offsetHeight;}try{apply();}catch(e){}function onR(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;try{apply();}catch(e){}});}window.addEventListener("resize",onR);window.addEventListener("orientationchange",onR);window.addEventListener("pageshow",onR);})();`,
