@@ -1,9 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Inter,
-  Poppins,
-  Noto_Sans_Devanagari,
-} from "next/font/google";
+import { Inter, Outfit, Mukta } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LanguageProvider } from "@/components/providers/language-provider";
@@ -20,13 +16,13 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-const poppins = Poppins({
+const poppins = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
 });
-const devanagari = Noto_Sans_Devanagari({
+const devanagari = Mukta({
   subsets: ["devanagari", "latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-devanagari",
@@ -100,6 +96,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var applied=null,raf=0;function dm(){var u=navigator.userAgent||"";var mob=/iPhone|iPod|Android.*Mobile|Mobile Safari|Windows Phone|IEMobile/i.test(u);var touch=(navigator.maxTouchPoints||0)>1;var small=Math.min(screen.width||9999,screen.height||9999)<=1024;return !mob&&touch&&small;}function vp(c){var o=document.querySelector('meta[name="viewport"]');if(!o||o.getAttribute("content")===c)return;var m=document.createElement("meta");m.setAttribute("name","viewport");m.setAttribute("content",c);o.parentNode.replaceChild(m,o);}function apply(){var on=dm();if(on===applied)return;applied=on;var e=document.documentElement;if(on){e.setAttribute("data-desktop-mode","1");vp("width=1280");}else{e.removeAttribute("data-desktop-mode");vp("width=device-width, initial-scale=1");}void e.offsetHeight;}try{apply();}catch(e){}function onR(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;try{apply();}catch(e){}});}window.addEventListener("resize",onR);window.addEventListener("orientationchange",onR);window.addEventListener("pageshow",onR);})();`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `/*btnRipple*/document.addEventListener("pointermove",function(e){var b=e.target&&e.target.closest&&e.target.closest(".btn");if(!b)return;var r=b.getBoundingClientRect();b.style.setProperty("--rx",((e.clientX-r.left)/r.width*100)+"%");b.style.setProperty("--ry",((e.clientY-r.top)/r.height*100)+"%");},{passive:true});`,
           }}
         />
         <StructuredData />

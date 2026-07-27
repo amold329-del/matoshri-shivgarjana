@@ -308,3 +308,158 @@ html.dark body {
     background-attachment: scroll;
   }
 }
+
+
+/* ==========================================================================
+   PREMIUM COMPONENT LAYER
+   Buttons, cards and section surfaces. Kept as CSS (not per-component
+   Tailwind) so every page inherits the upgrade without touching page code.
+   ========================================================================== */
+
+/* ---- Buttons ------------------------------------------------------------ */
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--gold-focus, #c9a227);
+  outline-offset: 3px;
+}
+.btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #f3df9a 0%, #e6c868 42%, #c9a227 100%);
+  color: #3a1206;
+  border: 0;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 12px 30px -12px rgba(201, 162, 39, 0.75);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 18px 42px -14px rgba(201, 162, 39, 0.85),
+    0 0 40px -14px rgba(230, 200, 104, 0.8);
+}
+
+/* ripple-style radial bloom from the pointer */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(
+    circle at var(--rx, 50%) var(--ry, 50%),
+    rgba(255, 255, 255, 0.55),
+    transparent 60%
+  );
+  transition: opacity 0.4s ease;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn-outline {
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(201, 162, 39, 0.08),
+    rgba(201, 162, 39, 0.02)
+  );
+  backdrop-filter: blur(6px);
+}
+.btn-outline:hover {
+  border-color: #c9a227;
+  box-shadow: 0 10px 28px -14px rgba(201, 162, 39, 0.6);
+}
+
+/* ---- Cards -------------------------------------------------------------- */
+.card-surface {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--surface) 96%, transparent),
+      color-mix(in srgb, var(--surface) 88%, transparent)
+    );
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 1px 2px rgba(74, 11, 25, 0.05),
+    0 4px 12px -4px rgba(74, 11, 25, 0.08);
+}
+/* hairline gradient edge — reads as a gilded border without a heavy stroke */
+.card-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    140deg,
+    rgba(230, 200, 104, 0.55),
+    rgba(230, 200, 104, 0) 38%,
+    rgba(230, 200, 104, 0) 62%,
+    rgba(230, 200, 104, 0.35)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.7;
+  transition: opacity 0.35s ease;
+}
+.card-surface:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 39, 0.5);
+  box-shadow:
+    0 4px 12px rgba(74, 11, 25, 0.08),
+    0 28px 60px -22px rgba(74, 11, 25, 0.28);
+}
+.card-surface:hover::after {
+  opacity: 1;
+}
+
+/* ---- Section surfaces ---------------------------------------------------- */
+/* a whisper of warmth so sections read as surfaces, not flat colour blocks */
+.bg-surface-2 {
+  background-image: radial-gradient(
+    120% 100% at 50% 0%,
+    rgba(201, 162, 39, 0.07),
+    transparent 60%
+  );
+}
+
+/* ---- Focus visibility (accessibility) ------------------------------------ */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card-surface {
+    transition: none !important;
+  }
+  .btn:hover,
+  .card-surface:hover {
+    transform: none !important;
+  }
+}

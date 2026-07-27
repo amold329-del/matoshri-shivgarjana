@@ -52,11 +52,27 @@ const config: Config = {
       borderRadius: {
         xl: "18px",
         "2xl": "28px",
+        "3xl": "36px",
       },
+      /* Fluid display scale — headings breathe instead of stepping at
+         breakpoints, which is what makes large type feel editorial. */
+      fontSize: {
+        "display-sm": ["clamp(1.6rem,1.2rem+1.8vw,2.4rem)", { lineHeight: "1.18", letterSpacing: "-0.01em" }],
+        "display-md": ["clamp(2rem,1.4rem+2.6vw,3.2rem)", { lineHeight: "1.14", letterSpacing: "-0.015em" }],
+        "display-lg": ["clamp(2.4rem,1.5rem+3.6vw,4.2rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
+        "display-xl": ["clamp(2.8rem,1.6rem+5vw,5.6rem)", { lineHeight: "1.04", letterSpacing: "-0.025em" }],
+      },
+      /* Elevation ladder: ambient + directional, warm-tinted rather than
+         neutral grey, so shadows sit inside the palette. */
       boxShadow: {
         soft: "0 2px 10px rgba(74,11,25,.06)",
+        e1: "0 1px 2px rgba(74,11,25,.05), 0 4px 12px -4px rgba(74,11,25,.08)",
+        e2: "0 2px 6px rgba(74,11,25,.06), 0 14px 34px -14px rgba(74,11,25,.18)",
+        e3: "0 4px 12px rgba(74,11,25,.08), 0 28px 60px -22px rgba(74,11,25,.28)",
         md: "0 14px 40px -12px rgba(74,11,25,.20)",
         gold: "0 0 0 1px rgba(201,162,39,.35), 0 18px 50px -18px rgba(201,162,39,.45)",
+        "gold-glow": "0 0 0 1px rgba(201,162,39,.45), 0 10px 30px -8px rgba(201,162,39,.55), 0 0 46px -12px rgba(230,200,104,.45)",
+        inset: "inset 0 1px 0 rgba(255,255,255,.35)",
       },
       maxWidth: {
         content: "1200px",

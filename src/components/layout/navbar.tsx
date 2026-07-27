@@ -128,7 +128,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
+                    "group/nav relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
                     active
                       ? scrolled
                         ? "text-saffron"
@@ -144,6 +144,14 @@ export function Navbar() {
                       {tr(dict.cta.comingSoon)}
                     </span>
                   )}
+                  {/* golden indicator: solid when active, wipes in on hover */}
+                  <span
+                    aria-hidden
+                    className={cn(
+                      "pointer-events-none absolute inset-x-2 -bottom-0.5 h-[2px] origin-center rounded-full bg-[linear-gradient(90deg,transparent,#e6c868,transparent)] transition-transform duration-300",
+                      active ? "scale-x-100" : "scale-x-0 group-hover/nav:scale-x-100",
+                    )}
+                  />
                 </Link>
               </li>
             );
