@@ -26,6 +26,7 @@ const routes: Array<{
   { path: "/registration/", priority: 0.5, changeFrequency: "yearly" },
   { path: "/advertisements/", priority: 0.6, changeFrequency: "monthly" },
   { path: "/downloads/", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/faq/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/contact/", priority: 0.6, changeFrequency: "yearly" },
   { path: "/sabhasad/", priority: 0.6, changeFrequency: "monthly" },
   { path: "/terms/", priority: 0.3, changeFrequency: "yearly" },

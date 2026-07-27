@@ -24,12 +24,14 @@ import type {
   VarganiContent,
   ProcessionRoute,
   Advertisement,
+  FaqItem,
 } from "@/types/content";
 
 import settings from "@/../content/settings.json";
 import navigation from "@/../content/navigation.json";
 import procession from "@/../content/procession.json";
 import advertisements from "@/../content/advertisements.json";
+import faq from "@/../content/faq.json";
 import timeline from "@/../content/timeline.json";
 import stats from "@/../content/stats.json";
 import social from "@/../content/social-activities.json";
@@ -62,3 +64,4 @@ export const getProcession = (): ProcessionRoute[] =>
   procession as ProcessionRoute[];
 export const getAdvertisements = (): Advertisement[] =>
   advertisements as Advertisement[];
+export const getFaq = (): FaqItem[] => faq as FaqItem[];

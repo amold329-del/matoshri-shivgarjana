@@ -138,6 +138,14 @@ export const dict = {
       mr: "तुमच्या दुकानाची जाहिरात येथे देण्यासाठी कृपया मंडळाच्या कार्यकारिणीशी संपर्क साधा.",
     },
   },
+  faq: {
+    eyebrow: { en: "Questions & Answers", mr: "प्रश्न व उत्तरे" },
+    title: { en: "Frequently Asked Questions", mr: "वारंवार विचारले जाणारे प्रश्न" },
+    subtitle: {
+      en: "Timings, routes, location, contributions and how to reach the Mandal.",
+      mr: "वेळा, मार्ग, ठिकाण, वर्गणी आणि मंडळापर्यंत कसे पोहोचाल याची माहिती.",
+    },
+  },
   legal: {
     terms: { en: "Terms of Use", mr: "वापराच्या अटी" },
     privacy: { en: "Privacy Policy", mr: "गोपनीयता धोरण" },

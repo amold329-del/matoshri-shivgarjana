@@ -175,3 +175,9 @@ export interface Advertisement {
   phone?: string;
   address?: Bilingual;
 }
+
+export interface FaqItem {
+  id: string;
+  q: Bilingual;
+  a: Bilingual;
+}
