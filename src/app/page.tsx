@@ -3,6 +3,7 @@ import { Ribbon } from "@/components/sections/ribbon";
 import { AshadhiNotice } from "@/components/sections/ashadhi-notice";
 import { Welcome } from "@/components/sections/welcome";
 import { Journey } from "@/components/sections/journey";
+import { SuvarnaMahotsav } from "@/components/sections/suvarna-mahotsav";
 import { Stats } from "@/components/sections/stats";
 import { Countdown } from "@/components/sections/countdown";
 import { LatestNews } from "@/components/sections/latest-news";
@@ -25,6 +26,7 @@ export default function HomePage() {
       <AshadhiNotice />
       <Welcome />
       <Journey />
+      <SuvarnaMahotsav />
       <Stats />
       <Countdown />
       <LatestNews />
