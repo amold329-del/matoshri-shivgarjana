@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/hero";
 import { Ribbon } from "@/components/sections/ribbon";
-import { AshadhiNotice } from "@/components/sections/ashadhi-notice";
 import { Welcome } from "@/components/sections/welcome";
 import { Journey } from "@/components/sections/journey";
 import { SuvarnaMahotsav } from "@/components/sections/suvarna-mahotsav";
@@ -9,6 +8,7 @@ import { Countdown } from "@/components/sections/countdown";
 import { LatestNews } from "@/components/sections/latest-news";
 import { UpcomingEvents } from "@/components/sections/upcoming-events";
 import { SocialActivities } from "@/components/sections/social-activities";
+import { CompletedProgrammes } from "@/components/sections/completed-programmes";
 import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Sponsors } from "@/components/sections/sponsors";
@@ -23,7 +23,6 @@ export default function HomePage() {
     <>
       <Hero />
       <Ribbon />
-      <AshadhiNotice />
       <Welcome />
       <Journey />
       <SuvarnaMahotsav />
@@ -32,6 +31,7 @@ export default function HomePage() {
       <LatestNews />
       <UpcomingEvents />
       <SocialActivities />
+      <CompletedProgrammes />
       <GalleryPreview />
       <Testimonials />
       <Sponsors />
