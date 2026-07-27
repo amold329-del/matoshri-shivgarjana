@@ -13,7 +13,7 @@ import { useLanguage } from "@/components/providers/language-provider";
 export function SevaHighlight() {
   const { tr } = useLanguage();
   return (
-    <section className="bg-surface-2 py-20">
+    <section className="bg-surface-2 section">
       <div className="wrap max-w-5xl">
         <SectionHeading
           eyebrow={{ en: "Special Announcement", mr: "विशेष घोषणा" }}

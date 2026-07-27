@@ -463,3 +463,52 @@ button:focus-visible,
     transform: none !important;
   }
 }
+
+
+/* ==========================================================================
+   RHYTHM & TYPE SCALE  (refinement pass)
+   Audit found five different section paddings (py-16/20/24/28) and several
+   near-duplicate font sizes (1.02rem vs 1.05rem etc). These utilities give
+   one system so every page shares the same vertical rhythm and text scale.
+   ========================================================================== */
+
+/* One fluid vertical rhythm for every full-width section.
+   Scales 4rem -> 7.5rem so large monitors get real breathing room
+   without phones feeling padded-out. */
+.section {
+  padding-block: clamp(4rem, 2.6rem + 4.4vw, 7.5rem);
+}
+.section-tight {
+  padding-block: clamp(3rem, 2rem + 3.2vw, 5.5rem);
+}
+
+/* Named body sizes — replaces ad-hoc rem values doing identical jobs. */
+.text-body-lg {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.text-body {
+  font-size: 0.975rem;
+  line-height: 1.7;
+}
+.text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* Comfortable measure. Prose should not run wider than ~68ch even on
+   ultra-wide monitors — this is the large-screen readability fix. */
+.measure {
+  max-width: 68ch;
+}
+.measure-tight {
+  max-width: 56ch;
+}
+
+/* Consistent icon-in-badge sizing */
+.icon-badge {
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 14px;
+}

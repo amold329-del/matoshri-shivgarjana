@@ -19,7 +19,7 @@ export function Journey() {
   const { tr } = useLanguage();
 
   return (
-    <section className="bg-surface-2 py-24">
+    <section className="bg-surface-2 section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.journey}
@@ -49,7 +49,7 @@ export function Journey() {
                         : "bg-[linear-gradient(135deg,#6b1226,#9e1b32)] text-gold-light",
                     )}
                   >
-                    <Icon className="h-7 w-7" />
+                    <Icon className="h-6 w-6" />
                   </span>
                   <p
                     className={cn(

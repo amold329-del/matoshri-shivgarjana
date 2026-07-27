@@ -36,7 +36,7 @@ export function DownloadsView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl space-y-12">
           {groups.map((g, gi) => (
             <div key={g.label.en}>

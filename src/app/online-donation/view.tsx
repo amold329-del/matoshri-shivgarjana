@@ -81,7 +81,7 @@ export function OnlineDonationView() {
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-4 max-w-xl text-[1.05rem] text-[var(--dark-text-soft)]">
+            <p className="mx-auto mt-4 max-w-xl text-body-lg text-[var(--dark-text-soft)]">
               {tr({
                 en: "Secure online contributions are on the way. Until then, please contact the committee to offer your vargani or donation.",
                 mr: "सुरक्षित ऑनलाइन वर्गणीची सुविधा लवकरच येत आहे. तोपर्यंत, वर्गणी किंवा देणगी देण्यासाठी कृपया कार्यकारिणीशी संपर्क साधा.",
@@ -104,7 +104,7 @@ export function OnlineDonationView() {
       </header>
 
       {/* Planned features */}
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-5xl">
           <Reveal className="mb-12 text-center">
             <span className="eyebrow">{tr({ en: "What's Coming", mr: "काय येत आहे" })}</span>

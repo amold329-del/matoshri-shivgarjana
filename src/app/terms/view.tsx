@@ -130,7 +130,7 @@ export function TermsView() {
           {b.body.map((para, j) => (
             <p
               key={j}
-              className="mt-2 text-[0.95rem] leading-relaxed text-ink-soft"
+              className="mt-2 text-body leading-relaxed text-ink-soft"
             >
               {tr(para)}
             </p>
@@ -153,7 +153,7 @@ export function TermsView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <Reveal>
             <h2 className="font-display text-2xl font-extrabold text-ink">

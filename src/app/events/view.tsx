@@ -43,7 +43,7 @@ export function EventsView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-4xl">
           {/* Tabs */}
           <div className="mb-12 flex justify-center">
@@ -56,7 +56,7 @@ export function EventsView() {
                   className={cn(
                     "rounded-full px-6 py-2 text-sm font-semibold transition-all",
                     tab === key
-                      ? "bg-maroon text-cream shadow-sm"
+                      ? "bg-maroon text-cream shadow-e1"
                       : "text-ink-soft hover:text-maroon",
                   )}
                 >

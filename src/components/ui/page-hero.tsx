@@ -51,7 +51,7 @@ export function PageHero({
           {tr(title)}
         </h1>
         {subtitle && (
-          <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] text-[var(--dark-text-soft)]">
+          <p className="mx-auto mt-4 max-w-2xl text-body-lg text-[var(--dark-text-soft)]">
             {tr(subtitle)}
           </p>
         )}

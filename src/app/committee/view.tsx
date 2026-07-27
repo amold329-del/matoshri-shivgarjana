@@ -80,7 +80,7 @@ export function CommitteeView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap">
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {members.map((m, i) => (

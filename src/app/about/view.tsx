@@ -35,14 +35,14 @@ export function AboutView() {
       />
 
       {/* Story */}
-      <section className="bg-bg py-24">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <SectionHeading
             eyebrow={dict.sections.welcome}
             title={{ en: "A Legacy Born in 1980", mr: "१९८० मध्ये जन्मलेला वारसा" }}
             align="left"
           />
-          <div className="space-y-5 text-[1.02rem] leading-relaxed text-ink-soft">
+          <div className="space-y-5 text-body-lg leading-relaxed text-ink-soft">
             <Reveal>
               <p>
                 {tr({
@@ -64,7 +64,7 @@ export function AboutView() {
       </section>
 
       {/* Foreword — lines drawn from the Annual Report 2025 (pages 2-3) */}
-      <section className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_50%_-10%,#5a1024,#2a0712)] py-24 text-[var(--dark-text)]">
+      <section className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_50%_-10%,#5a1024,#2a0712)] section text-[var(--dark-text)]">
         <div className="pointer-events-none absolute left-1/2 top-8 h-64 w-64 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" />
         <div className="wrap relative max-w-3xl">
           <Reveal className="text-center">
@@ -78,7 +78,7 @@ export function AboutView() {
 
           <Quote className="mx-auto mt-8 h-9 w-9 text-gold/40" />
 
-          <div className="mt-4 space-y-5 text-[1.05rem] leading-relaxed text-[var(--dark-text-soft)]">
+          <div className="mt-4 space-y-5 text-body-lg leading-relaxed text-[var(--dark-text-soft)]">
             <Reveal>
               <p>
                 {tr({
@@ -121,7 +121,7 @@ export function AboutView() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="bg-surface-2 py-24">
+      <section className="bg-surface-2 section">
         <div className="wrap grid gap-6 md:grid-cols-2">
           {[
             {
@@ -157,7 +157,7 @@ export function AboutView() {
       </section>
 
       {/* Achievements */}
-      <section className="bg-bg py-24">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <SectionHeading
             eyebrow={{ en: "Milestones", mr: "टप्पे" }}
@@ -168,7 +168,7 @@ export function AboutView() {
               <Reveal key={a.en} delay={i * 0.08}>
                 <div className="flex items-start gap-3 rounded-xl border border-card-border bg-surface p-5">
                   <Trophy className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <p className="text-[0.96rem] text-ink">{tr(a)}</p>
+                  <p className="text-body text-ink">{tr(a)}</p>
                 </div>
               </Reveal>
             ))}
@@ -177,7 +177,7 @@ export function AboutView() {
       </section>
 
       {/* Leadership message */}
-      <section className="bg-surface-2 py-24">
+      <section className="bg-surface-2 section">
         <div className="wrap max-w-3xl">
           <Reveal>
             <article className="card-surface relative px-7 py-12 text-center sm:px-14">

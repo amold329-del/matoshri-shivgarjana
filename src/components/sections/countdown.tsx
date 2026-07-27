@@ -50,7 +50,7 @@ export function Countdown() {
   ];
 
   return (
-    <section className="bg-bg py-24">
+    <section className="bg-bg section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.countdown}

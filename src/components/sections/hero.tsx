@@ -162,7 +162,7 @@ export function Hero() {
             className="btn btn-ghost relative opacity-90"
           >
             {tr(dict.cta.sabhasad)}
-            <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-wider text-gold-light">
+            <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold-light">
               {tr(dict.cta.comingSoon)}
             </span>
           </Link>

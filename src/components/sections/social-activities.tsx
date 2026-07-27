@@ -34,7 +34,7 @@ export function SocialActivities() {
   const { tr } = useLanguage();
 
   return (
-    <section className="bg-surface-2 py-24">
+    <section className="bg-surface-2 section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.social}
@@ -52,13 +52,13 @@ export function SocialActivities() {
               <Reveal key={item.title.en} delay={(i % 4) * 0.08}>
                 <article className="card-surface group flex h-full flex-col items-center p-6 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-gold hover:shadow-md">
                   <span className="grid h-16 w-16 place-items-center rounded-2xl bg-[linear-gradient(135deg,#6b1226,#9e1b32)] text-gold-light shadow-soft transition-all duration-300 group-hover:scale-105 group-hover:bg-[linear-gradient(135deg,#c9a227,#e6c868)] group-hover:text-maroon-ink">
-                    <Icon className="h-7 w-7" />
+                    <Icon className="h-6 w-6" />
                   </span>
                   <h3 className="mt-4 font-display text-base font-bold text-ink">
                     {tr(item.title)}
                   </h3>
                   {item.planned && (
-                    <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
                       {tr(dict.cta.planned)}
                     </span>
                   )}

@@ -22,7 +22,7 @@ export function FaqView() {
         subtitle={dict.faq.subtitle}
       />
 
-      <section className="bg-bg py-16">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <div className="space-y-3">
             {faqs.map((f, i) => {
@@ -38,7 +38,7 @@ export function FaqView() {
                         aria-expanded={isOpen}
                         className="flex w-full items-center justify-between gap-4 p-5 text-left"
                       >
-                        <span className="font-display text-[1.02rem] font-bold text-ink">
+                        <span className="font-display text-body-lg font-bold text-ink">
                           {tr(f.q)}
                         </span>
                         <ChevronDown
@@ -58,7 +58,7 @@ export function FaqView() {
                       )}
                     >
                       <div className="overflow-hidden">
-                        <p className="px-5 pb-5 text-[0.95rem] leading-relaxed text-ink-soft">
+                        <p className="px-5 pb-5 text-body leading-relaxed text-ink-soft">
                           {tr(f.a)}
                         </p>
                       </div>

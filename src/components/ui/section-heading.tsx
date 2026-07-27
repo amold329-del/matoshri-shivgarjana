@@ -47,7 +47,7 @@ export function SectionHeading({
       {intro && (
         <p
           className={cn(
-            "max-w-2xl text-[1.04rem] leading-[1.75]",
+            "max-w-2xl text-body-lg leading-[1.75]",
             tone === "dark" ? "text-[var(--dark-text-soft)]" : "text-ink-soft",
           )}
         >

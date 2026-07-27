@@ -13,7 +13,7 @@ export function AshadhiNotice() {
   const { tr } = useLanguage();
   const poster = asset("/announcements/ashadhi-ekadashi-2026.jpg");
   return (
-    <section className="relative overflow-hidden bg-bg py-16">
+    <section className="relative overflow-hidden bg-bg section">
       {/* soft festive glows */}
       <div className="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-saffron/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 top-8 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
@@ -52,7 +52,7 @@ export function AshadhiNotice() {
                 {tr({ en: "Saturday, 25 July 2026", mr: "शनिवार, २५ जुलै २०२६" })}
               </div>
 
-              <p className="text-[1.02rem] leading-relaxed text-ink-soft">
+              <p className="text-body-lg leading-relaxed text-ink-soft">
                 {tr({
                   en: "On the sacred occasion of Ashadhi Ekadashi, the Mandal will distribute bananas to devotees. All are warmly invited to take part.",
                   mr: "या आषाढी एकादशीच्या पावन निमित्ताने आमच्या मंडळातर्फे भाविकांना केळीचे वितरण केले जाणार आहे. सर्व भाविकांना सहभागी होण्याचे प्रेमळ आमंत्रण.",

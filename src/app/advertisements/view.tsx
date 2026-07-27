@@ -35,7 +35,7 @@ export function AdvertisementsView() {
         subtitle={dict.ads.subtitle}
       />
 
-      <section className="bg-bg py-16">
+      <section className="bg-bg section">
         <div className="wrap max-w-5xl space-y-14">
           {ads.map((ad, idx) => (
             <Reveal key={ad.id} delay={idx * 0.06}>
@@ -61,8 +61,8 @@ export function AdvertisementsView() {
                       loading="lazy"
                       className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     />
-                    <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-wider text-cream backdrop-blur-sm">
-                      <Maximize2 className="h-3 w-3" />
+                    <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[0.66rem] font-bold uppercase tracking-wider text-cream backdrop-blur-sm">
+                      <Maximize2 className="h-3.5 w-3.5" />
                       {tr(dict.ads.viewPoster)}
                     </span>
                   </button>
@@ -70,10 +70,10 @@ export function AdvertisementsView() {
                   {/* details */}
                   <div className="p-6 sm:p-8">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-full bg-maroon/10 px-3 py-1 text-[0.6rem] font-extrabold uppercase tracking-[0.14em] text-maroon">
+                      <span className="rounded-full bg-maroon/10 px-3 py-1 text-[0.66rem] font-extrabold uppercase tracking-[0.14em] text-maroon">
                         {tr(dict.ads.label)}
                       </span>
-                      <span className="text-[0.68rem] font-bold uppercase tracking-[0.12em] text-saffron">
+                      <span className="text-[0.66rem] font-bold uppercase tracking-[0.12em] text-saffron">
                         {tr(ad.category)}
                       </span>
                     </div>
@@ -81,23 +81,23 @@ export function AdvertisementsView() {
                     <h2 className="mt-3 font-display text-2xl font-extrabold text-ink sm:text-3xl">
                       {tr(ad.name)}
                     </h2>
-                    <p className="mt-1.5 font-mr text-[1.02rem] font-semibold text-saffron">
+                    <p className="mt-1.5 font-mr text-body-lg font-semibold text-saffron">
                       {tr(ad.tagline)}
                     </p>
-                    <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
+                    <p className="mt-3 text-body leading-relaxed text-ink-soft">
                       {tr(ad.description)}
                     </p>
 
                     {ad.offers.length > 0 && (
                       <div className="mt-5">
-                        <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-saffron">
+                        <p className="text-[0.66rem] font-extrabold uppercase tracking-[0.14em] text-saffron">
                           {tr(dict.ads.offers)}
                         </p>
                         <ul className="mt-2.5 flex flex-wrap gap-2">
                           {ad.offers.map((o, i) => (
                             <li
                               key={i}
-                              className="rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 text-[0.8rem] font-semibold text-ink"
+                              className="rounded-full border border-gold/40 bg-gold/10 px-3 py-1.5 text-body-sm font-semibold text-ink"
                             >
                               {tr(o)}
                             </li>
@@ -111,7 +111,7 @@ export function AdvertisementsView() {
                         {ad.highlights.map((h, i) => (
                           <li
                             key={i}
-                            className="flex items-start gap-2 text-[0.85rem] text-ink-soft"
+                            className="flex items-start gap-2 text-body-sm text-ink-soft"
                           >
                             <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                             {tr(h)}

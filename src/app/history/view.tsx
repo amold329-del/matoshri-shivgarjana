@@ -21,7 +21,7 @@ export function HistoryView() {
         }}
       />
 
-      <section className="bg-bg py-24">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <div className="relative">
             {/* central spine */}

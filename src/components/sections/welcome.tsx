@@ -49,7 +49,7 @@ export function Welcome() {
   const { tr } = useLanguage();
 
   return (
-    <section className="bg-bg py-24">
+    <section className="bg-bg section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.welcome}
@@ -70,7 +70,7 @@ export function Welcome() {
                 <h3 className="mt-5 font-display text-xl font-bold text-ink">
                   {tr(p.title)}
                 </h3>
-                <p className="mt-3 text-[0.96rem] leading-relaxed text-ink-soft">
+                <p className="mt-3 text-body leading-relaxed text-ink-soft">
                   {tr(p.body)}
                 </p>
               </article>

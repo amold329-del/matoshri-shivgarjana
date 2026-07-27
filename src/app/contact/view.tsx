@@ -59,7 +59,7 @@ export function ContactView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap grid gap-10 lg:grid-cols-2">
           {/* Details */}
           <div className="space-y-5">

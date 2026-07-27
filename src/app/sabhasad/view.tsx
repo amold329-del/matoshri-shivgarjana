@@ -75,7 +75,7 @@ export function SabhasadView() {
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-4 max-w-xl text-[1.05rem] text-[var(--dark-text-soft)]">
+            <p className="mx-auto mt-4 max-w-xl text-body-lg text-[var(--dark-text-soft)]">
               {tr({
                 en: "We're building a dedicated space for our members. Until it's ready, please reach out to the committee to become a सभासद.",
                 mr: "आम्ही आमच्या सभासदांसाठी एक समर्पित जागा तयार करत आहोत. ती तयार होईपर्यंत, सभासद होण्यासाठी कृपया कार्यकारिणीशी संपर्क साधा.",
@@ -98,7 +98,7 @@ export function SabhasadView() {
       </header>
 
       {/* Planned features */}
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-5xl">
           <Reveal className="mb-12 text-center">
             <span className="eyebrow">{tr({ en: "What's Coming", mr: "काय येत आहे" })}</span>

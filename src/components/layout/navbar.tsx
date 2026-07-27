@@ -104,13 +104,13 @@ export function Navbar() {
               {/* Short name everywhere: the full registered name cannot share
                   the bar with the menu, especially in English. It appears in
                   full in the hero and the footer. */}
-              <span className="block max-w-[11rem] text-[0.78rem] sm:max-w-[14rem] sm:text-[0.85rem] xl:max-w-[16rem] xl:text-[0.95rem]">
+              <span className="block max-w-[11rem] text-body-sm sm:max-w-[14rem] sm:text-body-sm xl:max-w-[16rem] xl:text-body">
                 {tr(settings.org.nameShort)}
               </span>
             </span>
             <span
               className={cn(
-                "mt-0.5 block font-mr text-[0.58rem] font-semibold tracking-[0.06em] transition-colors sm:text-[0.68rem] xl:text-[0.72rem]",
+                "mt-0.5 block font-mr text-[0.66rem] font-semibold tracking-[0.06em] transition-colors sm:text-[0.66rem] xl:text-[0.7rem]",
                 scrolled ? "text-saffron" : "text-gold-light",
               )}
             >
@@ -128,7 +128,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "group/nav relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
+                    "group/nav relative whitespace-nowrap rounded-full px-2 py-2 text-body-sm font-medium transition-colors",
                     active
                       ? scrolled
                         ? "text-saffron"
@@ -140,7 +140,7 @@ export function Navbar() {
                 >
                   {tr(item.label)}
                   {item.comingSoon && (
-                    <span className="ml-1 rounded-full bg-gold/15 px-1.5 py-0.5 align-middle text-[0.58rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="ml-1 rounded-full bg-gold/15 px-1.5 py-0.5 align-middle text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
                       {tr(dict.cta.comingSoon)}
                     </span>
                   )}
@@ -165,7 +165,7 @@ export function Navbar() {
                 aria-expanded={moreOpen}
                 aria-haspopup="true"
                 className={cn(
-                  "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
+                  "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-body-sm font-medium transition-colors",
                   moreActive
                     ? scrolled
                       ? "text-saffron"
@@ -195,7 +195,7 @@ export function Navbar() {
                             href={item.href}
                             onClick={() => setMoreOpen(false)}
                             className={cn(
-                              "flex items-center justify-between gap-2 px-4 py-2.5 text-[0.85rem] font-medium transition-colors",
+                              "flex items-center justify-between gap-2 px-4 py-2.5 text-body-sm font-medium transition-colors",
                               active
                                 ? "bg-gold/10 text-saffron"
                                 : "text-ink-soft hover:bg-gold/5 hover:text-saffron",
@@ -203,7 +203,7 @@ export function Navbar() {
                           >
                             <span>{tr(item.label)}</span>
                             {item.comingSoon && (
-                              <span className="rounded-full bg-gold/15 px-1.5 py-0.5 text-[0.55rem] font-semibold uppercase tracking-wider text-gold">
+                              <span className="rounded-full bg-gold/15 px-1.5 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
                                 {tr(dict.cta.comingSoon)}
                               </span>
                             )}
@@ -225,7 +225,7 @@ export function Navbar() {
             onClick={toggle}
             aria-label="Switch language / भाषा बदला"
             className={cn(
-              "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-[0.68rem] font-extrabold tracking-wide transition-colors",
+              "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-[0.66rem] font-extrabold tracking-wide transition-colors",
               scrolled
                 ? "border-card-border text-ink hover:border-gold hover:text-saffron"
                 : "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light",
@@ -271,7 +271,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-medium transition-colors",
+                    "flex items-center justify-between rounded-xl px-4 py-3 text-body font-medium transition-colors",
                     active
                       ? "bg-gold/10 text-saffron"
                       : "text-ink hover:bg-surface-2",
@@ -279,7 +279,7 @@ export function Navbar() {
                 >
                   <span>{tr(item.label)}</span>
                   {item.comingSoon && (
-                    <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
                       {tr(dict.cta.comingSoon)}
                     </span>
                   )}

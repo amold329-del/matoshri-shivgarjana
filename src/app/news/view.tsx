@@ -49,7 +49,7 @@ export function NewsView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-5xl">
           {/* Featured */}
           {featured && (

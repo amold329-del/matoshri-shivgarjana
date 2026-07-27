@@ -53,7 +53,7 @@ export function RegistrationView() {
       />
 
       {/* Record cards */}
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-4xl">
           <div className="grid gap-5 sm:grid-cols-2">
             {records.map((r, i) => (
@@ -87,7 +87,7 @@ export function RegistrationView() {
       </section>
 
       {/* What registration means */}
-      <section className="bg-surface-2 py-20">
+      <section className="bg-surface-2 section">
         <div className="wrap max-w-4xl">
           <SectionHeading
             eyebrow={{ en: "Legal Standing", mr: "कायदेशीर स्थान" }}

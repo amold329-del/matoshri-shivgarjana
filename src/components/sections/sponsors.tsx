@@ -15,7 +15,7 @@ export function Sponsors() {
   const loop = [...sponsors, ...sponsors];
 
   return (
-    <section className="border-y border-card-border bg-bg py-16">
+    <section className="border-y border-card-border bg-bg section">
       <div className="wrap">
         <p className="mb-8 text-center font-display text-sm font-semibold uppercase tracking-[0.2em] text-saffron">
           {tr(dict.sections.sponsors)}
@@ -38,7 +38,7 @@ export function Sponsors() {
                   {s.name}
                 </span>
                 {s.tier && (
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-gold">
+                  <span className="text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
                     {s.tier}
                   </span>
                 )}

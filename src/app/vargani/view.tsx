@@ -45,7 +45,7 @@ export function VarganiView() {
       />
 
       {/* Intro + What is */}
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap grid items-start gap-10 lg:grid-cols-2">
           <Reveal>
             <div className="card-surface h-full p-8">
@@ -94,7 +94,7 @@ export function VarganiView() {
       </section>
 
       {/* Importance */}
-      <section className="bg-surface-2 py-20">
+      <section className="bg-surface-2 section">
         <div className="wrap">
           <SectionHeading
             eyebrow={{ en: "Why It Matters", mr: "हे का महत्त्वाचे आहे" }}
@@ -124,7 +124,7 @@ export function VarganiView() {
       </section>
 
       {/* Fund utilisation */}
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-3xl">
           <SectionHeading
             eyebrow={{ en: "Fund Utilisation", mr: "निधी विनियोग" }}

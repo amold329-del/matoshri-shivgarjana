@@ -23,7 +23,7 @@ export function ProcessionView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap max-w-4xl space-y-10">
           {routes.map((route, idx) => (
             <Reveal key={route.id} delay={idx * 0.08}>
@@ -81,7 +81,7 @@ export function ProcessionView() {
                               i + 1
                             )}
                           </span>
-                          <span className="pt-0.5 font-mr text-[0.98rem] font-semibold text-ink">
+                          <span className="pt-0.5 font-mr text-body font-semibold text-ink">
                             {tr(stop)}
                           </span>
                         </li>

@@ -17,7 +17,7 @@ export function Stats() {
   const { tr } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_50%_0%,#5a1024,#2a0712_70%)] py-24 text-[var(--dark-text)]">
+    <section className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_50%_0%,#5a1024,#2a0712_70%)] section text-[var(--dark-text)]">
       <FloatingPetals count={9} />
       <div className="wrap relative z-10">
         <SectionHeading

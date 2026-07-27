@@ -78,7 +78,7 @@ export function GalleryView() {
         }}
       />
 
-      <section className="bg-bg py-20">
+      <section className="bg-bg section">
         <div className="wrap">
           {/* Year filter */}
           <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
@@ -121,7 +121,7 @@ export function GalleryView() {
                       src={asset(item.src)}
                       alt={tr(item.caption)}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                     />
                   ) : (
                     <span
@@ -147,7 +147,7 @@ export function GalleryView() {
                       {tr(item.caption)}
                     </span>
                   </span>
-                  <span className="absolute right-2 top-2 rounded-full bg-black/40 px-2 py-0.5 text-[0.65rem] font-semibold text-cream/90 backdrop-blur-sm">
+                  <span className="absolute right-2 top-2 rounded-full bg-black/40 px-2 py-0.5 text-[0.66rem] font-semibold text-cream/90 backdrop-blur-sm">
                     {item.year}
                   </span>
                 </button>

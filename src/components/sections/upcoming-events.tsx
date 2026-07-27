@@ -17,7 +17,7 @@ export function UpcomingEvents() {
     .slice(0, 4);
 
   return (
-    <section className="bg-surface-2 py-24">
+    <section className="bg-surface-2 section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.events}

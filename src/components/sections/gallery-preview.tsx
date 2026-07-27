@@ -47,7 +47,7 @@ export function GalleryPreview() {
   const visible = filtered.slice(0, shown);
 
   return (
-    <section className="bg-bg py-24">
+    <section className="bg-bg section">
       <div className="wrap">
         <SectionHeading
           eyebrow={dict.sections.gallery}
