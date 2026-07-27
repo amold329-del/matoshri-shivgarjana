@@ -24,6 +24,7 @@ const routes: Array<{
   { path: "/vargani/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-donation/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/registration/", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/advertisements/", priority: 0.6, changeFrequency: "monthly" },
   { path: "/downloads/", priority: 0.5, changeFrequency: "monthly" },
   { path: "/contact/", priority: 0.6, changeFrequency: "yearly" },
   { path: "/sabhasad/", priority: 0.6, changeFrequency: "monthly" },

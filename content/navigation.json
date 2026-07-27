@@ -4,63 +4,72 @@
       "en": "Home",
       "mr": "मुख्यपृष्ठ"
     },
-    "href": "/"
+    "href": "/",
+    "primary": true
   },
   {
     "label": {
       "en": "About Us",
       "mr": "आमच्याबद्दल"
     },
-    "href": "/about"
+    "href": "/about",
+    "primary": true
   },
   {
     "label": {
       "en": "History",
       "mr": "इतिहास"
     },
-    "href": "/history"
+    "href": "/history",
+    "primary": false
   },
   {
     "label": {
       "en": "Gallery",
       "mr": "गॅलरी"
     },
-    "href": "/gallery"
+    "href": "/gallery",
+    "primary": true
   },
   {
     "label": {
       "en": "Events",
       "mr": "कार्यक्रम"
     },
-    "href": "/events"
+    "href": "/events",
+    "primary": true
   },
   {
     "label": {
       "en": "News",
       "mr": "बातम्या"
     },
-    "href": "/news"
+    "href": "/news",
+    "primary": false
   },
   {
     "label": {
       "en": "Committee",
       "mr": "समिती"
     },
-    "href": "/committee"
+    "href": "/committee",
+    "primary": true
   },
   {
     "label": {
       "en": "Procession Route",
       "mr": "मिरवणूक मार्ग"
     },
-    "href": "/procession"
+    "href": "/procession",
+    "primary": true
   },
   {
     "label": {
       "en": "Vargani",
       "mr": "वर्गणी"
     },
-    "href": "/vargani"
+    "href": "/vargani",
+    "primary": false
   },
   {
     "label": {
@@ -68,28 +77,40 @@
       "mr": "ऑनलाइन देणगी"
     },
     "href": "/online-donation",
-    "comingSoon": true
+    "comingSoon": true,
+    "primary": false
   },
   {
     "label": {
       "en": "Registration",
       "mr": "नोंदणी तपशील"
     },
-    "href": "/registration"
+    "href": "/registration",
+    "primary": false
+  },
+  {
+    "label": {
+      "en": "Advertisements",
+      "mr": "जाहिराती"
+    },
+    "href": "/advertisements",
+    "primary": false
   },
   {
     "label": {
       "en": "Downloads",
       "mr": "डाउनलोड"
     },
-    "href": "/downloads"
+    "href": "/downloads",
+    "primary": false
   },
   {
     "label": {
       "en": "Contact",
       "mr": "संपर्क"
     },
-    "href": "/contact"
+    "href": "/contact",
+    "primary": true
   },
   {
     "label": {
@@ -97,6 +118,7 @@
       "mr": "सभासद"
     },
     "href": "/sabhasad",
-    "comingSoon": true
+    "comingSoon": true,
+    "primary": false
   }
 ]

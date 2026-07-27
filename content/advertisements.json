@@ -1,0 +1,128 @@
+[
+  {
+    "id": "bhulakshmi-jewellers",
+    "tier": "pramukh",
+    "name": {
+      "en": "Bhulakshmi Jewellers",
+      "mr": "भूलक्ष्मी ज्वेलर्स"
+    },
+    "category": {
+      "en": "Jewellery",
+      "mr": "सुवर्णालंकार"
+    },
+    "tagline": {
+      "en": "A jewel of trust, a golden bond of relationships!",
+      "mr": "विश्वासाचा दागिना, नात्यांचा सुबर्ण बंध!"
+    },
+    "description": {
+      "en": "Gold | Silver | Diamonds | Gemstone jewellery. Assured quality and a guarantee of genuine gold on every purchase.",
+      "mr": "सोनं | चांदी | हिरे | रत्नजडित दागिने. प्रत्येक खरेदीवर खात्रीशीर गुणवत्ता आणि खऱ्या सोन्याची हमी!"
+    },
+    "offers": [
+      {
+        "en": "Up to 25% off on making charges",
+        "mr": "मेकिंग चार्जवर २५% पर्यंत सूट"
+      },
+      {
+        "en": "Free gift on gold purchase",
+        "mr": "सोनं खरेदीवर फ्री गिफ्ट"
+      },
+      {
+        "en": "Up to 10% off on silver items",
+        "mr": "चांदीच्या वस्तूंवर १०% पर्यंत सूट"
+      },
+      {
+        "en": "100% bonus value on old gold exchange",
+        "mr": "जुने सोने एक्सचेंजवर १००% बोनस मूल्य"
+      }
+    ],
+    "highlights": [
+      {
+        "en": "Hallmarked gold assurance",
+        "mr": "हॉलमार्क सोन्याची खात्री"
+      },
+      {
+        "en": "Full purity guarantee",
+        "mr": "शुद्धतेची पूर्ण हमी"
+      },
+      {
+        "en": "Latest designs and collections",
+        "mr": "आकर्षक डिझाईन्स आणि लेटेस्ट कलेक्शन"
+      },
+      {
+        "en": "Customer satisfaction is our identity",
+        "mr": "ग्राहकांचे समाधान हीच आमची ओळख"
+      }
+    ],
+    "image": "/advertisements/bhulakshmi-jewellers.jpg",
+    "orientation": "portrait",
+    "phone": "",
+    "address": {
+      "en": "",
+      "mr": ""
+    }
+  },
+  {
+    "id": "shikhar-mens-wear",
+    "tier": "pramukh",
+    "name": {
+      "en": "Shikhar Mens Wear",
+      "mr": "शिखर मेंस वेअर"
+    },
+    "category": {
+      "en": "Mens Wear",
+      "mr": "पुरुष वस्त्रदालन"
+    },
+    "tagline": {
+      "en": "Your style... our selection!",
+      "mr": "स्टाईल तुमची... निवड आमची!"
+    },
+    "description": {
+      "en": "Modern fashion that gives your personality a new height. Shirts, pants, t-shirts, formal wear, denim and accessories.",
+      "mr": "आधुनिक फॅशन... तुमच्या व्यक्तिमत्त्वाला नवी उंची! शर्ट्स, पँट्स, टी-शर्ट्स, फॉर्मल वेअर, डेनिम, अ‍ॅक्सेसरीज आणि बरेच काही."
+    },
+    "offers": [
+      {
+        "en": "Buy 2 shirts, get 10% off",
+        "mr": "२ शर्ट खरेदी करा आणि मिळवा १०% सूट"
+      },
+      {
+        "en": "Buy 2 pants, get 15% off",
+        "mr": "२ पँट खरेदी करा आणि मिळवा १५% सूट"
+      },
+      {
+        "en": "Buy 2 t-shirts / polo tees, get 20% off",
+        "mr": "२ टी-शर्ट / पोलो टी खरेदी करा आणि मिळवा २०% सूट"
+      },
+      {
+        "en": "Special discount on formal sets",
+        "mr": "फॉर्मल सेटवर विशेष सवलत"
+      }
+    ],
+    "highlights": [
+      {
+        "en": "Finest quality",
+        "mr": "सर्वोत्कृष्ट गुणवत्ता"
+      },
+      {
+        "en": "Affordable prices",
+        "mr": "परवडणाऱ्या किंमती"
+      },
+      {
+        "en": "Customer service is our identity",
+        "mr": "ग्राहक सेवा हीच आमची ओळख"
+      },
+      {
+        "en": "Easy exchange and return",
+        "mr": "सोपे बदल व रिटर्न सुविधा"
+      }
+    ],
+    "image": "/advertisements/shikhar-mens-wear.jpg",
+    "orientation": "landscape",
+    "phone": "",
+    "address": {
+      "en": "",
+      "mr": ""
+    }
+  }
+]

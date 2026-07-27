@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { getNav, getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
@@ -24,6 +24,12 @@ export function Navbar() {
   const { tr, toggle } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLLIElement>(null);
+
+  const primaryNav = useMemo(() => nav.filter((n) => n.primary !== false), [nav]);
+  const moreNav = useMemo(() => nav.filter((n) => n.primary === false), [nav]);
+  const moreActive = moreNav.some((n) => n.href === pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 28);
@@ -41,7 +47,29 @@ export function Navbar() {
   }, [open]);
 
   // Close the sheet on route change.
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    setOpen(false);
+    setMoreOpen(false);
+  }, [pathname]);
+
+  // Close the "More" dropdown on outside click or Escape.
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMoreOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [moreOpen]);
 
   return (
     <header
@@ -81,16 +109,16 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop links */}
+        {/* Desktop links: primary items inline, the rest under "More" */}
         <ul className="nav-desktop hidden items-center gap-0.5 xl:flex">
-          {nav.map((item) => {
+          {primaryNav.map((item) => {
             const active = pathname === item.href;
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "relative whitespace-nowrap rounded-full px-1.5 py-2 text-[0.8rem] font-medium transition-colors",
+                    "relative whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
                     active
                       ? scrolled
                         ? "text-saffron"
@@ -110,6 +138,66 @@ export function Navbar() {
               </li>
             );
           })}
+
+          {moreNav.length > 0 && (
+            <li className="relative" ref={moreRef}>
+              <button
+                type="button"
+                onClick={() => setMoreOpen((o) => !o)}
+                aria-expanded={moreOpen}
+                aria-haspopup="true"
+                className={cn(
+                  "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[0.82rem] font-medium transition-colors",
+                  moreActive
+                    ? scrolled
+                      ? "text-saffron"
+                      : "text-gold-light"
+                    : scrolled
+                      ? "text-ink-soft hover:text-saffron"
+                      : "text-[var(--dark-text-soft)] hover:text-[var(--dark-text)]",
+                )}
+              >
+                {tr(dict.nav.more)}
+                <ChevronDown
+                  className={cn(
+                    "h-3.5 w-3.5 transition-transform",
+                    moreOpen && "rotate-180",
+                  )}
+                />
+              </button>
+
+              {moreOpen && (
+                <div className="glass absolute right-0 top-full z-50 mt-2 w-60 overflow-hidden rounded-2xl border border-card-border shadow-soft">
+                  <ul className="py-2">
+                    {moreNav.map((item) => {
+                      const active = pathname === item.href;
+                      return (
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            onClick={() => setMoreOpen(false)}
+                            className={cn(
+                              "flex items-center justify-between gap-2 px-4 py-2.5 text-[0.85rem] font-medium transition-colors",
+                              active
+                                ? "bg-gold/10 text-saffron"
+                                : "text-ink-soft hover:bg-gold/5 hover:text-saffron",
+                            )}
+                          >
+                            <span>{tr(item.label)}</span>
+                            {item.comingSoon && (
+                              <span className="rounded-full bg-gold/15 px-1.5 py-0.5 text-[0.55rem] font-semibold uppercase tracking-wider text-gold">
+                                {tr(dict.cta.comingSoon)}
+                              </span>
+                            )}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+            </li>
+          )}
         </ul>
 
         {/* Right controls */}

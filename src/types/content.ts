@@ -51,6 +51,7 @@ export interface SiteSettings {
 }
 
 export interface NavItem {
+  primary?: boolean;
   label: Bilingual;
   href: string;
   comingSoon?: boolean;
@@ -158,4 +159,19 @@ export interface ProcessionRoute {
   dateLabel: Bilingual;
   timeLabel: Bilingual;
   stops: Bilingual[];
+}
+
+export interface Advertisement {
+  id: string;
+  tier: "mukhya" | "pramukh" | "sahayogi";
+  name: Bilingual;
+  category: Bilingual;
+  tagline: Bilingual;
+  description: Bilingual;
+  offers: Bilingual[];
+  highlights: Bilingual[];
+  image: string;
+  orientation: "portrait" | "landscape";
+  phone?: string;
+  address?: Bilingual;
 }

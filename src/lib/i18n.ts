@@ -10,6 +10,7 @@ export type Lang = "en" | "mr";
 export const dict = {
   nav: {
     languageToggle: { en: "MR", mr: "EN" },
+    more: { en: "More", mr: "अधिक" },
     themeLight: { en: "Light", mr: "उजेड" },
     themeDark: { en: "Dark", mr: "अंधार" },
     menu: { en: "Menu", mr: "मेनू" },
@@ -114,6 +115,27 @@ export const dict = {
     note: {
       en: "Timings are indicative and may shift with crowd and traffic conditions.",
       mr: "वेळा अंदाजे असून गर्दी व वाहतुकीनुसार बदलू शकतात.",
+    },
+  },
+  ads: {
+    eyebrow: { en: "Our Supporters", mr: "आमचे आधारस्तंभ" },
+    title: { en: "Advertisements & Sponsors", mr: "जाहिराती व प्रायोजक" },
+    subtitle: {
+      en: "Local businesses who support the Mandal's festival and social work.",
+      mr: "मंडळाच्या उत्सवाला व सामाजिक कार्याला हातभार लावणारी स्थानिक दुकाने.",
+    },
+    label: { en: "Advertisement", mr: "जाहिरात" },
+    offers: { en: "Offers", mr: "आकर्षक ऑफर्स" },
+    why: { en: "Why choose us", mr: "आमची वैशिष्ट्ये" },
+    viewPoster: { en: "View full poster", mr: "संपूर्ण जाहिरात पहा" },
+    disclaimer: {
+      en: "These are paid advertisements. The Mandal is not responsible for the products, services, offers or claims of the advertisers.",
+      mr: "या सशुल्क जाहिराती आहेत. जाहिरातदारांच्या वस्तू, सेवा, ऑफर्स किंवा दाव्यांसाठी मंडळ जबाबदार नाही.",
+    },
+    advertise: { en: "Advertise with us", mr: "आमच्याकडे जाहिरात द्या" },
+    advertiseBody: {
+      en: "To place your shop's advertisement here, please contact the Mandal committee.",
+      mr: "तुमच्या दुकानाची जाहिरात येथे देण्यासाठी कृपया मंडळाच्या कार्यकारिणीशी संपर्क साधा.",
     },
   },
   legal: {
