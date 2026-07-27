@@ -52,6 +52,16 @@ export function Navbar() {
     setMoreOpen(false);
   }, [pathname]);
 
+  // Lock background scroll while the mobile menu is open.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   // Close the "More" dropdown on outside click or Escape.
   useEffect(() => {
     if (!moreOpen) return;
@@ -236,11 +246,16 @@ export function Navbar() {
       {/* Mobile sheet */}
       <div
         className={cn(
-          "nav-mobile-panel glass overflow-hidden border-t border-card-border transition-[max-height] duration-300 xl:hidden",
-          open ? "max-h-[80vh]" : "max-h-0",
+          "nav-mobile-panel glass border-t border-card-border transition-[max-height] duration-300 xl:hidden",
+          // Scroll inside the panel: the list is taller than the screen, so it
+          // must scroll rather than be clipped. Height is capped below the
+          // viewport so the header stays visible.
+          open
+            ? "max-h-[calc(100svh-4.5rem)] overflow-y-auto overscroll-contain"
+            : "max-h-0 overflow-hidden",
         )}
       >
-        <ul className="wrap flex flex-col gap-1 py-4">
+        <ul className="wrap flex flex-col gap-1 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
