@@ -82,10 +82,10 @@ export function SuvarnaMahotsav() {
         className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl"
       />
 
-      <div className="wrap relative grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+      <div className="wrap relative grid items-center gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1fr)] lg:gap-14">
         {/* Poster */}
         <Reveal>
-          <figure className="card-surface overflow-hidden p-0">
+          <figure className="card-surface mx-auto overflow-hidden p-0 lg:mx-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={asset("/announcements/suvarna-mahotsav.jpg")}
@@ -94,7 +94,7 @@ export function SuvarnaMahotsav() {
                 mr: "मातोश्री शिवगर्जना मंडळ — सुवर्ण महोत्सवाकडे वाटचाल, ४७ वे वर्ष",
               })}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="mx-auto block h-auto w-full max-w-[420px] object-contain lg:max-w-none"
             />
           </figure>
         </Reveal>
