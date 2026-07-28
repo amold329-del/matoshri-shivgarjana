@@ -15,17 +15,18 @@ import { Sponsors } from "@/components/sections/sponsors";
 
 /**
  * Homepage — composes the full narrative in the order set by the brief:
- * hero → celebration ribbon → welcome → journey → stats → countdown →
- * news → events → social work → gallery → testimonials → sponsors.
+ * hero → celebration ribbon → golden-jubilee journey → welcome → journey →
+ * stats → countdown → news → events → social work → completed programmes →
+ * gallery → testimonials → sponsors.
  */
 export default function HomePage() {
   return (
     <>
       <Hero />
       <Ribbon />
+      <SuvarnaMahotsav />
       <Welcome />
       <Journey />
-      <SuvarnaMahotsav />
       <Stats />
       <Countdown />
       <LatestNews />
