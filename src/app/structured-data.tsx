@@ -70,6 +70,29 @@ export default function StructuredData() {
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     url: `${SITE_URL}/events/`,
     isAccessibleForFree: true,
+    /* Google flags these three as optional-but-recommended on Event.
+       All are filled with accurate information: darshan is free and open
+       to all (no pass or ticket), the Mandal itself presents the aartis
+       and cultural programme, and the images are of our own idol. */
+    image: [
+      `${SITE_URL}/event/ganeshotsav-16x9.jpg`,
+      `${SITE_URL}/event/ganeshotsav-4x3.jpg`,
+      `${SITE_URL}/event/ganeshotsav-1x1.jpg`,
+    ],
+    performer: {
+      "@type": "PerformingGroup",
+      name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
+      url: SITE_URL,
+    },
+    offers: {
+      "@type": "Offer",
+      description: "दर्शन विनामूल्य — सर्व भाविकांसाठी खुले",
+      price: 0,
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      validFrom: "2026-01-01",
+      url: `${SITE_URL}/events/`,
+    },
     description:
       "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळाचा ४७ वा गणेशोत्सव — आगमन, आरती, सांस्कृतिक कार्यक्रम, महाप्रसाद व विसर्जन मिरवणूक.",
     location: {

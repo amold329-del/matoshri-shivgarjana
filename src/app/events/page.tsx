@@ -53,6 +53,25 @@ const eventsJsonLd = getEvents().map((event) => ({
   description: event.body.mr,
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  image: [
+    `${SITE_URL}/event/ganeshotsav-16x9.jpg`,
+    `${SITE_URL}/event/ganeshotsav-4x3.jpg`,
+    `${SITE_URL}/event/ganeshotsav-1x1.jpg`,
+  ],
+  performer: {
+    "@type": "PerformingGroup",
+    name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
+    url: SITE_URL,
+  },
+  offers: {
+    "@type": "Offer",
+    description: "विनामूल्य — सर्वांसाठी खुले",
+    price: 0,
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    validFrom: "2026-01-01",
+    url: SITE_URL,
+  },
   location: {
     "@type": "Place",
     name: event.venue.mr,
