@@ -76,7 +76,7 @@ export function AboutView() {
             </h2>
           </Reveal>
 
-          <Quote className="mx-auto mt-8 h-9 w-9 text-gold/40" />
+          <Quote className="mx-auto mt-8 h-9 w-9 text-accent-gold/40" />
 
           <div className="mt-4 space-y-5 text-body-lg leading-relaxed text-[var(--dark-text-soft)]">
             <Reveal>
@@ -167,7 +167,7 @@ export function AboutView() {
             {achievements.map((a, i) => (
               <Reveal key={a.en} delay={i * 0.08}>
                 <div className="flex items-start gap-3 rounded-xl border border-card-border bg-surface p-5">
-                  <Trophy className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                  <Trophy className="mt-0.5 h-5 w-5 shrink-0 text-accent-gold" />
                   <p className="text-body text-ink">{tr(a)}</p>
                 </div>
               </Reveal>
@@ -181,7 +181,7 @@ export function AboutView() {
         <div className="wrap max-w-3xl">
           <Reveal>
             <article className="card-surface relative px-7 py-12 text-center sm:px-14">
-              <Quote className="mx-auto h-10 w-10 text-gold/40" />
+              <Quote className="mx-auto h-10 w-10 text-accent-gold/40" />
               <p className="mt-5 font-display text-lg font-medium leading-relaxed text-ink sm:text-xl">
                 {tr({
                   en: "For 47 years, this Mandal has been more than a festival — it is a family bound by devotion and a shared duty to serve. We invite you to be part of our next chapter.",
@@ -189,8 +189,9 @@ export function AboutView() {
                 })}
               </p>
               <LotusDivider className="mt-7" />
-              <p className="mt-4 font-display font-bold text-maroon">
-                कु. विवेक राजाराम चव्हाण
+              <p className="mt-4 font-display font-bold text-brand">
+                {/* proper noun — stays in Devanagari, marked for screen readers */}
+                <span lang="mr">कु. विवेक राजाराम चव्हाण</span>
               </p>
               <p className="text-sm text-ink-soft">{tr({ en: "President", mr: "अध्यक्ष" })}</p>
             </article>

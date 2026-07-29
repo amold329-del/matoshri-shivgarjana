@@ -44,6 +44,7 @@ export function EventsView() {
       />
 
       <section className="bg-bg section">
+        <h2 className="sr-only">{tr({ en: "Event schedule", mr: "कार्यक्रम वेळापत्रक" })}</h2>
         <div className="wrap max-w-4xl">
           {/* Tabs */}
           <div className="mb-12 flex justify-center">
@@ -57,7 +58,7 @@ export function EventsView() {
                     "rounded-full px-6 py-2 text-sm font-semibold transition-all",
                     tab === key
                       ? "bg-maroon text-cream shadow-e1"
-                      : "text-ink-soft hover:text-maroon",
+                      : "text-ink-soft hover:text-brand",
                   )}
                 >
                   {key === "upcoming"
@@ -104,11 +105,11 @@ function EventCard({
 }) {
   return (
     <div className="relative flex gap-5 pl-1">
-      <span className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-gold bg-surface text-saffron">
+      <span className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-gold bg-surface text-accent">
         <CalendarDays className="h-4 w-4" />
       </span>
       <article className="card-surface flex-1 p-6">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold text-saffron">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold text-accent">
           <span className="inline-flex items-center gap-1.5">
             <CalendarDays className="h-3.5 w-3.5" />
             {formatDate(ev.date, lang)}
@@ -124,7 +125,7 @@ function EventCard({
           {tr(ev.title)}
         </h3>
         <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-ink-soft">
-          <MapPin className="h-3.5 w-3.5 text-maroon" />
+          <MapPin className="h-3.5 w-3.5 text-brand" />
           {tr(ev.venue)}
         </p>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">

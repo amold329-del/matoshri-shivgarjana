@@ -12,6 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import { getNav, getSettings } from "@/lib/content";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
 import { Emblem, LotusDivider } from "@/components/ui/decorations";
@@ -26,12 +27,13 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
 export function Footer() {
   const settings = getSettings();
   const nav = getNav();
-  const { tr } = useLanguage();
+  const { tr, lang } = useLanguage();
   const year = new Date().getFullYear();
 
   return (
     <footer className="relative overflow-hidden bg-[linear-gradient(180deg,#2a0712,#1b0410)] text-[var(--dark-text)]">
       <div className="wrap relative z-10 grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+        <h2 className="sr-only">{tr({ en: "Mandal information", mr: "मंडळाची माहिती" })}</h2>
         {/* Brand + motto */}
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3">
@@ -41,7 +43,7 @@ export function Footer() {
                 {tr(settings.org.nameShort)}
               </p>
               <p className="text-xs uppercase tracking-[0.18em] text-[var(--dark-text-soft)]">
-                स्थापना {settings.org.established}
+                {tr({ en: `Established ${settings.org.established}`, mr: `स्थापना ${settings.org.established}` })}
               </p>
             </div>
           </div>
@@ -55,7 +57,7 @@ export function Footer() {
 
         {/* Quick links */}
         <div>
-          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent-gold">
             {tr(dict.footer.quickLinks)}
           </h3>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
@@ -74,33 +76,33 @@ export function Footer() {
 
         {/* Contact */}
         <div className="min-w-0">
-          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent-gold">
             {tr(dict.footer.contact)}
           </h3>
           <ul className="space-y-3 text-sm text-[var(--dark-text-soft)]">
             <li className="flex gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <span>{settings.contact.addressLines.join(", ")}</span>
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-gold" />
+              <span lang={lang === "en" && settings.contact.addressLinesEn ? "en" : "mr"}>
+                {(lang === "en" && settings.contact.addressLinesEn
+                  ? settings.contact.addressLinesEn
+                  : settings.contact.addressLines
+                ).join(", ")}
+              </span>
             </li>
             {settings.contact.phones.map((p) => (
               <li key={p} className="flex gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent-gold" />
                 <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-gold-light">
                   {p}
                 </a>
               </li>
             ))}
             <li className="flex min-w-0 gap-3">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <a
-                href={`mailto:${settings.contact.email}`}
-                className="min-w-0 break-all hover:text-gold-light"
-              >
-                {settings.contact.email}
-              </a>
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent-gold" />
+              <ObfuscatedEmail className="min-w-0 break-all hover:text-gold-light" />
             </li>
             <li className="flex gap-3">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-accent-gold" />
               <span>{tr(settings.contact.hours)}</span>
             </li>
           </ul>
@@ -108,7 +110,7 @@ export function Footer() {
 
         {/* Map + social */}
         <div className="min-w-0">
-          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-gold">
+          <h3 className="mb-5 font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent-gold">
             {tr(dict.footer.follow)}
           </h3>
           <div className="flex gap-2.5">
@@ -154,7 +156,7 @@ export function Footer() {
         <p className="flex items-center gap-3">
           <Link
             href="/terms"
-            className="text-gold-light transition-colors hover:text-gold"
+            className="text-gold-light transition-colors hover:text-accent-gold"
           >
             {tr(dict.legal.terms)} · {tr(dict.legal.privacy)}
           </Link>

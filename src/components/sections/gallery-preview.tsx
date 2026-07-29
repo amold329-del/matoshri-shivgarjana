@@ -5,6 +5,7 @@ import Link from "next/link";
 import { X, ArrowRight, ImageIcon } from "lucide-react";
 import { getGallery } from "@/lib/content";
 import { asset } from "@/lib/asset";
+import { Picture } from "@/components/ui/picture";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -90,13 +91,13 @@ export function GalleryPreview() {
                 style={{ aspectRatio: i % 3 === 0 ? "3 / 4" : "4 / 3" }}
               >
                 {item.src ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={asset(item.src)}
-                    alt={tr(item.caption)}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <Picture
+                  src={item.src}
+                  alt={tr(item.caption)}
+                  sizes="(max-width: 640px) 92vw, 30vw"
+                  className="block h-full w-full"
+                  imgClassName="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 ) : (
                   <span
                     className="flex h-full w-full items-center justify-center"
@@ -128,7 +129,7 @@ export function GalleryPreview() {
           )}
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-saffron hover:gap-2.5"
+            className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-accent hover:gap-2.5"
           >
             {tr(dict.cta.viewAll)} <ArrowRight className="h-4 w-4" />
           </Link>
@@ -194,8 +195,8 @@ function FilterChip({
       className={cn(
         "rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
         active
-          ? "border-gold bg-gold/15 text-saffron"
-          : "border-card-border text-ink-soft hover:border-gold hover:text-saffron",
+          ? "border-gold bg-gold/15 text-accent"
+          : "border-card-border text-ink-soft hover:border-gold hover:text-accent",
       )}
     >
       {children}

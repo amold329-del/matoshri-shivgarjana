@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, Star } from "lucide-react";
+import { Search, Star, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
@@ -13,9 +13,19 @@ export function NewsView() {
   const { tr, lang } = useLanguage();
   const news = getNews();
   const [query, setQuery] = useState("");
+  const [year, setYear] = useState<string>("all");
   const [cat, setCat] = useState<string>("all");
 
   const featured = news.find((n) => n.featured) ?? news[0];
+
+  // Year archive (MCV-046) — mirrors the gallery filter pattern.
+  const years = useMemo(
+    () =>
+      Array.from(new Set(news.map((n) => n.date.slice(0, 4)))).sort(
+        (a, b) => Number(b) - Number(a),
+      ),
+    [news],
+  );
 
   const categories = useMemo(() => {
     const set = new Map<string, { en: string; mr: string }>();
@@ -27,6 +37,7 @@ export function NewsView() {
     const q = query.trim().toLowerCase();
     return news
       .filter((n) => (cat === "all" ? true : n.category.en === cat))
+      .filter((n) => (year === "all" ? true : n.date.startsWith(year)))
       .filter((n) => {
         if (!q) return true;
         return (
@@ -36,7 +47,7 @@ export function NewsView() {
         );
       })
       .sort((a, b) => +new Date(b.date) - +new Date(a.date));
-  }, [news, cat, query]);
+  }, [news, cat, query, year]);
 
   return (
     <>
@@ -74,7 +85,7 @@ export function NewsView() {
 
           {/* Controls */}
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-2">
+            <div role="group" aria-label={tr({ en: "Filter news by category", mr: "प्रकारानुसार गाळा" })} className="flex flex-wrap gap-2">
               <Chip active={cat === "all"} onClick={() => setCat("all")}>
                 {tr({ en: "All", mr: "सर्व" })}
               </Chip>
@@ -85,6 +96,22 @@ export function NewsView() {
                   onClick={() => setCat(c.en)}
                 >
                   {tr(c)}
+                </Chip>
+              ))}
+            </div>
+
+            {/* year archive */}
+            <div
+              role="group"
+              aria-label={tr({ en: "Filter news by year", mr: "वर्षानुसार गाळा" })}
+              className="mt-3 flex flex-wrap items-center justify-center gap-2"
+            >
+              <Chip active={year === "all"} onClick={() => setYear("all")}>
+                {tr({ en: "All years", mr: "सर्व वर्षे" })}
+              </Chip>
+              {years.map((y) => (
+                <Chip key={y} active={year === y} onClick={() => setYear(y)}>
+                  {y}
                 </Chip>
               ))}
             </div>
@@ -110,7 +137,7 @@ export function NewsView() {
               {filtered.map((n, i) => (
                 <Reveal key={n.id} delay={(i % 3) * 0.06}>
                   <article className="card-surface flex h-full flex-col p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-saffron">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                       {tr(n.category)}
                     </p>
                     <h3 className="mt-2 font-display text-lg font-bold leading-snug text-ink">
@@ -148,13 +175,16 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
+      aria-pressed={active}
       className={cn(
-        "rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
+        "inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
         active
-          ? "border-gold bg-gold/15 text-saffron"
-          : "border-card-border text-ink-soft hover:border-gold hover:text-saffron",
+          ? // non-colour affordance: heavier border + check glyph (WCAG 1.4.1)
+            "border-2 border-gold bg-gold/15 text-accent"
+          : "border border-card-border text-ink-soft hover:border-gold hover:text-accent",
       )}
     >
+      {active && <Check aria-hidden className="h-3.5 w-3.5" />}
       {children}
     </button>
   );

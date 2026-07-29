@@ -110,7 +110,7 @@ export function SabhasadView() {
             {planned.map((p, i) => (
               <Reveal key={p.title.en} delay={(i % 2) * 0.08}>
                 <article className="card-surface flex h-full gap-4 p-6">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-brand">
                     <p.icon className="h-6 w-6" />
                   </span>
                   <div>

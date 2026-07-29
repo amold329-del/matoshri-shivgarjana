@@ -81,7 +81,7 @@ export function Welcome() {
         {/* Core values */}
         <Reveal delay={0.15}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4 rounded-2xl border border-card-border bg-surface-2 p-6">
-            <span className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-saffron">
+            <span className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-accent">
               {tr(dict.sections.coreValues)}
             </span>
             {VALUES.map((v) => (
@@ -89,7 +89,7 @@ export function Welcome() {
                 key={v.label.en}
                 className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-surface px-4 py-2 font-display text-sm font-semibold text-ink"
               >
-                <v.icon className="h-4 w-4 text-saffron" />
+                <v.icon className="h-4 w-4 text-accent" />
                 {tr(v.label)}
                 <span className="font-mr text-ink-soft">· {v.label.mr}</span>
               </span>

@@ -21,7 +21,7 @@ export function TaxExemptionNotice({ className }: { className?: string }) {
     <div
       className={`card-surface flex gap-4 border-gold/40 p-6 ${className ?? ""}`}
     >
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold/15 text-gold">
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gold/15 text-accent-gold">
         <ShieldCheck className="h-5 w-5" />
       </span>
       <div>

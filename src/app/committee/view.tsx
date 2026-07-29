@@ -81,6 +81,7 @@ export function CommitteeView() {
       />
 
       <section className="bg-bg section">
+        <h2 className="sr-only">{tr({ en: "Committee members", mr: "कार्यकारिणी सदस्य" })}</h2>
         <div className="wrap">
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {members.map((m, i) => (
@@ -95,34 +96,34 @@ export function CommitteeView() {
                     />
                   ) : (
                     <span
-                      className="grid h-24 w-24 place-items-center rounded-full font-display text-2xl font-bold text-cream ring-4 ring-gold/30"
+                      className="grid h-24 w-24 place-items-center rounded-full font-display text-2xl font-bold text-on-gold ring-4 ring-gold/30"
                       style={{ background: AVATARS[i % AVATARS.length] }}
                     >
                       {initials(m.name)}
                     </span>
                   )}
                   <h3 className="mt-5 font-display text-lg font-bold text-ink">
-                    {m.name}
-                  </h3>
-                  <p className="mt-0.5 text-sm font-semibold text-saffron">
+                      <span lang="mr">{m.name}</span>
+                    </h3>
+                  <p className="mt-0.5 text-sm font-semibold text-accent">
                     {tr(m.role)}
                   </p>
 
                   <div className="mt-4 w-full space-y-2 border-t border-card-border pt-4 text-left text-sm text-ink-soft">
                     <p className="flex gap-2">
-                      <Briefcase className="mt-0.5 h-4 w-4 shrink-0 text-maroon" />
+                      <Briefcase className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                       <span>{tr(m.responsibilities)}</span>
                     </p>
                     <p className="flex items-center gap-2">
-                      <CalendarRange className="h-4 w-4 shrink-0 text-maroon" />
-                      <span>{m.tenure}</span>
+                      <CalendarRange className="h-4 w-4 shrink-0 text-brand" />
+                      <span>{tr(m.tenure)}</span>
                     </p>
                     {m.phone && (
                       <p className="flex items-center gap-2">
-                        <Phone className="h-4 w-4 shrink-0 text-maroon" />
+                        <Phone className="h-4 w-4 shrink-0 text-brand" />
                         <a
                           href={`tel:${m.phone.replace(/\s/g, "")}`}
-                          className="hover:text-saffron"
+                          className="hover:text-accent"
                         >
                           {m.phone}
                         </a>

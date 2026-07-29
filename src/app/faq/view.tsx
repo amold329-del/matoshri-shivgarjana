@@ -43,7 +43,7 @@ export function FaqView() {
                         </span>
                         <ChevronDown
                           className={cn(
-                            "h-5 w-5 shrink-0 text-saffron transition-transform duration-300",
+                            "h-5 w-5 shrink-0 text-accent transition-transform duration-300",
                             isOpen && "rotate-180",
                           )}
                         />

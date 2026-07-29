@@ -17,6 +17,8 @@ const ICONS = [Sparkles, Award, PartyPopper, Rocket];
 export function Journey() {
   const timeline = getTimeline();
   const { tr } = useLanguage();
+  const yearText = (y: string | { en: string; mr: string }) =>
+    typeof y === "string" ? y : tr(y);
 
   return (
     <section className="bg-surface-2 section">
@@ -34,7 +36,7 @@ export function Journey() {
             const Icon = ICONS[i % ICONS.length];
             const highlight = item.kind === "current";
             return (
-              <Reveal key={item.year} delay={i * 0.1}>
+              <Reveal key={yearText(item.year)} delay={i * 0.1}>
                 <article
                   className={cn(
                     "card-surface relative h-full p-6 text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md",
@@ -54,10 +56,10 @@ export function Journey() {
                   <p
                     className={cn(
                       "mt-4 font-display text-3xl font-extrabold",
-                      highlight ? "goldtext" : "text-maroon",
+                      highlight ? "goldtext" : "text-brand",
                     )}
                   >
-                    {item.year}
+                    {yearText(item.year)}
                   </p>
                   <h3 className="mt-1 font-display text-base font-bold text-ink">
                     {tr(item.title)}

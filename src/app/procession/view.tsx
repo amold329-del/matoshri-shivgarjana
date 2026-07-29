@@ -53,7 +53,7 @@ export function ProcessionView() {
 
                 {/* route steps */}
                 <div className="p-6">
-                  <p className="mb-5 text-xs font-bold uppercase tracking-widest text-saffron">
+                  <p className="mb-5 text-xs font-bold uppercase tracking-widest text-accent">
                     {tr(dict.procession.route)}
                   </p>
                   <ol className="relative space-y-0">
@@ -69,10 +69,10 @@ export function ProcessionView() {
                           )}
                           <span
                             className={
-                              "relative z-10 grid h-7 w-7 shrink-0 place-items-center rounded-full text-[0.7rem] font-extrabold " +
+                              "relative z-10 grid h-7 w-7 shrink-0 place-items-center rounded-full text-[0.8125rem] font-extrabold " +
                               (i === 0 || last
                                 ? "bg-[linear-gradient(120deg,#e6c868,#c9a227)] text-[#3a1206]"
-                                : "border border-gold/50 bg-surface text-saffron")
+                                : "border border-gold/50 bg-surface text-accent")
                             }
                           >
                             {last ? (

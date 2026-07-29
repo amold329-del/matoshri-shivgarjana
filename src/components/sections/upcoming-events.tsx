@@ -33,11 +33,11 @@ export function UpcomingEvents() {
             {events.map((e, i) => (
               <Reveal key={e.id} delay={i * 0.08}>
                 <div className="relative flex gap-5 pl-1">
-                  <span className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold/50 bg-surface text-sm font-bold text-saffron shadow-soft">
+                  <span className="relative z-10 mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold/50 bg-surface text-sm font-bold text-accent shadow-soft">
                     {new Date(e.date).getDate() || "•"}
                   </span>
                   <article className="card-surface flex-1 p-5">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-saffron">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">
                       {formatDate(e.date, lang)}
                     </p>
                     <h3 className="mt-1 font-display text-lg font-bold text-ink">
@@ -48,12 +48,12 @@ export function UpcomingEvents() {
                     </p>
                     <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-ink-soft">
                       <span className="inline-flex items-center gap-1.5">
-                        <MapPin className="h-3.5 w-3.5 text-gold" />
+                        <MapPin className="h-3.5 w-3.5 text-accent-gold" />
                         {tr(e.venue)}
                       </span>
                       {e.time && (
                         <span className="inline-flex items-center gap-1.5">
-                          <Clock className="h-3.5 w-3.5 text-gold" />
+                          <Clock className="h-3.5 w-3.5 text-accent-gold" />
                           {e.time}
                         </span>
                       )}
@@ -67,7 +67,7 @@ export function UpcomingEvents() {
           <div className="mt-8 pl-16">
             <Link
               href="/events"
-              className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-saffron hover:gap-2.5"
+              className="inline-flex items-center gap-1.5 font-display text-sm font-semibold text-accent hover:gap-2.5"
             >
               {tr(dict.cta.viewAll)} <ArrowRight className="h-4 w-4" />
             </Link>

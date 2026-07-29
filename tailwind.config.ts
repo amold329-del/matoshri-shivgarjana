@@ -43,11 +43,23 @@ const config: Config = {
         card: "var(--card)",
         "card-border": "var(--card-border)",
         hairline: "var(--hairline)",
+        // Theme-aware TEXT accents (use these for any text under 24px)
+        accent: "var(--accent)",
+        "accent-gold": "var(--accent-gold)",
+        brand: "var(--brand-text)",
+        "on-gold": "var(--on-gold)",
       },
       fontFamily: {
         mr: ["var(--font-devanagari)", "serif"],
         display: ["var(--font-poppins)", "sans-serif"],
         sans: ["var(--font-inter)", "sans-serif"],
+      },
+      /* Single z-index scale so layers cannot fight (MCV-010). */
+      zIndex: {
+        header: "50",
+        floating: "60",
+        overlay: "90",
+        toast: "100",
       },
       borderRadius: {
         xl: "18px",

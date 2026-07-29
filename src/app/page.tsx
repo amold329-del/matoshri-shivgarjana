@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { Ribbon } from "@/components/sections/ribbon";
 import { Welcome } from "@/components/sections/welcome";
@@ -19,6 +20,21 @@ import { Sponsors } from "@/components/sections/sponsors";
  * stats → countdown → news → events → social work → completed programmes →
  * gallery → testimonials → sponsors.
  */
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    images: [
+      {
+        url: "/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.) — ४७ वे वर्ष",
+      },
+    ],
+  },
+};
+
 export default function HomePage() {
   return (
     <>

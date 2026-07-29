@@ -185,3 +185,28 @@ This V1 is intentionally static but **future-ready**:
 Code scaffold is yours to use and modify for the Mandal. All personal data, registration details, and photographs shown are **placeholders** — replace them with the Mandal's real information before going live.
 
 *Designed with ❤ in Mumbai.*
+
+
+## Platform configuration
+
+Six audit issues (MCV-012, 015, 031, 036, 037, 042) are edge-level, not code:
+GitHub Pages cannot set response headers, caps `Cache-Control` at 600s, and
+serves gzip rather than brotli. Putting Cloudflare's free tier in front of the
+domain resolves all six without changing the deploy workflow.
+
+Full setup: [`docs/PLATFORM-CLOUDFLARE.md`](docs/PLATFORM-CLOUDFLARE.md)
+
+## Images
+
+`npm run build` runs `prebuild`, which regenerates responsive AVIF/WebP/JPEG
+variants (400w/800w/1200w) and `public/image-manifest.json` via
+`scripts/optimize-images.mjs`. Variants are gitignored — CI rebuilds them, so
+the repository stays small. Add new photographs as plain JPEG/PNG in `public/`
+and the pipeline picks them up.
+
+## Contact form
+
+`src/components/ui/contact-form.tsx` posts to `CONTACT_ENDPOINT`. It is empty
+by default, so the form falls back to a mailto flow that cannot fail silently.
+Set one endpoint URL (Formspree / Web3Forms / Apps Script) to switch the real
+backend on — no other change needed.

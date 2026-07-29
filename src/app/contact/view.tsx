@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   Navigation,
   MapPin,
+  MessageCircle,
   Phone,
   Mail,
   Clock,
@@ -15,8 +16,10 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getSettings } from "@/lib/content";
+import { ContactForm } from "@/components/ui/contact-form";
 import { dict } from "@/lib/i18n";
 
 const SOCIAL_ICONS: Record<string, typeof Facebook> = {
@@ -31,18 +34,8 @@ export function ContactView() {
   const s = getSettings();
   const { contact, social } = s;
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
   // No backend in V1 — submitting opens the visitor's mail client with a
   // pre-filled message. Swap for a real endpoint (e.g. Formspree / API) later.
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Website enquiry from ${form.name || "visitor"}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
-    );
-    window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`;
-  };
 
   const field =
     "w-full rounded-xl border border-card-border bg-surface px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-gold";
@@ -85,11 +78,21 @@ export function ContactView() {
                   <a
                     key={p}
                     href={`tel:${p.replace(/\s/g, "")}`}
-                    className="block hover:text-saffron"
+                    className="block hover:text-accent"
                   >
                     {p}
                   </a>
                 ))}
+                {/* WhatsApp outperforms email for this audience (MCV-003) */}
+                <a
+                  href={`https://wa.me/${contact.phones[0].replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1.5 font-semibold text-accent hover:underline"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  {tr({ en: "Chat on WhatsApp", mr: "व्हॉट्सअ‍ॅपवर संपर्क" })}
+                </a>
               </DetailCard>
             </Reveal>
 
@@ -98,9 +101,7 @@ export function ContactView() {
                 icon={<Mail className="h-5 w-5" />}
                 title={tr({ en: "Email", mr: "ईमेल" })}
               >
-                <a href={`mailto:${contact.email}`} className="hover:text-saffron">
-                  {contact.email}
-                </a>
+                <ObfuscatedEmail className="hover:text-accent" />
               </DetailCard>
             </Reveal>
 
@@ -125,7 +126,7 @@ export function ContactView() {
                       aria-label={soc.label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="grid h-11 w-11 place-items-center rounded-full border border-card-border text-maroon transition-colors hover:border-gold hover:bg-gold/10 hover:text-saffron"
+                      className="grid h-11 w-11 place-items-center rounded-full border border-card-border text-brand transition-colors hover:border-gold hover:bg-gold/10 hover:text-accent"
                     >
                       <Icon className="h-5 w-5" />
                     </a>
@@ -137,62 +138,7 @@ export function ContactView() {
 
           {/* Form */}
           <Reveal delay={0.1}>
-            <form onSubmit={submit} className="card-surface space-y-4 p-7">
-              <h2 className="font-display text-xl font-bold text-maroon">
-                {tr({ en: "Send a Message", mr: "संदेश पाठवा" })}
-              </h2>
-              <div>
-                <label className="mb-1.5 block text-sm font-semibold text-ink">
-                  {tr({ en: "Your Name", mr: "तुमचे नाव" })}
-                </label>
-                <input
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className={field}
-                  placeholder={tr({ en: "Full name", mr: "पूर्ण नाव" })}
-                />
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-semibold text-ink">
-                  {tr({ en: "Email", mr: "ईमेल" })}
-                </label>
-                <input
-                  required
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className={field}
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-semibold text-ink">
-                  {tr({ en: "Message", mr: "संदेश" })}
-                </label>
-                <textarea
-                  required
-                  rows={4}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className={`${field} resize-none`}
-                  placeholder={tr({
-                    en: "How can we help?",
-                    mr: "आम्ही कशी मदत करू शकतो?",
-                  })}
-                />
-              </div>
-              <button type="submit" className="btn btn-gold w-full">
-                <Send className="h-4 w-4" />
-                {tr({ en: "Send Message", mr: "संदेश पाठवा" })}
-              </button>
-              <p className="text-center text-xs text-ink-soft">
-                {tr({
-                  en: "This opens your email app — no data is stored on the site.",
-                  mr: "हे तुमचे ईमेल अ‍ॅप उघडते — साइटवर कोणताही डेटा साठवला जात नाही.",
-                })}
-              </p>
-            </form>
+            <ContactForm />
           </Reveal>
         </div>
 
@@ -206,7 +152,8 @@ export function ContactView() {
                 width="100%"
                 height="380"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
                 style={{ border: 0 }}
               />
             </div>
@@ -226,7 +173,7 @@ export function ContactView() {
             {contact.howToReach?.map((item, i) => (
               <Reveal key={item.mode.en} delay={(i % 2) * 0.08}>
                 <div className="card-surface flex h-full gap-4 p-6">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-maroon/10 text-brand">
                     <Navigation className="h-5 w-5" />
                   </span>
                   <div>
@@ -270,7 +217,7 @@ function DetailCard({
 }) {
   return (
     <div className="card-surface flex gap-4 p-6">
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-maroon/10 text-brand">
         {icon}
       </span>
       <div>

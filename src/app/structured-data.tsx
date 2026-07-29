@@ -48,6 +48,11 @@ export default function StructuredData() {
       { "@type": "Place", name: "Parel-Bhoiwada, Mumbai" },
       { "@type": "City", name: "Mumbai" },
     ],
+    // Kept in plain text deliberately: Google requires a literal address in
+    // Organization schema for it to be usable in knowledge panels and
+    // "contact" answers. Obfuscating it here would forfeit that benefit for
+    // marginal anti-spam gain, since the visible page text is already
+    // obfuscated (MCV-027). Rotate to a forwarding alias if spam appears.
     email: "matoshreeshivgarjanasarvajanik@gmail.com",
     telephone: "+91-77383-37412",
     sameAs: ["https://www.instagram.com/matoshree.cha.vighnaharta/"],

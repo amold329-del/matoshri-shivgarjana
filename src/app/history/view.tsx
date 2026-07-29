@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils";
 
 export function HistoryView() {
   const { tr } = useLanguage();
+  const yearText = (y: string | { en: string; mr: string }) =>
+    typeof y === "string" ? y : tr(y);
   const timeline = getTimeline();
 
   return (
@@ -22,6 +24,7 @@ export function HistoryView() {
       />
 
       <section className="bg-bg section">
+        <h2 className="sr-only">{tr({ en: "Milestones", mr: "महत्त्वाचे टप्पे" })}</h2>
         <div className="wrap max-w-3xl">
           <div className="relative">
             {/* central spine */}
@@ -31,7 +34,7 @@ export function HistoryView() {
               {timeline.map((item, i) => {
                 const left = i % 2 === 0;
                 return (
-                  <Reveal key={item.year} delay={i * 0.08}>
+                  <Reveal key={yearText(item.year)} delay={i * 0.08}>
                     <div
                       className={cn(
                         "relative flex items-start gap-6 sm:w-1/2",
@@ -47,14 +50,14 @@ export function HistoryView() {
                           left ? "sm:-right-7" : "sm:-left-7",
                           item.kind === "current"
                             ? "border-gold bg-gold text-maroon-ink"
-                            : "border-gold/50 bg-surface text-saffron",
+                            : "border-gold/50 bg-surface text-accent",
                         )}
                       >
-                        {item.year.length > 4 ? "★" : item.year}
+                        {yearText(item.year).length > 4 ? "★" : yearText(item.year)}
                       </span>
                       <article className="card-surface flex-1 p-6">
-                        <p className="font-display text-2xl font-extrabold text-maroon">
-                          {item.year}
+                        <p className="font-display text-2xl font-extrabold text-brand">
+                          {yearText(item.year)}
                         </p>
                         <h3 className="mt-1 font-display text-lg font-bold text-ink">
                           {tr(item.title)}

@@ -11,7 +11,7 @@ import {
   TempleSilhouette,
   FloatingPetals,
 } from "@/components/ui/decorations";
-import { asset } from "@/lib/asset";
+import { Picture } from "@/components/ui/picture";
 
 /**
  * Fullscreen landing hero — the showpiece.
@@ -46,11 +46,13 @@ export function Hero() {
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[radial-gradient(125%_125%_at_50%_-10%,#5a1024_0%,#2a0712_52%,#190410_100%)] text-center text-[var(--dark-text)]">
       {/* Idol photograph backdrop */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={asset("/hero-idol.jpg")}
+      <Picture
+        src="/hero-idol.jpg"
         alt=""
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-top"
+        sizes="100vw"
+        priority
+        className="pointer-events-none absolute inset-0 z-0 block h-full w-full"
+        imgClassName="absolute inset-0 z-0 h-full w-full object-cover object-top"
       />
       <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(180deg,rgba(25,4,16,0.66)_0%,rgba(42,7,18,0.46)_45%,rgba(25,4,16,0.82)_100%)]" />
 
@@ -73,11 +75,11 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="wrap relative z-10 flex flex-col items-center pt-24"
+        className="wrap relative z-10 flex flex-col items-center pt-24 pb-24"
       >
         <motion.span
           variants={item}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-[0.74rem] font-semibold uppercase tracking-[0.2em] text-gold-light backdrop-blur"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-[0.8125rem] font-semibold uppercase tracking-[0.2em] text-gold-light backdrop-blur"
         >
           {tr({
             en: `Shri Ganeshaya Namah · Est. ${org.established}`,
@@ -162,7 +164,7 @@ export function Hero() {
             className="btn btn-ghost relative opacity-90"
           >
             {tr(dict.cta.sabhasad)}
-            <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold-light">
+            <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-gold-light">
               {tr(dict.cta.comingSoon)}
             </span>
           </Link>
@@ -170,11 +172,11 @@ export function Hero() {
       </motion.div>
 
       {/* scroll cue */}
-      <div className="absolute bottom-28 left-1/2 z-10 -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
         <div className="flex h-9 w-6 items-start justify-center rounded-full border border-gold/40 p-1.5">
           <span className="h-2 w-1 animate-scroll-dot rounded-full bg-gold-light" />
         </div>
-        <ChevronDown className="mx-auto mt-1 h-4 w-4 animate-bounce text-gold/60" />
+        <ChevronDown className="mx-auto mt-1 h-4 w-4 animate-bounce text-accent-gold/60" />
       </div>
 
       <TempleSilhouette className="absolute bottom-0 left-0 z-0 h-28 w-full text-[#190410] sm:h-32" />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { EventsView } from "./view";
 import { getEvents } from "@/lib/content";
 
@@ -6,6 +7,9 @@ export const metadata: Metadata = {
   title: "कार्यक्रम",
   description:
     "मातोश्री शिवगर्जना मंडळाचे आगामी व मागील कार्यक्रम — गणेशोत्सव वेळापत्रक, सांस्कृतिक संध्या, आरत्या आणि सामुदायिक उपक्रम.",
+  alternates: { canonical: "/events/" },
+  openGraph: { url: "/events/", title: "कार्यक्रम", images: [{ url: "/og/events.jpg", width: 1200, height: 630 }] },
+  twitter: { images: ["/og/events.jpg"] },
 };
 
 const SITE_URL = "https://matoshreechavighnaharta.co.in";
@@ -83,6 +87,7 @@ const eventsJsonLd = getEvents().map((event) => ({
 export default function Page() {
   return (
     <>
+      <Breadcrumb path="/events/" name="कार्यक्रम" />
       <EventsView />
       <script
         type="application/ld+json"

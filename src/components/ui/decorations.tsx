@@ -15,7 +15,11 @@ export function Emblem({ className }: { className?: string }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={asset("/logo-emblem.png")}
+      src={asset("/logo-emblem-96.webp")}
+      srcSet={`${asset("/logo-emblem-96.webp")} 96w, ${asset("/logo-emblem-192.webp")} 192w`}
+      sizes="48px"
+      width={96}
+      height={96}
       alt="मातोश्रीचा विघ्नहर्ता — मातोश्री शिवगर्जना मंडळ"
       className={className}
     />
@@ -61,7 +65,7 @@ export function LotusDivider({ className }: { className?: string }) {
       aria-hidden="true"
     >
       <span className="h-px w-16 bg-gradient-to-r from-transparent to-gold sm:w-28" />
-      <svg viewBox="0 0 40 28" className="h-5 w-7 text-gold" fill="none">
+      <svg viewBox="0 0 40 28" className="h-5 w-7 text-accent-gold" fill="none">
         <path
           d="M20 4c2 6 7 10 13 10-2 6-8 9-13 9s-11-3-13-9c6 0 11-4 13-10z"
           fill="currentColor"

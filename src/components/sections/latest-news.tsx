@@ -29,11 +29,11 @@ export function LatestNews() {
               <article className="card-surface group flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                 {/* gradient banner with category */}
                 <div className="relative flex h-32 items-end bg-[linear-gradient(135deg,#6b1226,#9e1b32)] p-4">
-                  <span className="rounded-full bg-black/25 px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-wider text-gold-light backdrop-blur">
+                  <span className="rounded-full bg-black/25 px-3 py-1 text-[0.8125rem] font-semibold uppercase tracking-wider text-gold-light backdrop-blur">
                     {tr(n.category)}
                   </span>
                   {n.featured && (
-                    <span className="absolute right-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[0.66rem] font-bold uppercase tracking-wider text-maroon-ink">
+                    <span className="absolute right-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[0.8125rem] font-bold uppercase tracking-wider text-maroon-ink">
                       ★
                     </span>
                   )}
@@ -51,7 +51,7 @@ export function LatestNews() {
                   </p>
                   <Link
                     href="/news"
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-saffron hover:gap-2.5"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-2.5"
                   >
                     {tr(dict.cta.readMore)} <ArrowRight className="h-4 w-4" />
                   </Link>

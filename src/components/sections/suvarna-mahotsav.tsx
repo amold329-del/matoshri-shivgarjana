@@ -5,7 +5,7 @@ import { Sparkles } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getSettings } from "@/lib/content";
-import { asset } from "@/lib/asset";
+import { Picture } from "@/components/ui/picture";
 
 /**
  * "वाटचाल... सुवर्ण महोत्सवाकडे" — the Mandal's journey towards its golden
@@ -87,14 +87,16 @@ export function SuvarnaMahotsav() {
         <Reveal>
           <figure className="card-surface mx-auto overflow-hidden p-0 lg:mx-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/announcements/suvarna-mahotsav.jpg")}
+            <Picture
+              src="/announcements/suvarna-mahotsav.jpg"
               alt={tr({
                 en: "Matoshri Shivgarjana Mandal — journey towards the Golden Jubilee, 47th year",
                 mr: "मातोश्री शिवगर्जना मंडळ — सुवर्ण महोत्सवाकडे वाटचाल, ४७ वे वर्ष",
               })}
-              loading="lazy"
-              className="mx-auto block h-auto w-full max-w-[420px] object-contain lg:max-w-none"
+              sizes="(max-width: 1024px) 92vw, 420px"
+              fit="contain"
+              className="mx-auto block"
+              imgClassName="mx-auto block h-auto w-full max-w-[420px] object-contain lg:max-w-none"
             />
           </figure>
         </Reveal>
@@ -142,10 +144,10 @@ export function SuvarnaMahotsav() {
                   key={m.value}
                   className="card-surface px-3 py-4 text-center"
                 >
-                  <span className="block font-display text-2xl font-extrabold text-maroon">
+                  <span className="block font-display text-2xl font-extrabold text-brand">
                     {m.value}
                   </span>
-                  <span className="mt-1 block text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-ink-soft">
+                  <span className="mt-1 block text-[0.8125rem] font-semibold uppercase tracking-[0.12em] text-ink-soft">
                     {tr(m.label)}
                   </span>
                 </li>
@@ -156,7 +158,7 @@ export function SuvarnaMahotsav() {
           {/* countdown + journey progress */}
           <Reveal delay={0.28}>
             <div className="card-surface mt-6 p-6">
-              <p className="text-[0.66rem] font-extrabold uppercase tracking-[0.14em] text-saffron">
+              <p className="text-[0.8125rem] font-extrabold uppercase tracking-[0.14em] text-accent">
                 {tr({
                   en: "Countdown to the Golden Jubilee year",
                   mr: "सुवर्ण महोत्सव वर्षापर्यंत",
@@ -174,10 +176,10 @@ export function SuvarnaMahotsav() {
                       key={u.l.en}
                       className="min-w-[74px] flex-1 rounded-xl border border-gold/30 bg-gold/5 px-3 py-3 text-center"
                     >
-                      <span className="block font-display text-3xl font-extrabold tabular-nums text-maroon">
+                      <span className="block font-display text-3xl font-extrabold tabular-nums text-brand">
                         {u.v}
                       </span>
-                      <span className="mt-0.5 block text-[0.66rem] font-semibold uppercase tracking-[0.1em] text-ink-soft">
+                      <span className="mt-0.5 block text-[0.8125rem] font-semibold uppercase tracking-[0.1em] text-ink-soft">
                         {tr(u.l)}
                       </span>
                     </div>
@@ -189,9 +191,9 @@ export function SuvarnaMahotsav() {
 
               {/* the journey itself, 1980 -> 2029 */}
               <div className="mt-6">
-                <div className="flex items-center justify-between text-[0.66rem] font-semibold text-ink-soft">
+                <div className="flex items-center justify-between text-[0.8125rem] font-semibold text-ink-soft">
                   <span>{org.established}</span>
-                  <span className="text-saffron">
+                  <span className="text-accent">
                     {progress}% {tr({ en: "of the journey", mr: "वाटचाल पूर्ण" })}
                   </span>
                   <span>2029</span>
@@ -218,7 +220,7 @@ export function SuvarnaMahotsav() {
 
           <Reveal delay={0.3}>
             <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-body-sm font-semibold text-ink">
-              <Sparkles className="h-4 w-4 text-gold" />
+              <Sparkles className="h-4 w-4 text-accent-gold" />
               {tr({
                 en: "Together, let us reach the next step.",
                 mr: "चला... पुढची पायरी गाठूया!",

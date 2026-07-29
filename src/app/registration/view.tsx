@@ -59,14 +59,14 @@ export function RegistrationView() {
             {records.map((r, i) => (
               <Reveal key={r.label.en} delay={i * 0.07}>
                 <div className="card-surface flex items-center gap-4 p-6">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-brand">
                     <r.icon className="h-6 w-6" />
                   </span>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
                       {tr(r.label)}
                     </p>
-                    <p className="mt-0.5 font-display text-xl font-bold text-maroon">
+                    <p className="mt-0.5 font-display text-xl font-bold text-brand">
                       {r.value}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export function RegistrationView() {
             ].map((c, i) => (
               <Reveal key={c.title.en} delay={i * 0.08}>
                 <article className="card-surface h-full p-7">
-                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-gold/15 text-saffron">
+                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-gold/15 text-accent">
                     <c.icon className="h-6 w-6" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-bold text-ink">

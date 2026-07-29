@@ -15,18 +15,24 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  // Body face — not needed for the LCP paint, so it must not compete with
+  // the hero image for bandwidth (MCV-014).
+  preload: false,
 });
 const poppins = Outfit({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
+  // Display face used by the H1 — the only family worth preloading.
+  preload: true,
 });
 const devanagari = Mukta({
   subsets: ["devanagari", "latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
   variable: "--font-devanagari",
   display: "swap",
+  preload: false,
 });
 
 const SITE_URL = "https://matoshreechavighnaharta.co.in";
@@ -53,20 +59,33 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "mr_IN",
-    alternateLocale: "en_IN",
-    url: SITE_URL,
     siteName: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
     title: "मातोश्री शिवगर्जना मंडळ · ४७ वे वर्ष",
     description:
       "१९८० पासून श्रद्धा, एकता आणि सेवेची ४७ वर्षे. मुंबईतील आघाडीचे सार्वजनिक गणेशोत्सव मंडळ.",
+    images: [
+      {
+        url: "/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.) — ४७ वे वर्ष",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "मातोश्री शिवगर्जना मंडळ · ४७ वे वर्ष",
     description: "१९८० पासून श्रद्धा, एकता आणि सेवेची ४७ वर्षे.",
+    images: [
+      {
+        url: "/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.) — ४७ वे वर्ष",
+      },
+    ],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: SITE_URL },
 };
 
 export const viewport: Viewport = {
@@ -103,6 +122,13 @@ export default function RootLayout({
             __html: `/*btnRipple*/document.addEventListener("pointermove",function(e){var b=e.target&&e.target.closest&&e.target.closest(".btn");if(!b)return;var r=b.getBoundingClientRect();b.style.setProperty("--rx",((e.clientX-r.left)/r.width*100)+"%");b.style.setProperty("--ry",((e.clientY-r.top)/r.height*100)+"%");},{passive:true});`,
           }}
         />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:font-semibold focus:text-on-gold"
+        >
+          {/* server-rendered: both scripts, so it is correct in either language */}
+          मुख्य मजकुरावर जा · Skip to content
+        </a>
         <StructuredData />
         <ThemeProvider
           attribute="class"
@@ -113,7 +139,7 @@ export default function RootLayout({
           <LanguageProvider defaultLang="mr">
             <ScrollProgress />
             <Navbar />
-            <main>{children}</main>
+            <main id="main" tabIndex={-1}>{children}</main>
             <Footer />
             <BackToTop />
           </LanguageProvider>

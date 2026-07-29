@@ -17,7 +17,7 @@ export function Sponsors() {
   return (
     <section className="border-y border-card-border bg-bg section">
       <div className="wrap">
-        <p className="mb-8 text-center font-display text-sm font-semibold uppercase tracking-[0.2em] text-saffron">
+        <p className="mb-8 text-center font-display text-sm font-semibold uppercase tracking-[0.2em] text-accent">
           {tr(dict.sections.sponsors)}
         </p>
       </div>
@@ -30,7 +30,7 @@ export function Sponsors() {
         <div className="flex w-max animate-scroll-x gap-4 group-hover:[animation-play-state:paused]">
           {loop.map((s, i) => (
             <div
-              key={`${s.name}-${i}`}
+              key={`$<span lang="mr">{s.name}</span>-${i}`}
               className="flex h-20 min-w-[180px] items-center justify-center rounded-xl border border-card-border bg-surface px-8"
             >
               <span className="text-center">
@@ -38,8 +38,8 @@ export function Sponsors() {
                   {s.name}
                 </span>
                 {s.tier && (
-                  <span className="text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
-                    {s.tier}
+                  <span className="text-[0.8125rem] font-semibold uppercase tracking-wider text-accent-gold">
+                    {tr(s.tier)}
                   </span>
                 )}
               </span>

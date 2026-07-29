@@ -2,12 +2,14 @@
 
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, ImageIcon, Play } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ImageIcon, Play, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getGallery } from "@/lib/content";
 import { asset } from "@/lib/asset";
+import { Picture } from "@/components/ui/picture";
+import { Lightbox } from "@/components/ui/lightbox";
 import { dict } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import type { GalleryItem } from "@/types/content";
@@ -41,29 +43,16 @@ export function GalleryView() {
   const visible = filtered.slice(0, shown);
 
   const close = useCallback(() => setActiveIdx(null), []);
-  const next = useCallback(
-    () => setActiveIdx((i) => (i === null ? i : (i + 1) % filtered.length)),
-    [filtered.length],
-  );
-  const prev = useCallback(
-    () =>
-      setActiveIdx((i) =>
-        i === null ? i : (i - 1 + filtered.length) % filtered.length,
-      ),
-    [filtered.length],
-  );
 
-  // Keyboard controls for the lightbox.
-  useEffect(() => {
-    if (activeIdx === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowRight") next();
-      if (e.key === "ArrowLeft") prev();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [activeIdx, close, next, prev]);
+  // Caption + position are carried into the dialog (MCV-033).
+  // Placeholder tiles carry no photograph, so they are not paged through.
+  const lightboxItems = filtered
+    .filter((i): i is typeof i & { src: string } => Boolean(i.src))
+    .map((i) => ({
+      src: i.src,
+      caption: tr(i.caption),
+      meta: `${tr(i.category)} · ${i.year}`,
+    }));
 
   const active = activeIdx === null ? null : filtered[activeIdx];
 
@@ -81,7 +70,7 @@ export function GalleryView() {
       <section className="bg-bg section">
         <div className="wrap">
           {/* Year filter */}
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+          <div role="group" aria-label={tr({ en: "Filter gallery by year", mr: "वर्षानुसार गाळा" })} className="mb-10 flex flex-wrap items-center justify-center gap-2">
             <Chip
               active={year === "all"}
               onClick={() => {
@@ -116,12 +105,12 @@ export function GalleryView() {
                   style={{ aspectRatio: i % 3 === 0 ? "3 / 4" : "4 / 3" }}
                 >
                   {item.src ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={asset(item.src)}
+                    <Picture
+                      src={item.src}
                       alt={tr(item.caption)}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                      sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 300px"
+                      className="block h-full w-full"
+                      imgClassName="h-full w-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                     />
                   ) : (
                     <span
@@ -147,7 +136,7 @@ export function GalleryView() {
                       {tr(item.caption)}
                     </span>
                   </span>
-                  <span className="absolute right-2 top-2 rounded-full bg-black/40 px-2 py-0.5 text-[0.66rem] font-semibold text-cream/90 backdrop-blur-sm">
+                  <span className="absolute right-2 top-2 rounded-full bg-black/40 px-2 py-0.5 text-[0.8125rem] font-semibold text-cream/90 backdrop-blur-sm">
                     {item.year}
                   </span>
                 </button>
@@ -178,81 +167,13 @@ export function GalleryView() {
         </div>
       </section>
 
-      {/* Lightbox */}
-      <AnimatePresence>
-        {active && (
-          <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
-            onClick={close}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-          <button
-            type="button"
-            aria-label="Close"
-            className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10"
-            onClick={close}
-          >
-            <X className="h-5 w-5" />
-          </button>
-          {filtered.length > 1 && (
-            <>
-              <button
-                type="button"
-                aria-label="Previous"
-                className="absolute left-4 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prev();
-                }}
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-              <button
-                type="button"
-                aria-label="Next"
-                className="absolute right-4 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 text-white hover:bg-white/10"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  next();
-                }}
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </>
-          )}
-          <motion.figure
-            key={activeIdx}
-            className="overflow-hidden rounded-2xl"
-            onClick={(e) => e.stopPropagation()}
-            initial={{ scale: 0.92, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {active.src ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={asset(active.src)}
-                alt={tr(active.caption)}
-                className="mx-auto block max-h-[80vh] w-auto max-w-[min(92vw,60rem)] object-contain"
-              />
-            ) : (
-              <div
-                className="flex aspect-video w-[min(88vw,720px)] items-center justify-center"
-                style={{ background: GRADIENTS[(activeIdx ?? 0) % GRADIENTS.length] }}
-              >
-                <ImageIcon className="h-14 w-14 text-white/50" />
-              </div>
-            )}
-            <figcaption className="bg-maroon-ink p-4 text-center text-sm text-cream">
-              {tr(active.caption)} · {tr(active.category)} · {active.year}
-            </figcaption>
-          </motion.figure>
-        </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Lightbox — shared accessible dialog (MCV-009/010/033) */}
+      <Lightbox
+        items={lightboxItems}
+        index={activeIdx}
+        onClose={close}
+        onIndexChange={setActiveIdx}
+      />
     </>
   );
 }
@@ -270,13 +191,16 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
+      aria-pressed={active}
       className={cn(
-        "rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
+        "inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-semibold transition-all",
         active
-          ? "border-gold bg-gold/15 text-saffron"
-          : "border-card-border text-ink-soft hover:border-gold hover:text-saffron",
+          ? // non-colour affordance: heavier border + check glyph (WCAG 1.4.1)
+            "border-2 border-gold bg-gold/15 text-accent"
+          : "border border-card-border text-ink-soft hover:border-gold hover:text-accent",
       )}
     >
+      {active && <Check aria-hidden className="h-3.5 w-3.5" />}
       {children}
     </button>
   );

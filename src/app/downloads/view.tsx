@@ -41,8 +41,8 @@ export function DownloadsView() {
           {groups.map((g, gi) => (
             <div key={g.label.en}>
               <Reveal>
-                <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-bold text-maroon">
-                  <FolderOpen className="h-5 w-5 text-saffron" />
+                <h2 className="mb-5 flex items-center gap-2 font-display text-lg font-bold text-brand">
+                  <FolderOpen className="h-5 w-5 text-accent" />
                   {tr(g.label)}
                 </h2>
               </Reveal>
@@ -53,9 +53,10 @@ export function DownloadsView() {
                       href={asset(d.href)}
                       target="_blank"
                       rel="noopener noreferrer"
+                      download
                       className="card-surface group flex items-center gap-4 p-5 transition-colors hover:border-gold"
                     >
-                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-maroon/10 text-brand">
                         <FileText className="h-6 w-6" />
                       </span>
                       <div className="min-w-0 flex-1">
@@ -64,10 +65,24 @@ export function DownloadsView() {
                         </p>
                         <p className="truncate text-sm text-ink-soft">
                           {tr(d.description)}
-                          {d.size ? ` · ${d.size}` : ""}
+                        </p>
+                        {/* file type + real size, generated at build (MCV-039) */}
+                        <p className="mt-1 flex flex-wrap items-center gap-2">
+                          {d.fileType && (
+                            <span className="rounded-full bg-maroon/10 px-2 py-0.5 text-[0.8125rem] font-bold uppercase tracking-wider text-brand">
+                              {d.fileType}
+                              {d.fileSizeKb ? ` · ${d.fileSizeKb} KB` : ""}
+                            </span>
+                          )}
+                          <span className="sr-only">
+                            {tr({
+                              en: "(opens in a new tab)",
+                              mr: "(नवीन टॅबमध्ये उघडते)",
+                            })}
+                          </span>
                         </p>
                       </div>
-                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-card-border px-4 py-1.5 text-sm font-semibold text-saffron transition-colors group-hover:border-gold group-hover:bg-gold/10">
+                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-card-border px-4 py-1.5 text-sm font-semibold text-accent transition-colors group-hover:border-gold group-hover:bg-gold/10">
                         <Download className="h-4 w-4" />
                         <span className="hidden sm:inline">
                           {tr(dict.cta.download)}

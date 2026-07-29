@@ -110,8 +110,8 @@ export function Navbar() {
             </span>
             <span
               className={cn(
-                "mt-0.5 block font-mr text-[0.66rem] font-semibold tracking-[0.06em] transition-colors sm:text-[0.66rem] xl:text-[0.7rem]",
-                scrolled ? "text-saffron" : "text-gold-light",
+                "mt-0.5 block font-mr text-[0.8125rem] font-semibold tracking-[0.06em] transition-colors sm:text-[0.8125rem] xl:text-[0.8125rem]",
+                scrolled ? "text-accent" : "text-gold-light",
               )}
             >
               {tr(settings.org.tagline)}
@@ -131,16 +131,16 @@ export function Navbar() {
                     "group/nav relative whitespace-nowrap rounded-full px-2 py-2 text-body-sm font-medium transition-colors",
                     active
                       ? scrolled
-                        ? "text-saffron"
+                        ? "text-accent"
                         : "text-gold-light"
                       : scrolled
-                        ? "text-ink-soft hover:text-saffron"
+                        ? "text-ink-soft hover:text-accent"
                         : "text-[var(--dark-text-soft)] hover:text-[var(--dark-text)]",
                   )}
                 >
                   {tr(item.label)}
                   {item.comingSoon && (
-                    <span className="ml-1 rounded-full bg-gold/15 px-1.5 py-0.5 align-middle text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="ml-1 rounded-full bg-gold/15 px-1.5 py-0.5 align-middle text-[0.8125rem] font-semibold uppercase tracking-wider text-accent-gold">
                       {tr(dict.cta.comingSoon)}
                     </span>
                   )}
@@ -163,15 +163,15 @@ export function Navbar() {
                 type="button"
                 onClick={() => setMoreOpen((o) => !o)}
                 aria-expanded={moreOpen}
-                aria-haspopup="true"
+                aria-controls="nav-more-panel"
                 className={cn(
                   "inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-body-sm font-medium transition-colors",
                   moreActive
                     ? scrolled
-                      ? "text-saffron"
+                      ? "text-accent"
                       : "text-gold-light"
                     : scrolled
-                      ? "text-ink-soft hover:text-saffron"
+                      ? "text-ink-soft hover:text-accent"
                       : "text-[var(--dark-text-soft)] hover:text-[var(--dark-text)]",
                 )}
               >
@@ -185,7 +185,7 @@ export function Navbar() {
               </button>
 
               {moreOpen && (
-                <div className="glass absolute right-0 top-full z-50 mt-2 w-60 overflow-hidden rounded-2xl border border-card-border shadow-soft">
+                <div id="nav-more-panel" className="glass absolute right-0 top-full z-[60] mt-2 w-60 overflow-hidden rounded-2xl border border-card-border shadow-soft">
                   <ul className="py-2">
                     {moreNav.map((item) => {
                       const active = pathname === item.href;
@@ -197,13 +197,13 @@ export function Navbar() {
                             className={cn(
                               "flex items-center justify-between gap-2 px-4 py-2.5 text-body-sm font-medium transition-colors",
                               active
-                                ? "bg-gold/10 text-saffron"
-                                : "text-ink-soft hover:bg-gold/5 hover:text-saffron",
+                                ? "bg-gold/10 text-accent"
+                                : "text-ink-soft hover:bg-gold/5 hover:text-accent",
                             )}
                           >
                             <span>{tr(item.label)}</span>
                             {item.comingSoon && (
-                              <span className="rounded-full bg-gold/15 px-1.5 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
+                              <span className="rounded-full bg-gold/15 px-1.5 py-0.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-accent-gold">
                                 {tr(dict.cta.comingSoon)}
                               </span>
                             )}
@@ -225,9 +225,9 @@ export function Navbar() {
             onClick={toggle}
             aria-label="Switch language / भाषा बदला"
             className={cn(
-              "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-[0.66rem] font-extrabold tracking-wide transition-colors",
+              "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-[0.8125rem] font-extrabold tracking-wide transition-colors",
               scrolled
-                ? "border-card-border text-ink hover:border-gold hover:text-saffron"
+                ? "border-card-border text-ink hover:border-gold hover:text-accent"
                 : "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light",
             )}
           >
@@ -238,6 +238,7 @@ export function Navbar() {
             type="button"
             aria-label="Open menu"
             aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((o) => !o)}
             className={cn(
               "nav-burger grid h-10 w-10 place-items-center rounded-full border transition-colors xl:hidden",
@@ -253,6 +254,9 @@ export function Navbar() {
 
       {/* Mobile sheet */}
       <div
+        id="mobile-menu"
+        inert={!open}
+        aria-hidden={!open}
         className={cn(
           "nav-mobile-panel glass border-t border-card-border transition-[max-height] duration-300 xl:hidden",
           // Scroll inside the panel: the list is taller than the screen, so it
@@ -273,13 +277,13 @@ export function Navbar() {
                   className={cn(
                     "flex items-center justify-between rounded-xl px-4 py-3 text-body font-medium transition-colors",
                     active
-                      ? "bg-gold/10 text-saffron"
+                      ? "bg-gold/10 text-accent"
                       : "text-ink hover:bg-surface-2",
                   )}
                 >
                   <span>{tr(item.label)}</span>
                   {item.comingSoon && (
-                    <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-accent-gold">
                       {tr(dict.cta.comingSoon)}
                     </span>
                   )}

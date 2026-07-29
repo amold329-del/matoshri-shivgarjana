@@ -23,12 +23,21 @@ export function Counter({
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState(0);
+  // Server-render the real figure so crawlers and no-JS visitors never see
+  // "0+"; the count-up starts from 0 only after hydration (MCV-029).
+  const [display, setDisplay] = useState(value);
+  const [animatable, setAnimatable] = useState(false);
   const started = useRef(false);
   const reduce = useReducedMotion();
 
+  // Mark as animatable after mount — this is what flips the initial paint
+  // from the true value to the animated one, without an SSR mismatch.
   useEffect(() => {
-    if (plain) return;
+    setAnimatable(true);
+  }, []);
+
+  useEffect(() => {
+    if (plain || !animatable) return;
     if (reduce) {
       setDisplay(value);
       return;
@@ -41,6 +50,7 @@ export function Counter({
         entries.forEach((entry) => {
           if (entry.isIntersecting && !started.current) {
             started.current = true;
+            setDisplay(0);
             const start = performance.now();
             const tick = (now: number) => {
               const p = Math.min((now - start) / duration, 1);
@@ -57,7 +67,7 @@ export function Counter({
 
     io.observe(el);
     return () => io.disconnect();
-  }, [value, duration, reduce, plain]);
+  }, [value, duration, reduce, plain, animatable]);
 
   return (
     <span ref={ref} className={className}>

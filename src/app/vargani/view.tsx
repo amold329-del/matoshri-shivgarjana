@@ -49,7 +49,7 @@ export function VarganiView() {
         <div className="wrap grid items-start gap-10 lg:grid-cols-2">
           <Reveal>
             <div className="card-surface h-full p-8">
-              <h2 className="font-display text-2xl font-extrabold text-maroon">
+              <h2 className="font-display text-2xl font-extrabold text-brand">
                 {tr({ en: "The Idea of Vargani", mr: "वर्गणीची संकल्पना" })}
               </h2>
               <p className="mt-4 leading-relaxed text-ink-soft">{tr(v.intro)}</p>
@@ -57,7 +57,7 @@ export function VarganiView() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="card-surface h-full p-8">
-              <h2 className="font-display text-2xl font-extrabold text-maroon">
+              <h2 className="font-display text-2xl font-extrabold text-brand">
                 {tr({ en: "A Bond of Trust", mr: "विश्वासाचा बंध" })}
               </h2>
               <p className="mt-4 leading-relaxed text-ink-soft">{tr(v.whatIs)}</p>
@@ -106,7 +106,7 @@ export function VarganiView() {
               return (
                 <Reveal key={item.title.en} delay={i * 0.08}>
                   <article className="card-surface h-full p-7">
-                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-maroon/10 text-maroon">
+                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-maroon/10 text-brand">
                       <Icon className="h-6 w-6" />
                     </span>
                     <h3 className="mt-4 font-display text-lg font-bold text-ink">
@@ -140,7 +140,7 @@ export function VarganiView() {
                 <div>
                   <div className="mb-2 flex items-center justify-between text-sm font-semibold">
                     <span className="text-ink">{tr(u.label)}</span>
-                    <span className="text-saffron">{u.percent}%</span>
+                    <span className="text-accent">{u.percent}%</span>
                   </div>
                   <div className="h-3 overflow-hidden rounded-full bg-maroon/10">
                     <div
@@ -155,7 +155,7 @@ export function VarganiView() {
               </Reveal>
             ))}
             <p className="flex items-center gap-2 pt-2 text-xs text-ink-soft">
-              <PieChart className="h-4 w-4 text-maroon" />
+              <PieChart className="h-4 w-4 text-brand" />
               {tr({
                 en: "Figures are illustrative. Audited annual accounts are shared with members.",
                 mr: "आकडे उदाहरणादाखल आहेत. लेखापरीक्षित वार्षिक हिशेब सभासदांसोबत सामायिक केले जातात.",

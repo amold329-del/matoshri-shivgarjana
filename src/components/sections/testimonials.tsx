@@ -45,7 +45,7 @@ export function Testimonials() {
           onMouseLeave={() => setPaused(false)}
         >
           <article className="card-surface relative px-7 py-12 text-center sm:px-14">
-            <Quote className="mx-auto h-10 w-10 text-gold/40" />
+            <Quote className="mx-auto h-10 w-10 text-accent-gold/40" />
             <p
               key={index}
               className="mt-5 font-display text-lg font-medium leading-relaxed text-ink sm:text-xl"
@@ -53,7 +53,7 @@ export function Testimonials() {
               “{tr(active.quote)}”
             </p>
             <div className="mt-7">
-              <p className="font-display font-bold text-maroon">{active.name}</p>
+              <p className="font-display font-bold text-brand"><span lang="mr">{active.name}</span></p>
               <p className="text-sm text-ink-soft">{tr(active.role)}</p>
             </div>
           </article>
@@ -63,7 +63,7 @@ export function Testimonials() {
             type="button"
             aria-label="Previous"
             onClick={() => go(-1)}
-            className="absolute -left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-card-border bg-surface text-ink shadow-soft transition-colors hover:border-gold hover:text-saffron sm:-left-5"
+            className="absolute -left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-card-border bg-surface text-ink shadow-soft transition-colors hover:border-gold hover:text-accent sm:-left-5"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -71,7 +71,7 @@ export function Testimonials() {
             type="button"
             aria-label="Next"
             onClick={() => go(1)}
-            className="absolute -right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-card-border bg-surface text-ink shadow-soft transition-colors hover:border-gold hover:text-saffron sm:-right-5"
+            className="absolute -right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-card-border bg-surface text-ink shadow-soft transition-colors hover:border-gold hover:text-accent sm:-right-5"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -83,12 +83,19 @@ export function Testimonials() {
                 key={i}
                 type="button"
                 aria-label={`Go to testimonial ${i + 1}`}
+                aria-current={i === index ? "true" : undefined}
                 onClick={() => setIndex(i)}
-                className={cn(
-                  "h-2 rounded-full transition-all",
-                  i === index ? "w-7 bg-gold" : "w-2 bg-card-border hover:bg-gold/50",
-                )}
-              />
+                className="grid h-6 w-6 place-items-center rounded-full"
+              >
+                {/* 24x24 target (WCAG 2.2 §2.5.8), 8px visual dot */}
+                <span
+                  aria-hidden
+                  className={cn(
+                    "h-2 rounded-full transition-all",
+                    i === index ? "w-7 bg-gold" : "w-2 bg-card-border",
+                  )}
+                />
+              </button>
             ))}
           </div>
         </div>

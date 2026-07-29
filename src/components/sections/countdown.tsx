@@ -59,7 +59,7 @@ export function Countdown() {
         />
 
         {time?.done ? (
-          <p className="text-center font-display text-2xl font-bold text-saffron">
+          <p className="text-center font-display text-2xl font-bold text-accent">
             {tr(dict.countdown.live)} 🪷
           </p>
         ) : (
@@ -70,9 +70,9 @@ export function Countdown() {
                 className="card-surface relative overflow-hidden p-4 text-center sm:p-7"
               >
                 <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#c9a227,#e6c868,#c9a227)]" />
-                <p className="font-display text-3xl font-extrabold tabular-nums text-maroon sm:text-5xl">
+                <p className="font-display text-3xl font-extrabold tabular-nums text-brand sm:text-5xl">
                   <motion.span
-                    key={String(u.value ?? 0).padStart(2, "0")}
+                    key={u.value === undefined ? "—" : String(u.value).padStart(2, "0")}
                     initial={reduce ? false : { opacity: 0, y: -8, scale: 0.85 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -81,7 +81,7 @@ export function Countdown() {
                     {String(u.value ?? 0).padStart(2, "0")}
                   </motion.span>
                 </p>
-                <p className="mt-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink-soft sm:text-xs">
+                <p className="mt-1 text-[0.8125rem] font-semibold uppercase tracking-[0.16em] text-ink-soft sm:text-xs">
                   {tr(u.label)}
                 </p>
               </div>

@@ -113,7 +113,7 @@ export interface CommitteeMember {
   name: string;
   role: Bilingual;
   responsibilities: Bilingual;
-  tenure: string;
+  tenure: Bilingual;
   phone?: string;
   photo?: string;
 }
@@ -126,7 +126,7 @@ export interface Testimonial {
 
 export interface Sponsor {
   name: string;
-  tier?: string;
+  tier?: Bilingual;
 }
 
 export interface DownloadItem {
@@ -136,6 +136,8 @@ export interface DownloadItem {
   /** Path under /public/documents. Placeholder until real PDFs are added. */
   href: string;
   size?: string;
+  fileType?: string;
+  fileSizeKb?: number;
 }
 
 export interface VarganiContent {

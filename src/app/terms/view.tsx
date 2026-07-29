@@ -2,6 +2,7 @@
 
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ObfuscatedEmail } from "@/components/ui/obfuscated-email";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getSettings } from "@/lib/content";
 import { dict } from "@/lib/i18n";
@@ -124,7 +125,7 @@ export function TermsView() {
     blocks.map((b, i) => (
       <Reveal key={b.heading.en} delay={Math.min(i * 0.05, 0.2)}>
         <div className="card-surface p-6">
-          <h3 className="font-display text-lg font-bold text-maroon">
+          <h3 className="font-display text-lg font-bold text-brand">
             {tr(b.heading)}
           </h3>
           {b.body.map((para, j) => (
@@ -176,12 +177,7 @@ export function TermsView() {
                   en: "Questions about anything on this page? Write to us at",
                   mr: "या पृष्ठाबद्दल काही शंका असल्यास आम्हाला लिहा",
                 })}{" "}
-                <a
-                  href={`mailto:${email}`}
-                  className="font-semibold text-saffron hover:underline"
-                >
-                  {email}
-                </a>
+                <ObfuscatedEmail className="font-semibold text-accent hover:underline" />
               </p>
             </div>
           </Reveal>

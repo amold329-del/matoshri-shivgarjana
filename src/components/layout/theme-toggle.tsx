@@ -29,7 +29,7 @@ export function ThemeToggle({ onDark = false }: { onDark?: boolean }) {
         "grid h-10 w-10 place-items-center rounded-full border transition-colors",
         onDark
           ? "border-white/25 text-[var(--dark-text)] hover:border-gold hover:text-gold-light"
-          : "border-card-border text-ink hover:border-gold hover:text-saffron",
+          : "border-card-border text-ink hover:border-gold hover:text-accent",
       )}
     >
       {/* Shown in dark mode (tap to switch to light) */}

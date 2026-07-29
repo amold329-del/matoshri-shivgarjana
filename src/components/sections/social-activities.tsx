@@ -58,7 +58,7 @@ export function SocialActivities() {
                     {tr(item.title)}
                   </h3>
                   {item.planned && (
-                    <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.66rem] font-semibold uppercase tracking-wider text-gold">
+                    <span className="mt-2 rounded-full bg-gold/15 px-2.5 py-0.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-accent-gold">
                       {tr(dict.cta.planned)}
                     </span>
                   )}

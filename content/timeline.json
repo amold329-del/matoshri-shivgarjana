@@ -36,7 +36,10 @@
     }
   },
   {
-    "year": "भविष्य",
+    "year": {
+      "en": "Future",
+      "mr": "भविष्य"
+    },
     "kind": "future",
     "title": {
       "en": "Towards Digital Transformation",

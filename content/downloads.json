@@ -1,12 +1,20 @@
 [
   {
-    "title": { "en": "Annual Report 2025", "mr": "वार्षिक अहवाल २०२५" },
+    "title": {
+      "en": "Annual Report 2025",
+      "mr": "वार्षिक अहवाल २०२५"
+    },
     "description": {
       "en": "The Mandal's report for 2025 — activities, notice of the general meeting and the statement of accounts.",
       "mr": "मंडळाचा सन २०२५ चा अहवाल — उपक्रम, सर्वसाधारण सभेची सूचना आणि जमाखर्चाचा तपशील."
     },
-    "category": { "en": "Reports", "mr": "अहवाल" },
+    "category": {
+      "en": "Reports",
+      "mr": "अहवाल"
+    },
     "href": "/documents/ahawal-2025.pdf",
-    "size": "PDF · 415 KB"
+    "size": "PDF · 415 KB",
+    "fileType": "PDF",
+    "fileSizeKb": 416
   }
 ]
