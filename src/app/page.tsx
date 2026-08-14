@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { Ribbon } from "@/components/sections/ribbon";
+import { LogoUnveiling } from "@/components/sections/logo-unveiling";
 import { Welcome } from "@/components/sections/welcome";
 import { Journey } from "@/components/sections/journey";
 import { SuvarnaMahotsav } from "@/components/sections/suvarna-mahotsav";
@@ -40,6 +41,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Ribbon />
+      <LogoUnveiling />
       <SuvarnaMahotsav />
       <Welcome />
       <Journey />

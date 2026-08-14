@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Search, Star, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { Picture } from "@/components/ui/picture";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getNews } from "@/lib/content";
 import { formatDate } from "@/lib/date";
@@ -65,7 +66,18 @@ export function NewsView() {
           {/* Featured */}
           {featured && (
             <Reveal>
-              <article className="mb-12 overflow-hidden rounded-2xl border border-gold/30 bg-gradient-to-br from-maroon to-maroon-ink p-8 text-cream shadow-gold sm:p-10">
+              <article className="mb-12 overflow-hidden rounded-2xl border border-gold/30 bg-gradient-to-br from-maroon to-maroon-ink text-cream shadow-gold">
+                {featured.image && (
+                  <Picture
+                    src={featured.image}
+                    alt={tr(featured.title)}
+                    sizes="(max-width: 1024px) 92vw, 880px"
+                    priority
+                    className="block border-b border-gold/25"
+                    imgClassName="block h-auto w-full"
+                  />
+                )}
+                <div className="p-8 sm:p-10">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-gold/20 px-3 py-1 text-xs font-bold text-gold-light">
                   <Star className="h-3.5 w-3.5" />
                   {tr({ en: "Featured", mr: "वैशिष्ट्यीकृत" })}
@@ -79,6 +91,7 @@ export function NewsView() {
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cream/85">
                   {tr(featured.excerpt)}
                 </p>
+                </div>
               </article>
             </Reveal>
           )}

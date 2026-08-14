@@ -87,6 +87,8 @@ export interface NewsItem {
   title: Bilingual;
   excerpt: Bilingual;
   featured?: boolean;
+  /** Poster shown on the featured card, e.g. "/announcements/x.jpg". */
+  image?: string;
 }
 
 export interface EventItem {

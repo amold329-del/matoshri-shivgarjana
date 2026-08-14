@@ -1,8 +1,25 @@
 [
   {
+    "id": "n-logo-2026",
+    "date": "2026-08-14",
+    "featured": true,
+    "image": "/announcements/logo-unveiling.jpg",
+    "category": {
+      "en": "Announcement",
+      "mr": "घोषणा"
+    },
+    "title": {
+      "en": "Our New Logo Unveiled — ॥ मातोश्रीचा विघ्नहर्ता ॥",
+      "mr": "नव्या लोगोचे हार्दिक अनावरण — ॥ मातोश्रीचा विघ्नहर्ता ॥"
+    },
+    "excerpt": {
+      "en": "As the Mandal steps into its 47th year, it takes on a new identity. The name by which we have called out to Bappa year after year now stays with us for good, in the form of our own logo — a temple arch in deep maroon, with Bappa's form shaped in gold letters. This logo is not ours alone; it stands on every hand that gave a vargani and every voice that answers “Morya”. A new identity, new energy, and Bappa's blessing — Ganpati Bappa Morya!",
+      "mr": "मंडळ ४७ व्या वर्षात पदार्पण करीत असताना आज त्याला नवी ओळख मिळाली आहे. ज्या नावाने आपण वर्षानुवर्षे बाप्पाला साद घातली, तेच नाव आता आपल्या लोगोच्या रूपाने कायमचे आपल्यासोबत राहील — मंदिराच्या कमानीत, गडद लाल पार्श्वभूमीवर, सुवर्ण अक्षरांतून साकारलेले बाप्पाचे रूप. हा लोगो केवळ आमचा नाही; वर्गणी देणाऱ्या प्रत्येक हातामुळे आणि 'मोरया' म्हणणाऱ्या प्रत्येक आवाजामुळे ही ओळख उभी राहिली आहे. नव्या ओळखीने, नव्या ऊर्जेने आणि बाप्पाच्या आशीर्वादाने — गणपती बाप्पा मोरया!"
+    }
+  },
+  {
     "id": "n0",
     "date": "2026-07-25",
-    "featured": true,
     "category": {
       "en": "Seva",
       "mr": "सेवा"
