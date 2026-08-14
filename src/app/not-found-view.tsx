@@ -13,7 +13,7 @@ export function NotFoundView() {
     <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-[radial-gradient(120%_120%_at_50%_-10%,#5a1024_0%,#2a0712_55%,#1b0410_100%)] px-6 section text-center text-[var(--dark-text)]">
       <FloatingPetals count={8} />
       <div className="relative z-10 flex flex-col items-center">
-        <Emblem className="h-20 w-20 drop-shadow-[0_8px_24px_rgba(230,200,104,0.35)]" />
+        <Emblem sizes="80px" className="h-20 w-20 drop-shadow-[0_8px_24px_rgba(230,200,104,0.35)]" />
         <p className="mt-6 font-display text-6xl font-extrabold text-gold-light">
           {lang === "mr" ? "४०४" : "404"}
         </p>

@@ -4,23 +4,33 @@ import { asset } from "@/lib/asset";
 import { useEffect, useState } from "react";
 
 /**
- * Original, respectful decorative SVGs.
+ * Decorative marks used across the site.
  *
- * The emblem is an abstract lotus + kalash motif — deliberately NOT a literal
- * depiction of a deity. This keeps the mark original (no copyrighted artwork)
- * while still reading as devotional and Maharashtrian.
+ * The emblem is the Mandal's official ॥ मातोश्रीचा विघ्नहर्ता ॥ logo. The master
+ * artwork lives at brand/logo-master.png; every size served here is generated
+ * from it by tools/generate-logo-assets.py, which also adds the gold keyline
+ * that keeps the maroon medallion visible on the dark navbar and footer.
+ *
+ * `sizes` must match the rendered CSS width, or the browser under-fetches and
+ * the calligraphy blurs — pass "96px" wherever the mark is shown large.
  */
 
-export function Emblem({ className }: { className?: string }) {
+export function Emblem({
+  className,
+  sizes = "48px",
+}: {
+  className?: string;
+  sizes?: string;
+}) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={asset("/logo-emblem-96.webp")}
-      srcSet={`${asset("/logo-emblem-96.webp")} 96w, ${asset("/logo-emblem-192.webp")} 192w`}
-      sizes="48px"
-      width={96}
-      height={96}
-      alt="मातोश्रीचा विघ्नहर्ता — मातोश्री शिवगर्जना मंडळ"
+      src={asset("/logo-emblem-192.webp")}
+      srcSet={`${asset("/logo-emblem-96.webp")} 96w, ${asset("/logo-emblem-192.webp")} 192w, ${asset("/logo-emblem-384.webp")} 384w`}
+      sizes={sizes}
+      width={192}
+      height={192}
+      alt="मातोश्रीचा विघ्नहर्ता — मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ"
       className={className}
     />
   );

@@ -57,7 +57,7 @@ export function SabhasadView() {
 
         <div className="wrap relative z-10 flex flex-col items-center">
           <Reveal>
-            <Emblem className="h-24 w-24 drop-shadow-[0_8px_24px_rgba(230,200,104,0.35)]" />
+            <Emblem sizes="96px" className="h-24 w-24 drop-shadow-[0_8px_24px_rgba(230,200,104,0.35)]" />
           </Reveal>
           <Reveal delay={0.05}>
             <span className="mt-6 inline-block rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-gold-light">

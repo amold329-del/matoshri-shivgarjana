@@ -196,6 +196,27 @@ domain resolves all six without changing the deploy workflow.
 
 Full setup: [`docs/PLATFORM-CLOUDFLARE.md`](docs/PLATFORM-CLOUDFLARE.md)
 
+## Brand assets
+
+The official ॥ मातोश्रीचा विघ्नहर्ता ॥ logo lives at **`brand/logo-master.png`**.
+Nothing references it directly — every served size is generated from it, so
+replacing that one file and re-running the two scripts updates the whole site:
+
+```bash
+pip install pillow
+python3 tools/generate-logo-assets.py   # emblem, favicon, PWA + iOS icons
+python3 tools/generate-og-cards.py      # the four WhatsApp/Facebook share cards
+```
+
+`generate-og-cards.py` needs Pillow built with libraqm, or Devanagari conjuncts
+break apart; it downloads Noto Sans Devanagari into `tools/.fonts/` on first run.
+
+Derived web assets carry a hairline gold keyline around the medallion. Without
+it the deep-maroon body disappears against the dark hero navbar and the footer
+(`#2a0712` → `#1b0410`) and only the calligraphy floats. Set `KEYLINE_PCT = 0`
+in `tools/generate-logo-assets.py` and re-run for the untouched mark. The master
+file is never modified — that's the one to hand to printers.
+
 ## Images
 
 `npm run build` runs `prebuild`, which regenerates responsive AVIF/WebP/JPEG
