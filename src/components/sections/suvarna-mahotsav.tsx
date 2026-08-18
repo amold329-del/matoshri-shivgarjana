@@ -90,7 +90,7 @@ export function SuvarnaMahotsav() {
             <Picture
               src="/announcements/suvarna-mahotsav.jpg"
               alt={tr({
-                en: "Matoshri Shivgarjana Mandal — journey towards the Golden Jubilee, 47th year",
+                en: "Matoshree Shivgarjana Mandal — journey towards the Golden Jubilee, 47th year",
                 mr: "मातोश्री शिवगर्जना मंडळ — सुवर्ण महोत्सवाकडे वाटचाल, ४७ वे वर्ष",
               })}
               sizes="(max-width: 1024px) 92vw, 420px"

@@ -139,7 +139,7 @@ export function LogoUnveiling() {
           <Reveal delay={0.38}>
             <p className="mt-4 text-body-sm font-semibold text-ink-soft">
               {tr({
-                en: "— The Committee, Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
+                en: "— The Committee, Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal",
                 mr: "— कार्यकारिणी, मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
               })}
             </p>

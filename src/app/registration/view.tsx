@@ -47,7 +47,7 @@ export function RegistrationView() {
         eyebrow={{ en: "Official Records", mr: "अधिकृत नोंदी" }}
         title={{ en: "Registration Details", mr: "नोंदणी तपशील" }}
         subtitle={{
-          en: "Matoshri Shivgarjana Mandal is a duly registered public charitable body. Key statutory details are listed below.",
+          en: "Matoshree Shivgarjana Mandal is a duly registered public charitable body. Key statutory details are listed below.",
           mr: "मातोश्री शिवगर्जना मंडळ ही रीतसर नोंदणीकृत सार्वजनिक धर्मादाय संस्था आहे. प्रमुख वैधानिक तपशील खाली दिले आहेत.",
         }}
       />

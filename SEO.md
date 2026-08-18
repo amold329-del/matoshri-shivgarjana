@@ -50,7 +50,7 @@ setting. But the honest version is better news than it sounds, because it splits
 into three very different questions:
 
 **Searches for your own name** — "मातोश्री शिवगर्जना", "Matoshree cha
-Vighnaharta", "Matoshri Shivgarjana mandal". You should rank #1. Almost nothing
+Vighnaharta", "Matoshree Shivgarjana mandal". You should rank #1. Almost nothing
 competes for that exact name. **Right now you rank nowhere — I searched, and the
 site does not appear for its own name.** That is the whole problem, and it is
 fixable.

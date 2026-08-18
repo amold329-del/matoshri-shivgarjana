@@ -16,6 +16,10 @@ Matoshree S.R.A. CHS, Jerbai Wadia Road, Parel-Bhoiwada, Mumbai 400012.
 - Established **1980** · registered **2025** (`F0087088(GBR)`) · **47th year** in 2026
 - Golden Jubilee **2029**
 - Tagline: **॥ मातोश्रीचा विघ्नहर्ता ॥**
+- **Latin spelling is "Matoshree" everywhere** (matches the domain and the mandal's
+  email). Standardised 17 Aug 2026; the old "Matoshri" survives only in
+  `QA-FIXES.md`, where it is part of a real PDF's filename, and in the repo /
+  npm package name `matoshri-shivgarjana`, which is an identifier, not display text.
 - Live: **https://matoshreechavighnaharta.co.in** (HTTPS, custom domain)
 - Repo: `github.com/amold329-del/matoshri-shivgarjana` · branch `main`
 - Instagram: `@matoshree.cha.vighnaharta` · phone `+91 77383 37412`
@@ -92,7 +96,10 @@ Two commits made locally on top of `origin/main` (= `1ca489b`), **not yet pushed
 1. `dec1740` — the official मातोश्रीचा विघ्नहर्ता logo adopted sitewide
 2. `5ecf183` — the logo-unveiling announcement (homepage section + featured news entry)
 3. sitemap lastmod from git history; /sabhasad/ + /online-donation/ noindexed
-4. SEO audit pass: every route through buildMetadata (Next replaces rather than
+4. Latin spelling standardised to "Matoshree"; visarjan procession corrected to
+   25 Sept 2026 in content/events.json (it disagreed with procession.json and the
+   Festival schema)
+5. SEO audit pass: every route through buildMetadata (Next replaces rather than
    merges openGraph, so 14 routes were silently dropping og:type/locale/site_name),
    bilingual titles on 7 routes, gallery images in the sitemap — see
    SEO-AUDIT-2026-08-17.md

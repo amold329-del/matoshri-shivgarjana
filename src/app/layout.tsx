@@ -51,13 +51,13 @@ export const metadata: Metadata = {
   keywords: [
     "Ganeshotsav",
     "Ganesh Mandal Mumbai",
-    "Matoshri Shivgarjana",
+    "Matoshree Shivgarjana",
     "सार्वजनिक गणेशोत्सव मंडळ",
     "Ganpati Mandal",
     "Mumbai Ganesh festival",
     "Maharashtrian culture",
   ],
-  authors: [{ name: "Matoshri Shivgarjana Mandal" }],
+  authors: [{ name: "Matoshree Shivgarjana Mandal" }],
   openGraph: {
     type: "website",
     locale: "mr_IN",

@@ -16,7 +16,7 @@ export default function StructuredData() {
     "@id": `${SITE_URL}/#organization`,
     name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
     alternateName: [
-      "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
+      "Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal",
       "मातोश्रीचा विघ्नहर्ता",
       "Matoshreecha Vighnaharta",
     ],
@@ -68,7 +68,7 @@ export default function StructuredData() {
     "@type": "Festival",
     "@id": `${SITE_URL}/#ganeshotsav2026`,
     name: "मातोश्री शिवगर्जना गणेशोत्सव २०२६ (४७ वे वर्ष)",
-    alternateName: "Matoshri Shivgarjana Ganeshotsav 2026",
+    alternateName: "Matoshree Shivgarjana Ganeshotsav 2026",
     startDate: "2026-09-14",
     endDate: "2026-09-25",
     eventStatus: "https://schema.org/EventScheduled",
@@ -133,7 +133,7 @@ export default function StructuredData() {
     // besides the page titles and the address inside the Organization node.
     alternateName: [
       "Matoshreecha Vighnaharta",
-      "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
+      "Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal",
     ],
     inLanguage: ["mr", "en"],
     publisher: { "@id": `${SITE_URL}/#organization` },

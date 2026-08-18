@@ -1,5 +1,5 @@
 # मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.)
-## Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal — Website (V1.0)
+## Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal — Website (V1.0)
 
 A premium, bilingual (मराठी / English), fully **static** website for a registered Mumbai Ganeshotsav Mandal — established **1980**, registered **2025**, celebrating its **47th year** in **2026**.
 

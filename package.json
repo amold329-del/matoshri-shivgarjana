@@ -2,7 +2,7 @@
   "name": "matoshri-shivgarjana",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium static website for Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal (Regd.), Mumbai \u2014 celebrating 47 years of Faith, Unity & Service.",
+  "description": "Premium static website for Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal (Regd.), Mumbai \u2014 celebrating 47 years of Faith, Unity & Service.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

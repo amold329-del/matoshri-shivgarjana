@@ -20,7 +20,7 @@ export function TermsView() {
       heading: { en: "About this website", mr: "या संकेतस्थळाबद्दल" },
       body: [
         {
-          en: "This is the official website of Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal (Regd.), Parel-Bhoiwada, Mumbai. It exists to share information about the Mandal, its festival programmes and its social activities.",
+          en: "This is the official website of Matoshree Shivgarjana Sarvajanik Ganeshotsav Mandal (Regd.), Parel-Bhoiwada, Mumbai. It exists to share information about the Mandal, its festival programmes and its social activities.",
           mr: "हे मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.), परेल-भोईवाडा, मुंबई यांचे अधिकृत संकेतस्थळ आहे. मंडळ, उत्सवाचे कार्यक्रम आणि सामाजिक उपक्रम यांची माहिती देणे हा त्याचा उद्देश आहे.",
         },
       ],
