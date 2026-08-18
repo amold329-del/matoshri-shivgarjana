@@ -42,8 +42,11 @@ export default function StructuredData() {
       latitude: 19.0052,
       longitude: 72.8485,
     },
-    hasMap:
-      "https://www.google.com/maps/search/?api=1&query=MATOSHREE%20S.R.A%20CHS%20A%20WING%2C%20Jerbai%20Wadia%20Rd%2C%20Bhoiwada%2C%20Parel%2C%20Mumbai%20400012",
+    // The Mandal's own Google Business Profile, not an address search. Paired
+    // with sameAs below, this is the site's half of the link between the two
+    // records — the profile links out to the site, the site points back — so
+    // Google reconciles them as one entity instead of inferring a relationship.
+    hasMap: "https://maps.app.goo.gl/ihTuBeJm4LFRscB89",
     areaServed: [
       { "@type": "Place", name: "Parel-Bhoiwada, Mumbai" },
       { "@type": "City", name: "Mumbai" },
@@ -55,7 +58,10 @@ export default function StructuredData() {
     // obfuscated (MCV-027). Rotate to a forwarding alias if spam appears.
     email: "matoshreeshivgarjanasarvajanik@gmail.com",
     telephone: "+91-77383-37412",
-    sameAs: ["https://www.instagram.com/matoshree.cha.vighnaharta/"],
+    sameAs: [
+      "https://www.instagram.com/matoshree.cha.vighnaharta/",
+      "https://maps.app.goo.gl/ihTuBeJm4LFRscB89",
+    ],
     subjectOf: {
       "@type": "CreativeWork",
       name: "वार्षिक अहवाल २०२५",
