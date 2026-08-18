@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { TermsView } from "./view";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
+  path: "/terms/",
   title: "अटी व गोपनीयता",
   description:
     "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ संकेतस्थळाच्या वापराच्या अटी आणि गोपनीयता धोरण.",
-  alternates: { canonical: "/terms/" },
-  openGraph: { url: "/terms/", title: "अटी व गोपनीयता", images: [{ url: "/og-cover.jpg", width: 1200, height: 630 }] },
-  twitter: { images: ["/og-cover.jpg"] },
-};
+});
 
 export default function Page() {
   return (

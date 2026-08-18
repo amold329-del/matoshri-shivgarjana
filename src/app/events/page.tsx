@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { EventsView } from "./view";
 import { getEvents } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "कार्यक्रम",
+export const metadata: Metadata = buildMetadata({
+  path: "/events/",
+  absoluteTitle:
+    "कार्यक्रम · Ganeshotsav 2026 Events, Parel Mumbai",
   description:
     "मातोश्री शिवगर्जना मंडळाचे आगामी व मागील कार्यक्रम — गणेशोत्सव वेळापत्रक, सांस्कृतिक संध्या, आरत्या आणि सामुदायिक उपक्रम.",
-  alternates: { canonical: "/events/" },
-  openGraph: { url: "/events/", title: "कार्यक्रम", images: [{ url: "/og/events.jpg", width: 1200, height: 630 }] },
-  twitter: { images: ["/og/events.jpg"] },
-};
+  ogImage: "/og/events.jpg",
+});
 
 const SITE_URL = "https://matoshreechavighnaharta.co.in";
 

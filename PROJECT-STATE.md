@@ -90,7 +90,12 @@ Two commits made locally on top of `origin/main` (= `1ca489b`), **not yet pushed
 `git push` to deploy:
 
 1. `dec1740` — the official मातोश्रीचा विघ्नहर्ता logo adopted sitewide
-2. the logo-unveiling announcement (homepage section + featured news entry)
+2. `5ecf183` — the logo-unveiling announcement (homepage section + featured news entry)
+3. sitemap lastmod from git history; /sabhasad/ + /online-donation/ noindexed
+4. SEO audit pass: every route through buildMetadata (Next replaces rather than
+   merges openGraph, so 14 routes were silently dropping og:type/locale/site_name),
+   bilingual titles on 7 routes, gallery images in the sitemap — see
+   SEO-AUDIT-2026-08-17.md
 
 `1ca489b` and everything before it is already on GitHub. Whether the Pages workflow
 actually published it still needs checking in the Actions tab — earlier in the project,
@@ -124,7 +129,12 @@ and footer; `KEYLINE_PCT = 0` reverts that.
 8. **Unveiling poster typo:** the third line reads (मातोश्रीचा विध्न‌हर्ता) — ध्न where it
    should be घ्न. Replace `public/announcements/logo-unveiling.jpg` with a corrected
    render; nothing else changes. Page text already spells it correctly.
-9. **`<LogoUnveiling />` is temporary furniture.** It sits right after `<Ribbon />` for
+9. **Indexing (see SEO.md §6).** 8 URLs sat in "Discovered – currently not indexed"
+   with Last crawled N/A — never fetched, nothing broken. Sitemap lastmod and the
+   placeholder noindex are fixed in code; still by hand: Request Indexing for
+   /procession/, /faq/, /registration/, /advertisements/, and get two or three real
+   external links.
+10. **`<LogoUnveiling />` is temporary furniture.** It sits right after `<Ribbon />` for
    launch visibility. Once the festival starts, move it below `<Countdown />` in
    `src/app/page.tsx`; afterwards drop the section and keep news entry `n-logo-2026`
    as the record.

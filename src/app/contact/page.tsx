@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { ContactView } from "./view";
 
-export const metadata: Metadata = {
-  title: "संपर्क करा",
+export const metadata: Metadata = buildMetadata({
+  path: "/contact/",
+  absoluteTitle:
+    "संपर्क · Contact Matoshree Shivgarjana Mandal, Mumbai",
   description:
     "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळाशी संपर्क साधा — पत्ता, दूरध्वनी, ईमेल आणि स्थान नकाशा.",
-  alternates: { canonical: "/contact/" },
-  openGraph: { url: "/contact/", title: "संपर्क करा", images: [{ url: "/og-cover.jpg", width: 1200, height: 630 }] },
-  twitter: { images: ["/og-cover.jpg"] },
-};
+});
 
 export default function Page() {
   return (

@@ -127,6 +127,14 @@ export default function StructuredData() {
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: "मातोश्रीचा विघ्नहर्ता — मातोश्री शिवगर्जना मंडळ",
+    // Latin-script names, so an English query can resolve to the same entity.
+    // The served HTML is Marathi-only until localised routes exist, which
+    // makes these machine-readable names the only English signal Google gets
+    // besides the page titles and the address inside the Organization node.
+    alternateName: [
+      "Matoshreecha Vighnaharta",
+      "Matoshri Shivgarjana Sarvajanik Ganeshotsav Mandal",
+    ],
     inLanguage: ["mr", "en"],
     publisher: { "@id": `${SITE_URL}/#organization` },
   };

@@ -168,3 +168,53 @@ the one that matters.
 
 Re-run `tools/verify.sh` after deploying — it checks canonicals on five routes,
 which is the fix underneath all of this.
+
+---
+
+## 6. "Discovered – currently not indexed" (17 Aug 2026)
+
+Search Console listed 8 URLs in this state: /advertisements/, /online-donation/,
+/faq/, /terms/, /history/, /sabhasad/, /procession/, /registration/ — all showing
+**Last crawled: N/A**, with FAILED 0.
+
+That N/A is the whole diagnosis. Google discovered these URLs from the sitemap
+but has never fetched them, so nothing on the pages themselves can be the cause.
+Checked and ruled out: every one of them sent `index, follow`, robots.txt allows
+Googlebot, and all 8 are linked from the static homepage HTML. Word count does
+not explain it either — /faq/ (506 words) and /terms/ (503) were unindexed while
+/downloads/ (202) was indexed. The 8 are simply the routes added most recently;
+crawl demand on a months-old domain with no external links is low, and Google
+queued them.
+
+The "Validation started 28/07" that sat PENDING for three weeks is not stuck.
+For this issue type there is nothing to validate — it waits for a crawl.
+Re-triggering it does nothing.
+
+### Fixed in this update
+
+**Sitemap lastmod is now real.** It was `new Date()`, so all 17 URLs claimed to
+change at each deploy. Google discounts a lastmod that behaves like that, and
+lastmod is the only field it still reads (`priority` and `changefreq` are
+ignored). Now `scripts/build-route-dates.mjs` derives each route's date from the
+last commit touching that route's files or the content JSON it renders, written
+to `content/route-dates.json` at prebuild. Shared component edits deliberately
+do not bump every route. CI checks out with `fetch-depth: 0` so git history is
+available; without it, routes keep their previously committed date rather than
+claiming today.
+
+**The two placeholders are noindexed.** /sabhasad/ and /online-donation/ send
+`noindex, follow` and are out of the sitemap. They stay in the navigation for
+visitors. Asking Google to index a "coming soon" notice spends crawl budget the
+real pages need. On launch: drop the `robots` line in their `page.tsx` and add
+them back to `src/app/sitemap.ts`.
+
+### Still to do, by hand
+
+1. **URL Inspection → Request Indexing** for /procession/, /faq/,
+   /registration/, /advertisements/. About 10 a day allowed; usually crawled
+   within days. Don't spend one on /terms/.
+2. **External links** — the biggest lever on crawl demand, more than anything
+   on-site: a Google Business Profile for the Mandal, the site in the Instagram
+   bio, a mention from a local news page or a Mumbai Ganeshotsav directory.
+3. **Depth.** /history/ carries 233 words for 47 years; /procession/ should have
+   the street names as text, not only on the map.

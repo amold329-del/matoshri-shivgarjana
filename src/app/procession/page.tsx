@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { ProcessionView } from "./view";
 import { getProcession } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "आगमन व विसर्जन मार्ग",
+export const metadata: Metadata = buildMetadata({
+  path: "/procession/",
+  absoluteTitle:
+    "आगमन व विसर्जन मार्ग · Ganesh Procession Route, Parel",
   description:
     "मातोश्री शिवगर्जना मंडळाच्या गणेशोत्सव २०२६ आगमन व विसर्जन मिरवणुकीचा संपूर्ण मार्ग आणि वेळापत्रक — भोईवाडा, परेल, मुंबई.",
-  alternates: { canonical: "/procession/" },
-  openGraph: { url: "/procession/", title: "आगमन व विसर्जन मार्ग", images: [{ url: "/og-cover.jpg", width: 1200, height: 630 }] },
-  twitter: { images: ["/og-cover.jpg"] },
-};
+});
 
 const SITE_URL = "https://matoshreechavighnaharta.co.in";
 

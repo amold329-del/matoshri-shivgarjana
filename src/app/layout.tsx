@@ -40,8 +40,10 @@ const SITE_URL = "https://matoshreechavighnaharta.co.in";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
+    // Kept under ~65 characters so Google shows it whole, and carries the
+    // locality, which the old 71-character version spent on ॥ ॥ decoration.
     default:
-      "॥ मातोश्रीचा विघ्नहर्ता ॥ · मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
+      "मातोश्रीचा विघ्नहर्ता · मातोश्री शिवगर्जना मंडळ, परेल मुंबई",
     template: "%s · मातोश्री शिवगर्जना मंडळ",
   },
   description:

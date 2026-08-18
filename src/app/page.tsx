@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import { Hero } from "@/components/sections/hero";
 import { Ribbon } from "@/components/sections/ribbon";
 import { LogoUnveiling } from "@/components/sections/logo-unveiling";
@@ -21,20 +22,9 @@ import { Sponsors } from "@/components/sections/sponsors";
  * stats → countdown → news → events → social work → completed programmes →
  * gallery → testimonials → sponsors.
  */
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-  openGraph: {
-    url: "/",
-    images: [
-      {
-        url: "/og-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ (रजि.) — ४७ वे वर्ष",
-      },
-    ],
-  },
-};
+export const metadata: Metadata = buildMetadata({
+  path: "/",
+});
 
 export default function HomePage() {
   return (
