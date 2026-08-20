@@ -86,7 +86,8 @@
     "body": {
       "en": "A grand, eco-conscious farewell procession with dhol-tasha.",
       "mr": "ढोल-ताशासह भव्य, पर्यावरणपूरक निरोप मिरवणूक."
-    }
+    },
+    "schemaRef": "/procession/#visarjan"
   },
   {
     "id": "e5",

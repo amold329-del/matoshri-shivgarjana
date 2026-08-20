@@ -69,6 +69,19 @@ export default function StructuredData() {
     },
   };
 
+  /**
+   * The festival as a whole — deliberately NOT built by src/lib/event-schema.ts.
+   *
+   * That builder produces one Event per programme, tied to the page describing
+   * it. This node is the umbrella Festival: it spans the whole eleven days, has
+   * its own @id, and is emitted sitewide so any page can be understood as
+   * belonging to Ganeshotsav 2026. It already carries a real startDate and
+   * endDate, taken from Ganesh Chaturthi and Anant Chaturdashi.
+   *
+   * If a third Event-family node is ever added, put it through the builder
+   * instead — two hand-written literals is exactly how `endDate` went missing
+   * from every programme in the first place.
+   */
   const festival = {
     "@context": "https://schema.org",
     "@type": "Festival",

@@ -95,6 +95,20 @@ export interface EventItem {
   id: string;
   date: string;
   time?: string;
+  /**
+   * End time, 12-hour clock, e.g. "9:00 PM". Optional and never guessed —
+   * src/lib/event-schema.ts omits schema.org `endDate` when it is absent
+   * rather than inventing one. Fill it in as the Mandal fixes each programme's
+   * finishing time and the endDate appears automatically.
+   */
+  endTime?: string;
+  /**
+   * Set when another page owns this event's structured data, e.g.
+   * "/procession/#visarjan". The card still renders here; the Event JSON-LD is
+   * emitted only by the owning page, so one real event never appears as two
+   * @ids with conflicting times.
+   */
+  schemaRef?: string;
   title: Bilingual;
   venue: Bilingual;
   body: Bilingual;
@@ -161,7 +175,11 @@ export interface ProcessionRoute {
   title: Bilingual;
   date: string;
   dateLabel: Bilingual;
+  /** Human-readable range shown on the page, e.g. "4:00 PM to 9:00 PM". */
   timeLabel: Bilingual;
+  /** Machine-readable form of timeLabel, for Event startDate/endDate. */
+  startTime: string;
+  endTime: string;
   stops: Bilingual[];
 }
 

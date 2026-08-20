@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "prebuild": "node scripts/optimize-images.mjs && node scripts/build-manifest.mjs && node scripts/build-route-dates.mjs"
+    "prebuild": "node scripts/optimize-images.mjs && node scripts/build-manifest.mjs && node scripts/build-route-dates.mjs",
+    "verify:events": "node scripts/verify-event-schema.mjs",
+    "test:events": "node --experimental-strip-types --test scripts/test-event-schema.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

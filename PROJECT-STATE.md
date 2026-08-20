@@ -85,6 +85,7 @@ entry, both built around the unveiling poster.
 | `SECURITY-HEADERS.md` | the headers GitHub Pages can't set |
 | `docs/PLATFORM-CLOUDFLARE.md` | Cloudflare setup that closes 6 audit issues |
 | `tools/verify.sh` | post-deploy check: routes, headers, canonicals, og:image, a11y |
+| `docs/EVENT-SCHEMA-ENDDATE.md` | why endDate was missing, and the guards against it returning |
 | `tools/generate-og-image.py` | regenerates `public/og-image.png` (needs Pillow + libraqm) |
 | `tools/worker.js` | Cloudflare worker |
 
@@ -102,7 +103,9 @@ Two commits made locally on top of `origin/main` (= `1ca489b`), **not yet pushed
 4. Latin spelling standardised to "Matoshree"; visarjan procession corrected to
    25 Sept 2026 in content/events.json (it disagreed with procession.json and the
    Festival schema)
-5. SEO audit pass: every route through buildMetadata (Next replaces rather than
+5. Event schema centralised in `src/lib/event-schema.ts` — fixes the Search
+   Console "Missing field 'endDate'" issue; see docs/EVENT-SCHEMA-ENDDATE.md
+6. SEO audit pass: every route through buildMetadata (Next replaces rather than
    merges openGraph, so 14 routes were silently dropping og:type/locale/site_name),
    bilingual titles on 7 routes, gallery images in the sitemap — see
    SEO-AUDIT-2026-08-17.md
@@ -136,7 +139,12 @@ and footer; `KEYLINE_PCT = 0` reverts that.
    sweep, Safari/Firefox/Edge spot-check. Untested, not broken.
 7. **Content:** 80G block is `enabled: false` with a blank registration number — fill it
    in or leave the notice off. Roll `countdown.targetISO` to 2027 after the festival.
-8. **Unveiling poster typo:** the third line reads (मातोश्रीचा विध्न‌हर्ता) — ध्न where it
+8. **Five events still have no `endTime`** in `content/events.json`, so they emit no
+   `endDate` (correctly — it is not invented). Add `"endTime": "9:00 PM"` to an entry
+   and the schema follows. Also: `/events/` and `/procession/` display different start
+   times for the visarjan procession (5:00 PM vs 4:00 PM) — a content contradiction
+   needing the committee's answer.
+9. **Unveiling poster typo:** the third line reads (मातोश्रीचा विध्न‌हर्ता) — ध्न where it
    should be घ्न. Replace `public/announcements/logo-unveiling.jpg` with a corrected
    render; nothing else changes. Page text already spells it correctly.
 9. **Indexing (see SEO.md §6).** 8 URLs sat in "Discovered – currently not indexed"

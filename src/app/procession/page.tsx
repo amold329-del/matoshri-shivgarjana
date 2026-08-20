@@ -3,6 +3,7 @@ import { buildMetadata } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/breadcrumb";
 import { ProcessionView } from "./view";
 import { getProcession } from "@/lib/content";
+import { buildEvent } from "@/lib/event-schema";
 
 export const metadata: Metadata = buildMetadata({
   path: "/procession/",
@@ -12,56 +13,26 @@ export const metadata: Metadata = buildMetadata({
     "मातोश्री शिवगर्जना मंडळाच्या गणेशोत्सव २०२६ आगमन व विसर्जन मिरवणुकीचा संपूर्ण मार्ग आणि वेळापत्रक — भोईवाडा, परेल, मुंबई.",
 });
 
-const SITE_URL = "https://matoshreechavighnaharta.co.in";
-
-const processionJsonLd = getProcession().map((route) => ({
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: route.title.mr,
-  startDate: route.date,
-  description: `${route.title.mr} — ${route.stops
-    .map((s) => s.mr)
-    .join(" → ")}. ${route.timeLabel.mr}.`,
-  eventStatus: "https://schema.org/EventScheduled",
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  image: [
-    `${SITE_URL}/event/ganeshotsav-16x9.jpg`,
-    `${SITE_URL}/event/ganeshotsav-4x3.jpg`,
-    `${SITE_URL}/event/ganeshotsav-1x1.jpg`,
-  ],
-  performer: {
-    "@type": "PerformingGroup",
-    name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
-    url: SITE_URL,
-  },
-  offers: {
-    "@type": "Offer",
-    description: "विनामूल्य — सर्वांसाठी खुले",
-    price: 0,
-    priceCurrency: "INR",
-    availability: "https://schema.org/InStock",
-    validFrom: "2026-01-01",
-    url: SITE_URL,
-  },
-  location: {
-    "@type": "Place",
-    name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "A Wing 1/102, Matoshree SRA CHS, Jerbai Wadia Road, Parel-Bhoiwada",
-      addressLocality: "Mumbai",
-      addressRegion: "Maharashtra",
-      postalCode: "400012",
-      addressCountry: "IN",
-    },
-  },
-  organizer: {
-    "@type": "Organization",
-    name: "मातोश्री शिवगर्जना सार्वजनिक गणेशोत्सव मंडळ",
-    url: SITE_URL,
-  },
-}));
+/**
+ * The aagman and visarjan processions. Both have a real finishing time in
+ * content/procession.json (timeLabel, e.g. "4:00 PM to 9:00 PM"), which the
+ * previous inline schema spent on the description string while emitting a
+ * date-only startDate. startTime/endTime now feed the builder directly, so both
+ * events carry a precise startDate and a true endDate.
+ */
+const processionJsonLd = getProcession().map((route) =>
+  buildEvent({
+    id: route.id,
+    path: "/procession/",
+    name: route.title.mr,
+    description: `${route.title.mr} — ${route.stops
+      .map((s) => s.mr)
+      .join(" → ")}. ${route.timeLabel.mr}.`,
+    date: route.date,
+    startTime: route.startTime,
+    endTime: route.endTime,
+  }),
+);
 
 export default function Page() {
   return (
