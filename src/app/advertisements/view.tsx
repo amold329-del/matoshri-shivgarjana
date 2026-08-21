@@ -91,7 +91,7 @@ export function AdvertisementsView() {
                     {ad.offers.length > 0 && (
                       <div className="mt-5">
                         <p className="text-[0.8125rem] font-extrabold uppercase tracking-[0.14em] text-accent">
-                          {tr(dict.ads.offers)}
+                          {tr(ad.offersLabel ?? dict.ads.offers)}
                         </p>
                         <ul className="mt-2.5 flex flex-wrap gap-2">
                           {ad.offers.map((o, i) => (

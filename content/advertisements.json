@@ -63,66 +63,66 @@
     }
   },
   {
-    "id": "shikhar-mens-wear",
+    "id": "one-step-finance-solution",
     "tier": "pramukh",
     "name": {
-      "en": "Shikhar Mens Wear",
-      "mr": "शिखर मेंस वेअर"
+      "en": "One Step Finance Solution",
+      "mr": "वन स्टेप फायनान्स सोल्युशन"
     },
     "category": {
-      "en": "Mens Wear",
-      "mr": "पुरुष वस्त्रदालन"
+      "en": "Loans & Finance",
+      "mr": "कर्ज व वित्तसेवा"
     },
     "tagline": {
-      "en": "Your style... our selection!",
-      "mr": "स्टाईल तुमची... निवड आमची!"
+      "en": "Your dreams, our financial support!",
+      "mr": "तुमची स्वप्ने… आमचे आर्थिक सहकार्य!"
     },
     "description": {
-      "en": "Modern fashion that gives your personality a new height. Shirts, pants, t-shirts, formal wear, denim and accessories.",
-      "mr": "आधुनिक फॅशन... तुमच्या व्यक्तिमत्त्वाला नवी उंची! शर्ट्स, पँट्स, टी-शर्ट्स, फॉर्मल वेअर, डेनिम, अ‍ॅक्सेसरीज आणि बरेच काही."
+      "en": "Personal, business, home and property loans — fresh, balance transfer or top-up. Speak to Sudesh Pandare, your financial partner, on call or WhatsApp.",
+      "mr": "पर्सनल, बिझनेस, गृह आणि प्रॉपर्टीवरील कर्ज — नवीन, बॅलन्स ट्रान्सफर किंवा टॉप-अप. अधिक माहितीसाठी सुदेश पांडरे यांना कॉल करा किंवा WhatsApp करा."
+    },
+    "offersLabel": {
+      "en": "Services",
+      "mr": "आमच्या सेवा"
     },
     "offers": [
       {
-        "en": "Buy 2 shirts, get 10% off",
-        "mr": "२ शर्ट खरेदी करा आणि मिळवा १०% सूट"
+        "en": "Personal Loan — fresh / balance transfer / top-up",
+        "mr": "पर्सनल लोन — नवीन / बॅलन्स ट्रान्सफर / टॉप-अप"
       },
       {
-        "en": "Buy 2 pants, get 15% off",
-        "mr": "२ पँट खरेदी करा आणि मिळवा १५% सूट"
+        "en": "Business Loan",
+        "mr": "बिझनेस लोन"
       },
       {
-        "en": "Buy 2 t-shirts / polo tees, get 20% off",
-        "mr": "२ टी-शर्ट / पोलो टी खरेदी करा आणि मिळवा २०% सूट"
+        "en": "Home Loan — fresh / balance transfer / top-up",
+        "mr": "गृह कर्ज — नवीन / बॅलन्स ट्रान्सफर / टॉप-अप"
       },
       {
-        "en": "Special discount on formal sets",
-        "mr": "फॉर्मल सेटवर विशेष सवलत"
+        "en": "Loan Against Property / Mortgage Loan",
+        "mr": "प्रॉपर्टीवर कर्ज / मॉर्टगेज लोन"
       }
     ],
     "highlights": [
       {
-        "en": "Finest quality",
-        "mr": "सर्वोत्कृष्ट गुणवत्ता"
+        "en": "Best interest rates",
+        "mr": "सर्वोत्तम व्याजदर"
       },
       {
-        "en": "Affordable prices",
-        "mr": "परवडणाऱ्या किंमती"
+        "en": "Quick processing",
+        "mr": "जलद प्रक्रिया"
       },
       {
-        "en": "Customer service is our identity",
-        "mr": "ग्राहक सेवा हीच आमची ओळख"
+        "en": "Easy documentation",
+        "mr": "सोपे कागदपत्र"
       },
       {
-        "en": "Easy exchange and return",
-        "mr": "सोपे बदल व रिटर्न सुविधा"
+        "en": "Fast disbursement",
+        "mr": "त्वरित कर्ज वितरण"
       }
     ],
-    "image": "/advertisements/shikhar-mens-wear.jpg",
-    "orientation": "landscape",
-    "phone": "",
-    "address": {
-      "en": "",
-      "mr": ""
-    }
+    "image": "/advertisements/one-step-finance-solution.jpg",
+    "orientation": "portrait",
+    "phone": "+91 77000 76154"
   }
 ]

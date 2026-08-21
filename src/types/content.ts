@@ -191,6 +191,13 @@ export interface Advertisement {
   tagline: Bilingual;
   description: Bilingual;
   offers: Bilingual[];
+  /**
+   * Heading for the chip group. Defaults to "Offers / आकर्षक ऑफर्स" from
+   * src/lib/i18n.ts. Override it when the chips are not discounts — a finance
+   * sponsor lists loan products, and calling those "आकर्षक ऑफर्स" would
+   * misdescribe them.
+   */
+  offersLabel?: Bilingual;
   highlights: Bilingual[];
   image: string;
   orientation: "portrait" | "landscape";
