@@ -33,6 +33,7 @@ const eventsJsonLd = getEvents()
     date: event.date,
     startTime: event.time,
     endTime: event.endTime,
+    endDate: event.endDate,
     venueName: event.venue.mr,
   }),
 );

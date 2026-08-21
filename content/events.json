@@ -14,7 +14,9 @@
     "body": {
       "en": "On the holy occasion of Ashadhi Ekadashi, the Mandal will distribute bananas to devotees as a small seva. All are warmly invited.",
       "mr": "आषाढी एकादशीच्या पावन निमित्ताने मंडळातर्फे भाविकांना केळीचे वितरण ही छोटीशी सेवा केली जाणार आहे. सर्वांना प्रेमळ आमंत्रण."
-    }
+    },
+    "time": "7:00 AM",
+    "endTime": "11:00 AM"
   },
   {
     "id": "e1",
@@ -32,7 +34,8 @@
     "body": {
       "en": "The sacred installation of Shri Ganesh, marking the start of the 47th Ganeshotsav.",
       "mr": "श्री गणेशाची पवित्र स्थापना, ४७ व्या गणेशोत्सवाची सुरुवात."
-    }
+    },
+    "endTime": "11:00 AM"
   },
   {
     "id": "e2",
@@ -50,12 +53,13 @@
     "body": {
       "en": "An evening of music, dance and folk performances by local artists.",
       "mr": "स्थानिक कलाकारांकडून संगीत, नृत्य आणि लोककला सादरीकरणाची संध्याकाळ."
-    }
+    },
+    "endTime": "10:30 PM"
   },
   {
     "id": "e3",
     "date": "2026-09-20",
-    "time": "8:00 AM",
+    "time": "7:00 PM",
     "status": "upcoming",
     "title": {
       "en": "Mahaprasad & Community Bhojan",
@@ -68,12 +72,13 @@
     "body": {
       "en": "A shared meal bringing the entire community together in devotion.",
       "mr": "संपूर्ण समाजाला भक्तीत एकत्र आणणारे सामुदायिक भोजन."
-    }
+    },
+    "endTime": "10:00 PM"
   },
   {
     "id": "e4",
     "date": "2026-09-25",
-    "time": "5:00 PM",
+    "time": "4:00 PM",
     "status": "upcoming",
     "title": {
       "en": "Visarjan Procession",
@@ -87,11 +92,12 @@
       "en": "A grand, eco-conscious farewell procession with dhol-tasha.",
       "mr": "ढोल-ताशासह भव्य, पर्यावरणपूरक निरोप मिरवणूक."
     },
-    "schemaRef": "/procession/#visarjan"
+    "schemaRef": "/procession/#visarjan",
+    "endTime": "9:00 PM"
   },
   {
     "id": "e5",
-    "date": "2025-09-06",
+    "date": "2025-08-27",
     "status": "past",
     "title": {
       "en": "46th Ganeshotsav",
@@ -104,6 +110,7 @@
     "body": {
       "en": "Last year's celebration welcomed record participation from the community.",
       "mr": "मागील वर्षीच्या उत्सवात समाजाचा विक्रमी सहभाग होता."
-    }
+    },
+    "endDate": "2025-09-06"
   }
 ]

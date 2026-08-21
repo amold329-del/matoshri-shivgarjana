@@ -139,11 +139,9 @@ and footer; `KEYLINE_PCT = 0` reverts that.
    sweep, Safari/Firefox/Edge spot-check. Untested, not broken.
 7. **Content:** 80G block is `enabled: false` with a blank registration number — fill it
    in or leave the notice off. Roll `countdown.targetISO` to 2027 after the festival.
-8. **Five events still have no `endTime`** in `content/events.json`, so they emit no
-   `endDate` (correctly — it is not invented). Add `"endTime": "9:00 PM"` to an entry
-   and the schema follows. Also: `/events/` and `/procession/` display different start
-   times for the visarjan procession (5:00 PM vs 4:00 PM) — a content contradiction
-   needing the committee's answer.
+8. ~~Events without `endTime`~~ — closed 21 Aug 2026. The committee supplied every
+   finishing time; all Events now emit a real `endDate` and `npm run verify:events`
+   reports 0 warnings. The visarjan start is 4:00 PM on both pages.
 9. **Unveiling poster typo:** the third line reads (मातोश्रीचा विध्न‌हर्ता) — ध्न where it
    should be घ्न. Replace `public/announcements/logo-unveiling.jpg` with a corrected
    render; nothing else changes. Page text already spells it correctly.

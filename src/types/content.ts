@@ -103,6 +103,11 @@ export interface EventItem {
    */
   endTime?: string;
   /**
+   * End day, YYYY-MM-DD, for an event that runs past the day it starts —
+   * a whole festival rather than a single programme.
+   */
+  endDate?: string;
+  /**
    * Set when another page owns this event's structured data, e.g.
    * "/procession/#visarjan". The card still renders here; the Event JSON-LD is
    * emitted only by the owning page, so one real event never appears as two
