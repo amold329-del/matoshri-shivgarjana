@@ -54,12 +54,42 @@
     "howToReach": [
       {
         "mode": {
-          "en": "By Local Train",
-          "mr": "लोकल ट्रेनने"
+          "en": "From Parel Station",
+          "mr": "परेल स्थानकावरून"
         },
         "detail": {
-          "en": "Central line: Currey Road or Chinchpokli station (approx. 10-12 min walk). Western line: Lower Parel station, then a short auto/taxi ride.",
-          "mr": "मध्य रेल्वे: करी रोड किंवा चिंचपोकळी स्थानक (अंदाजे १०-१२ मिनिटे चालत). पश्चिम रेल्वे: लोअर परेल स्थानक, तेथून रिक्षा/टॅक्सी."
+          "en": "The nearest station — about 1 km. Share taxis run from Parel station, and BEST bus route 168 also comes this way.",
+          "mr": "सर्वात जवळचे स्थानक — सुमारे १ कि.मी. परेल स्थानकावरून शेअर टॅक्सी मिळतात आणि बेस्ट बस क्र. १६८ देखील येते."
+        }
+      },
+      {
+        "mode": {
+          "en": "From Dadar Station",
+          "mr": "दादर स्थानकावरून"
+        },
+        "detail": {
+          "en": "About 1.5 km, and the easiest option if you are travelling from further away, Dadar being the main interchange. Share taxis from Dadar drop you directly at Matoshree Society, and BEST bus route 218 runs from the station.",
+          "mr": "सुमारे १.५ कि.मी. दादर हे मुख्य जंक्शन असल्याने लांबून येणाऱ्यांसाठी सर्वात सोयीचे. दादरहून शेअर टॅक्सी थेट मातोश्री सोसायटीपर्यंत सोडतात आणि स्थानकावरून बेस्ट बस क्र. २१८ येते."
+        }
+      },
+      {
+        "mode": {
+          "en": "From Sewri Station",
+          "mr": "शिवडी स्थानकावरून"
+        },
+        "detail": {
+          "en": "About 1 km on foot. There is no connecting bus or share taxi from Sewri, so plan to walk.",
+          "mr": "सुमारे १ कि.मी. चालत. शिवडीहून बस किंवा शेअर टॅक्सीची सोय नाही, त्यामुळे चालत येण्याची तयारी ठेवा."
+        }
+      },
+      {
+        "mode": {
+          "en": "From Wadala Station",
+          "mr": "वडाळा स्थानकावरून"
+        },
+        "detail": {
+          "en": "About 2 km. BEST bus route 13 runs from Wadala.",
+          "mr": "सुमारे २ कि.मी. वडाळ्याहून बेस्ट बस क्र. १३ येते."
         }
       },
       {
@@ -68,8 +98,8 @@
           "mr": "बसने"
         },
         "detail": {
-          "en": "BEST buses to Bhoiwada Naka. Alight at Bhoiwada and walk along Jerbai Wadia Road towards the Mandal.",
-          "mr": "भोईवाडा नाक्यापर्यंत बेस्ट बस. भोईवाडा येथे उतरून जेरबाई वाडिया रोडने मंडळाकडे चालत या."
+          "en": "Route 168 from Parel, 218 from Dadar station, 13 from Wadala. Alight at Bhoiwada Naka and walk along Jerbai Wadia Road towards the Mandal.",
+          "mr": "परेलहून बस क्र. १६८, दादर स्थानकावरून क्र. २१८, वडाळ्याहून क्र. १३. भोईवाडा नाक्यावर उतरून जेरबाई वाडिया रोडने मंडळाकडे चालत या."
         }
       },
       {
@@ -78,8 +108,8 @@
           "mr": "रस्त्याने / टॅक्सीने"
         },
         "detail": {
-          "en": "Take Jerbai Wadia Road from Bhoiwada Naka. The Mandal is in the Matoshree S.R.A. building premises.",
-          "mr": "भोईवाडा नाक्यावरून जेरबाई वाडिया रोड घ्या. मंडळ मातोश्री एस.आर.ए. इमारतीच्या आवारात आहे."
+          "en": "Take Jerbai Wadia Road from Bhoiwada Naka. The Mandal is in the Matoshree S.R.A. building premises, just past the Indian Cancer Society.",
+          "mr": "भोईवाडा नाक्यावरून जेरबाई वाडिया रोड घ्या. इंडियन कॅन्सर सोसायटीच्या पुढेच मातोश्री एस.आर.ए. इमारतीच्या आवारात मंडळ आहे."
         }
       },
       {
@@ -88,8 +118,8 @@
           "mr": "खूण"
         },
         "detail": {
-          "en": "Matoshree S.R.A. building, Jerbai Wadia Road, near Bhoiwada Naka, Parel.",
-          "mr": "मातोश्री एस.आर.ए. इमारत, जेरबाई वाडिया रोड, भोईवाडा नाक्याजवळ, परेल."
+          "en": "Matoshree S.R.A. building, Jerbai Wadia Road, near the Indian Cancer Society and Bhoiwada Naka, Parel-Bhoiwada, Mumbai 400012.",
+          "mr": "मातोश्री एस.आर.ए. इमारत, जेरबाई वाडिया रोड, इंडियन कॅन्सर सोसायटी व भोईवाडा नाक्याजवळ, परेल-भोईवाडा, मुंबई ४०००१२."
         }
       }
     ]
