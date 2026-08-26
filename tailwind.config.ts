@@ -90,9 +90,16 @@ const config: Config = {
         content: "1200px",
       },
       keyframes: {
+        /**
+         * Translate, not `left`. Lighthouse flagged this as a non-composited
+         * animation: `left` runs on the main thread and forces layout on every
+         * frame, while `transform` is handed to the compositor. Same movement,
+         * measured from the element's own width (w-1/3), so -180% .. 360%
+         * reproduces the old -60% .. 120% of the container.
+         */
         shimmer: {
-          "0%": { left: "-60%" },
-          "55%, 100%": { left: "120%" },
+          "0%": { transform: "translateX(-180%)" },
+          "55%, 100%": { transform: "translateX(360%)" },
         },
         fall: {
           "0%": { transform: "translateY(-10vh) rotate(0deg)", opacity: "0" },

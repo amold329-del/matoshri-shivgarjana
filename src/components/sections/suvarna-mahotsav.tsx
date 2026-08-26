@@ -210,8 +210,10 @@ export function SuvarnaMahotsav() {
                   })}
                 >
                   <div
-                    className="h-full rounded-full bg-[linear-gradient(90deg,#c9a227,#f3df9a,#e6c868)] transition-[width] duration-1000 ease-out"
-                    style={{ width: `${progress}%` }}
+                    className="h-full w-full origin-left rounded-full bg-[linear-gradient(90deg,#c9a227,#f3df9a,#e6c868)] transition-transform duration-1000 ease-out"
+                    // scaleX composites; animating width forces layout each frame (Lighthouse:
+                    // "avoid non-composited animations"). origin-left keeps it growing rightward.
+                    style={{ transform: `scaleX(${progress / 100})` }}
                   />
                 </div>
               </div>

@@ -24,15 +24,23 @@ const poppins = Outfit({
   weight: ["600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
-  // Display face used by the H1 — the only family worth preloading.
-  preload: true,
+  // Latin display face. Used for headings in English and for numerals; the
+  // Marathi H1 does not render in it, so it is no longer preloaded — see below.
+  preload: false,
 });
 const devanagari = Mukta({
   subsets: ["devanagari", "latin"],
   weight: ["400", "600", "700"],
   variable: "--font-devanagari",
   display: "swap",
-  preload: false,
+  /**
+   * This is the face that paints first. `font-mr` maps to --font-devanagari,
+   * and the hero H1, the tagline, the year badge and the location line are all
+   * font-mr — so on a Marathi-first site this is the only family worth
+   * preloading. The preload used to sit on Outfit, from when the site was
+   * English-first; the comment there still claimed it was "used by the H1".
+   */
+  preload: true,
 });
 
 const SITE_URL = "https://matoshreechavighnaharta.co.in";

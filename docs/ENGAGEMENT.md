@@ -121,3 +121,69 @@ data and behaviour sit side by side.
    "parel ganpati" peaks.
 4. **One local news mention with a link.** Worth more than the rest of this list
    combined. The 47th year and the new logo are the hook.
+
+---
+
+## Mobile performance, 26 August 2026
+
+PageSpeed mobile: **Performance 76**, Accessibility 100, Best Practices 96,
+SEO 100. FCP 2.6 s, **LCP 4.7 s**, Speed Index 4.7 s, **TBT 50 ms**, **CLS 0**.
+
+The green TBT and CLS are the important part: this site is not slow because of
+JavaScript or layout instability. Two guesses were wrong before the report
+arrived — framer-motion was suspected (TBT is 50 ms, so no) and then the hero
+image (it is 14 KB at 1200w AVIF, so no). The actual top opportunities were:
+
+| Insight | Est. saving |
+|---|---|
+| Render-blocking requests | **2,070 ms** |
+| Use efficient cache lifetimes | 709 KiB |
+| Improve image delivery | 117 KiB |
+| Legacy JavaScript | 12 KiB |
+
+### Fixed
+
+**Render-blocking stylesheet → inlined.** `experimental.inlineCss` in
+`next.config.mjs`. Nothing could paint until a separate 53 KB stylesheet had been
+fetched over a high-latency connection; now there is no `<link rel="stylesheet">`
+at all. Verified: 0 stylesheet links, 1 inline `<style>`.
+
+*The trade-off, stated plainly:* the homepage HTML goes from 156 KB to 260 KB
+uncompressed, and the CSS is no longer separately cacheable, so **repeat**
+visitors re-download it with every page. For a festival site where most people
+arrive once from a search or a WhatsApp forward, first paint is the right thing
+to optimise — but this is an experimental flag and the judgement should be
+re-checked against a fresh PageSpeed run. Deleting the `experimental` block
+reverts it.
+
+**Two non-composited animations.** The ribbon shimmer animated `left` and the
+jubilee progress bar animated `width`; both force layout every frame. Now
+`translateX` and `scaleX`, which the compositor handles. Identical visually.
+
+**Font preload was on the wrong family.** `preload: true` sat on Outfit, a Latin
+display face, with a comment claiming it was "used by the H1" — true when the
+site was English-first. `font-mr` maps to `--font-devanagari`, so the H1, the
+tagline, the year badge and the location line all render in **Mukta**, which was
+`preload: false`. Swapped.
+
+### Not fixable in code
+
+**Cache lifetimes (709 KiB)** — GitHub Pages sets a short max-age on everything
+and gives no control over it. Cloudflare in front fixes this, and would also add
+Brotli and HTTP/3, both of which act directly on the render-blocking path. The
+config has been sitting in `docs/PLATFORM-CLOUDFLARE.md` since July and closes
+six audit issues besides. **This is now the highest-value performance item left,
+and it needs no code change.**
+
+### Not yet attempted
+
+- **Improve image delivery (117 KiB)** — likely the advertisement and
+  announcement posters, whose sources are 320–380 KB. Worth a pass at the
+  variant widths offered for them.
+- **Legacy JavaScript (12 KiB)** — a browserslist target would drop transpiled
+  polyfills.
+- **Forced reflow** — a scroll listener measuring layout, most likely
+  `scroll-progress` or `back-to-top`. TBT is already green, so this is cosmetic.
+
+None of the above is verified faster. **Re-run PageSpeed after deploying** — the
+numbers here are the only way to know.
