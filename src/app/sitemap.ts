@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import routeDates from "@/../content/route-dates.json";
 import galleryItems from "@/../content/gallery.json";
+import newsItems from "@/../content/news.json";
 
 export const dynamic = "force-static";
 
@@ -56,13 +57,43 @@ const galleryImages = (galleryItems as Array<{ type: string; src: string }>)
   .filter((item) => item.type === "photo")
   .map((item) => `${SITE_URL}${item.src}`);
 
+/**
+ * Year pages under /gallery/ and article pages under /news/, derived from the
+ * same content the routes are generated from — so a new year of photographs or
+ * a new article cannot be added to the site and forgotten by the sitemap.
+ */
+const galleryYears = Array.from(
+  new Set((galleryItems as Array<{ year: number }>).map((i) => i.year)),
+).sort((a, b) => b - a);
+
+const newsPosts = (
+  newsItems as Array<{ id: string; slug?: string; date: string; body?: unknown }>
+).filter((item) => item.body);
+
+const derived: MetadataRoute.Sitemap = [
+  ...galleryYears.map((year) => ({
+    url: `${SITE_URL}/gallery/${year}/`,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+    images: (galleryItems as Array<{ year: number; type: string; src: string }>)
+      .filter((i) => i.year === year && i.type === "photo")
+      .map((i) => `${SITE_URL}${i.src}`),
+  })),
+  ...newsPosts.map((post) => ({
+    url: `${SITE_URL}/news/${post.slug ?? post.id}/`,
+    lastModified: new Date(post.date),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  })),
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map(({ path, priority, changeFrequency }) => ({
+  return [...derived, ...routes.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE_URL}${path}`,
     // Omitted rather than faked if a route has no recorded date.
     ...(dates[path] ? { lastModified: new Date(dates[path] as string) } : {}),
     changeFrequency,
     priority,
     ...(path === "/gallery/" ? { images: galleryImages } : {}),
-  }));
+  }))];
 }

@@ -89,6 +89,18 @@ export interface NewsItem {
   featured?: boolean;
   /** Poster shown on the featured card, e.g. "/announcements/x.jpg". */
   image?: string;
+  /** URL segment for the detail page. Falls back to `id` when absent. */
+  slug?: string;
+  /**
+   * Long-form text, in paragraphs.
+   *
+   * Its presence is what gives an item its own page at /news/<slug>/. Most
+   * entries here are a single sentence — an announcement, not an article — and
+   * a page per sentence would be the thin content Google's scaled-content
+   * policy is aimed at. Write a body when there is genuinely something to read,
+   * and the page appears at the next build.
+   */
+  body?: { en: string[]; mr: string[] };
 }
 
 export interface EventItem {

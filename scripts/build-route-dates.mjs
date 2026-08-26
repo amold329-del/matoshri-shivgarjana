@@ -50,6 +50,10 @@ const ROUTES = {
   "/faq/": ["src/app/faq", "content/faq.json"],
   "/contact/": ["src/app/contact", "content/settings.json"],
   "/terms/": ["src/app/terms"],
+  // Derived routes. The year pages follow the gallery content and the photos
+  // themselves; the article pages follow the news content.
+  "/gallery/YEAR/": ["src/app/gallery", "content/gallery.json", "public/gallery"],
+  "/news/POST/": ["src/app/news", "content/news.json"],
 };
 
 const previous = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : {};

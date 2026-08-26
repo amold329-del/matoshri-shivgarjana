@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import { useMemo, useState } from "react";
-import { Search, Star, Check } from "lucide-react";
+import { ArrowRight, Search, Star, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
 import { ShareButtons } from "@/components/ui/share-buttons";
@@ -92,6 +94,15 @@ export function NewsView() {
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cream/85">
                   {tr(featured.excerpt)}
                 </p>
+                {featured.body && (
+                  <Link
+                    href={`/news/${featured.slug ?? featured.id}`}
+                    className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-gold/50 bg-gold/15 px-4 py-2 text-sm font-bold text-gold-light transition-colors hover:bg-gold/25"
+                  >
+                    {tr({ en: "Read the full announcement", mr: "संपूर्ण घोषणा वाचा" })}
+                    <ArrowRight aria-hidden className="h-4 w-4" />
+                  </Link>
+                )}
                 </div>
               </article>
             </Reveal>
@@ -160,10 +171,20 @@ export function NewsView() {
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
                       {tr(n.excerpt)}
                     </p>
-                    <div className="mt-4 border-t border-card-border pt-3">
+                    <div className="mt-4 flex items-center justify-between gap-3 border-t border-card-border pt-3">
                       <time className="text-xs text-ink-soft">
                         {formatDate(n.date, lang)}
                       </time>
+                      {/* Only items with a body have a page of their own. */}
+                      {n.body && (
+                        <Link
+                          href={`/news/${n.slug ?? n.id}`}
+                          className="inline-flex items-center gap-1 text-xs font-bold text-accent underline-offset-4 hover:underline"
+                        >
+                          {tr({ en: "Read more", mr: "पूर्ण वाचा" })}
+                          <ArrowRight aria-hidden className="h-3.5 w-3.5" />
+                        </Link>
+                      )}
                     </div>
                   </article>
                 </Reveal>

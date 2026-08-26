@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageIcon, Play, Check } from "lucide-react";
@@ -94,6 +96,29 @@ export function GalleryView() {
               </Chip>
             ))}
           </div>
+
+          {/*
+            The chips above are client state, so those views have no URL. These
+            are real links to the per-year pages — how Google (and anyone sharing
+            "the 2025 photos") reaches a single year.
+          */}
+          <nav
+            aria-label={tr({ en: "Browse by year", mr: "वर्षानुसार पहा" })}
+            className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-body-sm"
+          >
+            <span className="font-semibold text-ink-soft">
+              {tr({ en: "Open a year:", mr: "वर्ष उघडा:" })}
+            </span>
+            {years.map((y) => (
+              <Link
+                key={y}
+                href={`/gallery/${y}`}
+                className="font-semibold text-accent underline-offset-4 hover:underline"
+              >
+                {tr({ en: `Ganeshotsav ${y}`, mr: `गणेशोत्सव ${y}` })}
+              </Link>
+            ))}
+          </nav>
 
           {/* Masonry grid */}
           <div className="columns-2 gap-4 sm:columns-3 lg:columns-4 [&>*]:mb-4">

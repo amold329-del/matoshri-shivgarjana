@@ -42,11 +42,17 @@ is slower than usual.
 **Marathi-first:** `<html lang="mr">`, Marathi metadata and JSON-LD, in-app EN⇄MR
 toggle (no locale routing yet — see MCV-004).
 
-## 3. Routes (17 + 404)
+## 3. Routes (23 + 404)
 
 home · about · history · gallery · events · news · committee · vargani · registration ·
 downloads · contact · sabhasad (coming soon) · faq · terms · procession ·
 advertisements · online-donation (coming soon)
+
+**Derived routes**, generated from content — add data and the page appears:
+`/gallery/<year>/` (2021, 2023, 2024, 2025, 2026, from `content/gallery.json`) and
+`/news/<slug>/` for any news item carrying a `body` (currently one:
+`new-logo-unveiled`). A one-sentence announcement deliberately gets no page — see
+the note on `NewsItem.body` in `src/types/content.ts`.
 
 Pattern: `page.tsx` (server, exports `buildMetadata`) + `view.tsx` (client UI).
 Copy both files when adding a route.
@@ -86,6 +92,8 @@ entry, both built around the unveiling poster.
 | `docs/PLATFORM-CLOUDFLARE.md` | Cloudflare setup that closes 6 audit issues |
 | `tools/verify.sh` | post-deploy check: routes, headers, canonicals, og:image, a11y |
 | `docs/EVENT-SCHEMA-ENDDATE.md` | why endDate was missing, and the guards against it returning |
+| `docs/CONTENT-ARCHITECTURE.md` | why the site has 21 pages and not 100 — the standing answer |
+| `docs/ENGAGEMENT.md` | CRO/perf work, and the analytics that still needs installing |
 | `tools/generate-og-image.py` | regenerates `public/og-image.png` (needs Pillow + libraqm) |
 | `tools/worker.js` | Cloudflare worker |
 
