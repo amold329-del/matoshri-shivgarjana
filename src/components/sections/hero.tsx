@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays, ChevronDown, MapPin } from "lucide-react";
 import { getSettings } from "@/lib/content";
 import { useLanguage } from "@/components/providers/language-provider";
 import { dict } from "@/lib/i18n";
@@ -125,6 +125,22 @@ export function Hero() {
           {tr(dict.hero.subtitle)}
         </motion.p>
 
+        {/* Where, and when — the two questions a search visitor arrives with. */}
+        <motion.p
+          variants={item}
+          className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-mr text-base font-semibold text-[var(--dark-text)] sm:text-lg"
+        >
+          <span className="inline-flex items-center gap-1.5">
+            <MapPin aria-hidden className="h-4 w-4 text-gold-light" />
+            {tr(dict.hero.place)}
+          </span>
+          <span aria-hidden className="hidden h-1 w-1 rounded-full bg-gold sm:block" />
+          <span className="inline-flex items-center gap-1.5 text-gold-light">
+            <CalendarDays aria-hidden className="h-4 w-4" />
+            {tr(dict.hero.festivalWindow)}
+          </span>
+        </motion.p>
+
         <motion.div
           variants={item}
           className="mt-3 flex items-center gap-3 text-sm text-[var(--dark-text-soft)]"
@@ -149,24 +165,18 @@ export function Hero() {
           variants={item}
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
-          <Link href="/gallery" className="btn btn-gold">
-            {tr(dict.cta.gallery)}
+          <Link href="/events" className="btn btn-gold">
+            {tr(dict.cta.programme)}
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/about" className="btn btn-ghost">
-            {tr(dict.cta.about)}
+          <Link href="/procession" className="btn btn-ghost">
+            {tr(dict.cta.route)}
+          </Link>
+          <Link href="/gallery" className="btn btn-ghost">
+            {tr(dict.cta.gallery)}
           </Link>
           <Link href="/vargani" className="btn btn-ghost">
             {tr(dict.cta.vargani)}
-          </Link>
-          <Link
-            href="/sabhasad"
-            className="btn btn-ghost relative opacity-90"
-          >
-            {tr(dict.cta.sabhasad)}
-            <span className="rounded-full bg-gold/20 px-2 py-0.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-gold-light">
-              {tr(dict.cta.comingSoon)}
-            </span>
           </Link>
         </motion.div>
       </motion.div>

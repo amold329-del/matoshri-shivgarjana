@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Search, Star, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ShareButtons } from "@/components/ui/share-buttons";
 import { Picture } from "@/components/ui/picture";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getNews } from "@/lib/content";
@@ -170,7 +171,17 @@ export function NewsView() {
             </div>
           )}
         </div>
-      </section>
+        <Reveal delay={0.1}>
+            <ShareButtons
+              path="/news/"
+              title={tr({
+                en: "Latest updates — Matoshree Shivgarjana Ganeshotsav Mandal",
+                mr: "ताज्या घडामोडी — मातोश्री शिवगर्जना गणेशोत्सव मंडळ",
+              })}
+              className="wrap mt-4 border-t border-card-border pt-8"
+            />
+          </Reveal>
+        </section>
     </>
   );
 }

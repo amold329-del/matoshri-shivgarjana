@@ -17,6 +17,8 @@ export const dict = {
   },
   cta: {
     gallery: { en: "Gallery", mr: "गॅलरी" },
+    programme: { en: "Ganeshotsav 2026 Programme", mr: "गणेशोत्सव २०२६ कार्यक्रम" },
+    route: { en: "Procession Route", mr: "मिरवणूक मार्ग" },
     about: { en: "About Us", mr: "आमच्याबद्दल" },
     vargani: { en: "Know About Vargani", mr: "वर्गणीबद्दल" },
     sabhasad: { en: "Membership", mr: "सभासद" },
@@ -56,6 +58,8 @@ export const dict = {
     social: { en: "Social Service", mr: "सामाजिक सेवा" },
     socialTitle: { en: "Serving the Community", mr: "समाजाची सेवा" },
     gallery: { en: "Gallery", mr: "गॅलरी" },
+    programme: { en: "Ganeshotsav 2026 Programme", mr: "गणेशोत्सव २०२६ कार्यक्रम" },
+    route: { en: "Procession Route", mr: "मिरवणूक मार्ग" },
     galleryTitle: { en: "Moments of Celebration", mr: "उत्सवाचे क्षण" },
     testimonials: { en: "Testimonials", mr: "अभिप्राय" },
     testimonialsTitle: { en: "Voices of Our Community", mr: "समाजाचा आवाज" },
@@ -82,6 +86,20 @@ export const dict = {
     subtitle: {
       en: "Celebrating 47 years of faith, unity and service",
       mr: "श्रद्धा, एकता आणि सेवेची ४७ वर्षे साजरी करत आहोत",
+    },
+    /**
+     * Above the fold, a visitor arriving from a search like "ganpati mandal
+     * parel" previously saw the Mandal's name, its tagline and a 47-year badge
+     * — and nothing about where it is or when the festival happens. These two
+     * lines answer "where" and "when" on the first screen.
+     */
+    place: {
+      en: "Sarvajanik Ganeshotsav Mandal · Parel-Bhoiwada, Mumbai 400012",
+      mr: "सार्वजनिक गणेशोत्सव मंडळ · परेल-भोईवाडा, मुंबई ४०००१२",
+    },
+    festivalWindow: {
+      en: "Ganeshotsav 2026 · 14 to 25 September",
+      mr: "गणेशोत्सव २०२६ · १४ ते २५ सप्टेंबर",
     },
   },
   comingSoonPage: {

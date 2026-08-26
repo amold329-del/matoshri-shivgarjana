@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageIcon, Play, Check } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ShareButtons } from "@/components/ui/share-buttons";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getGallery } from "@/lib/content";
 import { asset } from "@/lib/asset";
@@ -165,7 +166,17 @@ export function GalleryView() {
             </div>
           )}
         </div>
-      </section>
+        <Reveal delay={0.1}>
+            <ShareButtons
+              path="/gallery/"
+              title={tr({
+                en: "Ganeshotsav photo gallery — Matoshree Shivgarjana, Parel",
+                mr: "गणेशोत्सव गॅलरी — मातोश्री शिवगर्जना, परेल",
+              })}
+              className="wrap mt-4 border-t border-card-border pt-8"
+            />
+          </Reveal>
+        </section>
 
       {/* Lightbox — shared accessible dialog (MCV-009/010/033) */}
       <Lightbox

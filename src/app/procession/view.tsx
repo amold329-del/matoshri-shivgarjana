@@ -3,6 +3,7 @@
 import { CalendarDays, Clock, MapPin, Navigation } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ShareButtons } from "@/components/ui/share-buttons";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getProcession, getSettings } from "@/lib/content";
 import { dict } from "@/lib/i18n";
@@ -115,6 +116,17 @@ export function ProcessionView() {
                 {tr(dict.cta.getDirections)}
               </a>
             </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <ShareButtons
+              path="/procession/"
+              title={tr({
+                en: "Ganpati procession route — Matoshree Shivgarjana, Parel",
+                mr: "मिरवणूक मार्ग — मातोश्री शिवगर्जना, परेल",
+              })}
+              className="mt-12 border-t border-card-border pt-8"
+            />
           </Reveal>
         </div>
       </section>

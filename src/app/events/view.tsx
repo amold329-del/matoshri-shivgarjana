@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
 import { PageHero } from "@/components/ui/page-hero";
 import { Reveal } from "@/components/ui/reveal";
+import { ShareButtons } from "@/components/ui/share-buttons";
 import { useLanguage } from "@/components/providers/language-provider";
 import { getEvents } from "@/lib/content";
 import { formatDate } from "@/lib/date";
@@ -89,7 +90,17 @@ export function EventsView() {
             </div>
           )}
         </div>
-      </section>
+        <Reveal delay={0.1}>
+            <ShareButtons
+              path="/events/"
+              title={tr({
+                en: "Ganeshotsav 2026 programme — Matoshree Shivgarjana, Parel",
+                mr: "गणेशोत्सव २०२६ कार्यक्रम — मातोश्री शिवगर्जना, परेल",
+              })}
+              className="wrap mt-4 border-t border-card-border pt-8"
+            />
+          </Reveal>
+        </section>
     </>
   );
 }
