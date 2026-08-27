@@ -76,17 +76,26 @@ Two implementation choices worth knowing:
   OS sheet — which beats a WhatsApp-only button, since it offers whatever that
   person actually uses. Where it doesn't exist, the anchor stays an anchor.
 
-## Analytics — what you need to add
+## Analytics — wired, switched off
 
-Nothing here can be measured until this exists. Minimum:
+`src/lib/analytics.ts` now holds the plumbing, and `share_click` / `copy_link`
+are wired on the share buttons. Nothing is sent anywhere: `GA_ID` reads
+`NEXT_PUBLIC_GA_ID`, which is unset, so no script is injected and every
+`track()` call returns immediately. Verified in the build — zero occurrences of
+`googletagmanager` in the output.
 
-1. Create a GA4 property and get the measurement ID (`G-XXXXXXXXXX`).
-2. Tell me the ID and I will add the script to `src/app/layout.tsx` behind an
-   env var, plus a small `track()` helper.
-3. Then these get wired, on elements that already exist:
-   `share_click` · `directions_click` (the Maps button on `/contact/` and
-   `/procession/`) · `gallery_open` and `gallery_image_view` (lightbox) ·
-   `contact_click` · `email_click` · `download_click` · `faq_expand`.
+**To switch it on:** create a GA4 property, then
+GitHub → Settings → Secrets → Actions → `NEXT_PUBLIC_GA_ID = G-XXXXXXXXXX`, and
+add it to the `env:` block of the build step in `.github/workflows/deploy.yml`.
+
+**It is deliberately off rather than on-by-default.** Enabling third-party
+tracking on a Mandal's site is the committee's decision; under India's DPDP Act
+the operator carries the obligations, and a temple site collecting visitor data
+before anyone agreed to it is the wrong default. Once the ID exists, say so and
+I will wire the rest on the elements that already exist: `directions_click`
+(the Maps buttons on `/contact/` and `/procession/`), `gallery_open` and
+`gallery_image_view` (lightbox), `contact_click`, `email_click`,
+`download_click`, `faq_expand`.
 
 Consider Search Console → Settings → Associations to link the property, so query
 data and behaviour sit side by side.

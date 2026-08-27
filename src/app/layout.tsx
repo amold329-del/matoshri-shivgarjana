@@ -9,6 +9,7 @@ import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BackToTop } from "@/components/ui/back-to-top";
 import StructuredData from "./structured-data";
 import { asset } from "@/lib/asset";
+import { GA_ID } from "@/lib/analytics";
 
 /* ---- Fonts wired to the CSS variables used in tailwind.config ---- */
 const inter = Inter({
@@ -154,6 +155,20 @@ export default function RootLayout({
             <BackToTop />
           </LanguageProvider>
         </ThemeProvider>
+        {/* Injected only when NEXT_PUBLIC_GA_ID is set; see src/lib/analytics.ts. */}
+        {GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`,
+              }}
+            />
+          </>
+        )}
       </body>
     </html>
   );

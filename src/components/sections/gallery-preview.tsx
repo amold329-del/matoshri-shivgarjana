@@ -80,6 +80,26 @@ export function GalleryPreview() {
           ))}
         </div>
 
+        {/*
+          The chips above are client state and have no URL. These are links to
+          the per-year pages, which otherwise receive no inbound link from the
+          homepage at all.
+        */}
+        <nav
+          aria-label={tr({ en: "Photographs by year", mr: "वर्षानुसार छायाचित्रे" })}
+          className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-body-sm"
+        >
+          {years.map((y) => (
+            <Link
+              key={y}
+              href={`/gallery/${y}`}
+              className="font-semibold text-accent underline-offset-4 hover:underline"
+            >
+              {tr({ en: `Ganeshotsav ${y}`, mr: `गणेशोत्सव ${y}` })}
+            </Link>
+          ))}
+        </nav>
+
         {/* Masonry-ish grid */}
         <div className="columns-2 gap-4 sm:columns-3 lg:columns-4 [&>*]:mb-4">
           {visible.map((item, i) => (

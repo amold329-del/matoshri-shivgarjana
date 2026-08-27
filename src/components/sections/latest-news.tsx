@@ -49,8 +49,13 @@ export function LatestNews() {
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
                     {tr(n.excerpt)}
                   </p>
+                  {/*
+                    Deep-link to the article when the item has one. The homepage
+                    is the site's highest-authority page; sending every card to
+                    /news/ left the article pages with a single inbound link.
+                  */}
                   <Link
-                    href="/news"
+                    href={n.body ? `/news/${n.slug ?? n.id}` : "/news"}
                     className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-2.5"
                   >
                     {tr(dict.cta.readMore)} <ArrowRight className="h-4 w-4" />

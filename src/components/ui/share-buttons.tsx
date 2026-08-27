@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Check, Link2, Share2 } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
 import { SITE_URL } from "@/lib/site";
+import { track } from "@/lib/analytics";
 
 /**
  * Share the current page.
@@ -56,6 +57,7 @@ export function ShareButtons({
   const whatsapp = `https://wa.me/?text=${encodeURIComponent(`${title}\n${url}`)}`;
 
   async function handleShare(event: React.MouseEvent<HTMLAnchorElement>) {
+    track("share_click", { method: canNativeShare ? "native" : "whatsapp", path });
     if (!canNativeShare) return; // let the anchor do its normal job
     event.preventDefault();
     try {
@@ -68,6 +70,7 @@ export function ShareButtons({
   async function copy() {
     try {
       await navigator.clipboard.writeText(url);
+      track("copy_link", { path });
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
