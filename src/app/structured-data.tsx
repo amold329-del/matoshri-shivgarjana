@@ -46,7 +46,7 @@ export default function StructuredData() {
     // with sameAs below, this is the site's half of the link between the two
     // records — the profile links out to the site, the site points back — so
     // Google reconciles them as one entity instead of inferring a relationship.
-    hasMap: "https://maps.app.goo.gl/ihTuBeJm4LFRscB89",
+    hasMap: "https://maps.app.goo.gl/KFZazg6y5e3QAbKu5",
     areaServed: [
       { "@type": "Place", name: "Parel-Bhoiwada, Mumbai" },
       { "@type": "City", name: "Mumbai" },
@@ -60,7 +60,7 @@ export default function StructuredData() {
     telephone: "+91-77383-37412",
     sameAs: [
       "https://www.instagram.com/matoshree.cha.vighnaharta/",
-      "https://maps.app.goo.gl/ihTuBeJm4LFRscB89",
+      "https://maps.app.goo.gl/KFZazg6y5e3QAbKu5",
     ],
     subjectOf: {
       "@type": "CreativeWork",

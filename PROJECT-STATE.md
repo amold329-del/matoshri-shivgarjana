@@ -24,7 +24,7 @@ Matoshree S.R.A. CHS, Jerbai Wadia Road, Parel-Bhoiwada, Mumbai 400012.
 - Repo: `github.com/amold329-del/matoshri-shivgarjana` · branch `main`
 - Instagram: `@matoshree.cha.vighnaharta` · phone `+91 77383 37412`
 - Google Business Profile (live on Maps, 18 Aug 2026):
-  `https://maps.app.goo.gl/ihTuBeJm4LFRscB89` — referenced from `content/settings.json`
+  `https://maps.app.goo.gl/KFZazg6y5e3QAbKu5` — referenced from `content/settings.json`
   (`mapLink`) and the Organization schema (`hasMap`, `sameAs`)
 - Email: `matoshreeshivgarjanasarvajanik@gmail.com`
 
