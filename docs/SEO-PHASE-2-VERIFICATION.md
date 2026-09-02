@@ -68,7 +68,7 @@ Stated plainly, because a claim without evidence is worse than a gap:
   claims what ranks for "ganpati mandal parel".
 - **Google Maps / the Business Profile.** Cannot be inspected. The profile went
   live on 18 August by your account, and the site now links to it
-  (`maps.app.goo.gl/KFZazg6y5e3QAbKu5` in `hasMap` and `sameAs`), but its
+  (`maps.app.goo.gl/2Qn7VMRZvCzyorHe7` in `hasMap` and `sameAs`), but its
   contents, categories and pin are unverified from here.
 - **Existing citations and backlinks.** Cannot be searched for, so the citation
   table in the brief cannot be filled with real rows. Inventing them would be
