@@ -185,3 +185,87 @@ Ask devotees for reviews, in person, with a printed QR.
 **Week 4 — read the numbers.** First Search Console comparison. Check whether the
 eight previously uncrawled pages now show impressions. Re-run PageSpeed. Then
 plan the `/en` routes for October.
+
+---
+
+## 10. "Page with redirect" on the HTTP URLs (2 Sep 2026)
+
+Search Console reported these as failed:
+
+```
+http://www.matoshreechavighnaharta.co.in/
+http://matoshreechavighnaharta.co.in/
+```
+
+**This is expected behaviour, not a fault.** Those two URLs are the non-canonical
+variants; they redirect to `https://matoshreechavighnaharta.co.in/`, which is
+exactly what they should do. Search Console files a redirecting URL under *Page
+with redirect* to explain why **that URL** was not indexed — the destination is
+indexed instead. Making them indexable would be the actual mistake: it would put
+three hostnames in the index for one site.
+
+### Why the validation failed, specifically
+
+A *Page with redirect* item cannot be validated away. Clicking **Validate fix**
+asks Google to confirm the URLs no longer have that state — but they will always
+redirect, so the check will fail every time it is run. The failure is the
+validation being the wrong tool, not a problem with the site.
+
+### Verified in the source and the build
+
+```
+domain constants          7, all https non-www (robots.ts, sitemap.ts,
+                          layout.tsx, structured-data.tsx, seo.ts, site.ts,
+                          event-schema.ts)
+http:// or www in source  0 occurrences
+sitemap                   21 urls · 0 http:// · 0 www · image locs clean
+canonical hosts           {https://matoshreechavighnaharta.co.in}
+og:url / og:image hosts   {https://matoshreechavighnaharta.co.in}
+JSON-LD hosts             {https://matoshreechavighnaharta.co.in}
+whole build               0 self-references to http:// or //www.
+robots.txt                Sitemap: https://matoshreechavighnaharta.co.in/sitemap.xml
+```
+
+So: no redirected URL is in the sitemap, no internal link points at HTTP, and no
+canonical, Open Graph tag or schema URL uses HTTP or www. There was nothing to
+fix in any of them, and nothing was changed.
+
+### The one real finding: no CNAME in the deploy artifact
+
+`public/CNAME` did not exist, so the custom domain rested entirely on the
+repository's Pages setting. This deploy publishes through a GitHub Actions
+artifact, which replaces the served site wholesale — and a custom domain can be
+dropped when the artifact carries no CNAME. If that happened the site would fall
+back to `*.github.io` and **every** URL would become a redirect, which is a far
+worse version of the report above.
+
+Added `public/CNAME` containing `matoshreechavighnaharta.co.in`. It matches the
+domain already in use, so nothing changes today; it is a safety net, and it also
+makes the canonical hostname explicit in the repository.
+
+### Confirm the chain yourself
+
+Not testable from this environment — the sandbox blocks outbound requests to the
+site. Run:
+
+```bash
+curl -sSI http://matoshreechavighnaharta.co.in/      | grep -i "^HTTP/\|^location"
+curl -sSI http://www.matoshreechavighnaharta.co.in/  | grep -i "^HTTP/\|^location"
+curl -sSI https://www.matoshreechavighnaharta.co.in/ | grep -i "^HTTP/\|^location"
+curl -sSI https://matoshreechavighnaharta.co.in/     | grep -i "^HTTP/"
+```
+
+Want: each of the first three a `301` (GitHub Pages may answer HTTP with `301`
+to the HTTPS host) landing on `https://matoshreechavighnaharta.co.in/`, and the
+last a plain `200`. If any shows two hops — HTTP → HTTPS www → HTTPS non-www —
+that is a chain worth flattening in DNS, and the only case here that would need
+a change.
+
+Also confirm **Settings → Pages → Enforce HTTPS** is ticked.
+
+### What to do in Search Console
+
+**Nothing on this issue.** Do not start a new validation for *Page with
+redirect*; it will fail again for the same reason. Instead, inspect
+`https://matoshreechavighnaharta.co.in/` and confirm it reports *URL is on
+Google*. That is the URL that matters.
